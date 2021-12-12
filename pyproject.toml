@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "pywttr"
+version = "0.1.1"
+description = "Wrapper for wttr.in"
+authors = ["monosans <hsyqixco@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/monosans/pywttr"
+keywords = [
+  "forecast",
+  "weather",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: Russian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+pywttr-models = "^0.1.1"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+isort = "^5.10.1"
+mypy = "^0.910"
+types-requests = "^2.25.12"
+pre-commit = "^2.16.0"
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+
+[tool.black]
+line-length = 79
+skip-magic-trailing-comma = true
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.mypy]
+strict = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
