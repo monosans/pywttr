@@ -9,6 +9,7 @@ def _fetch(location: str, session: _Session, lang: str) -> _Any:
     with session.get(
         f"https://wttr.in/{location}", params={"format": "j1", "lang": lang}
     ) as r:
+        r.raise_for_status()
         return r.json()
 
 
