@@ -14,7 +14,7 @@ def _fetch(location: str, session: _Session, lang: str) -> _Any:
 
 
 def get_json(location: str, session: _Optional[_Session], lang: str) -> _Any:
-    if session:
+    if isinstance(session, _Session):
         return _fetch(location, session, lang)
     with _Session() as session:
         return _fetch(location, session, lang)
