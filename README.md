@@ -32,4 +32,9 @@ Other languages may also be used instead of `en`. For a complete list of support
 
 For an example of type annotations, see `pywttr-models` [README.md](https://github.com/monosans/pywttr-models#usage-for-type-annotation).
 
-There is no documentation, just follow the code completion from your IDE. I'd recommend [Visual Studio Code](https://code.visualstudio.com) (with [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)) or [PyCharm](https://jetbrains.com/pycharm).
+There is no documentation, just follow the code completion from your IDE.
+
+Recommended IDEs:
+
+- [Visual Studio Code](https://code.visualstudio.com) (with [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python))
+- [PyCharm](https://jetbrains.com/pycharm)
