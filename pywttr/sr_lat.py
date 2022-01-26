@@ -10,6 +10,6 @@ from pywttr.http import get_json as _get_json
 def get_forecast(
     location: str, *, session: _Optional[_Session] = None
 ) -> _pywttr_models.sr_lat.Model:
-    return _pywttr_models.sr_lat.Model(
-        **_get_json(location, session, "sr-lat")
+    return _pywttr_models.sr_lat.Model.parse_obj(
+        _get_json(location, session, "sr-lat")
     )
