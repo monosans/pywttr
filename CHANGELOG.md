@@ -2,6 +2,11 @@
 
 We follow [Semantic Versions](https://semver.org/).
 
+## Version 0.1.3
+
+- Use `parse_obj` method for models.
+- Check `if isinstance(session, requests.Session)`.
+
 ## Version 0.1.2
 
 - Raise `HTTPError` if 400 <= status_code < 600
