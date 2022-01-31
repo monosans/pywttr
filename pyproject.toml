@@ -26,7 +26,7 @@ pywttr-models = "^0.1.1"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
-black = "^21.12b0"
+black = "^22.1"
 isort = "^5.10.1"
 mypy = "^0.931"
 types-requests = "^2.25.12"
