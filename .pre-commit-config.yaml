@@ -34,5 +34,5 @@ repos:
             pywttr-models<1.0.0,
             requests<3.0.0,
             types-requests<3.0.0,
-            pytest<7.0.0,
+            pytest<8.0.0,
           ]
