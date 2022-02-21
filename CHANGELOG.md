@@ -1,16 +1,16 @@
-# Version history
+# Changelog
 
-We follow [Semantic Versions](https://semver.org/).
+We follow [Semantic Versioning](https://semver.org/).
 
-## Version 0.1.3
+## [0.1.3] - 2022-01-26
 
 - Use `parse_obj` method for models.
 - Check `if isinstance(session, requests.Session)`.
 
-## Version 0.1.2
+## [0.1.2] - 2022-01-02
 
-- Raise `HTTPError` if 400 <= status_code < 600
+- Raise `HTTPError` if 400 <= status_code < 600.
 
-## Version 0.1.1
+## [0.1.1] - 2021-12-12
 
-- Initial release
+- Initial release.
