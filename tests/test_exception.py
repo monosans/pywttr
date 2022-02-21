@@ -2,10 +2,10 @@
 import pytest
 from requests.exceptions import HTTPError
 
-import pywttr
+from pywttr import Wttr
 
 
-def test_validation() -> None:
-    location = "sdlaghdsaklgthj"
+def test_exception() -> None:
+    wttr = Wttr("sdlaghdsaklgthj")
     with pytest.raises(HTTPError):
-        pywttr.en.get_forecast(location)
+        wttr.en()
