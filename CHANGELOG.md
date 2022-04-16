@@ -2,6 +2,10 @@
 
 We follow [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2022-04-16
+
+- Use `__slots__`.
+
 ## [1.0.0] - 2022-02-21
 
 - Rewrite everything.

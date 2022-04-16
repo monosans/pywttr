@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pywttr"
-version = "1.0.0"
+version = "1.0.1"
 description = "Wrapper for wttr.in"
 authors = ["monosans <hsyqixco@protonmail.com>"]
 license = "MIT"
