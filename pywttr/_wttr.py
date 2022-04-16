@@ -8,6 +8,8 @@ from requests import Session
 class Wttr:
     """Wrapper for wttr.in weather forecast."""
 
+    __slots__ = ("location", "session")
+
     def __init__(
         self, location: str, *, session: Optional[Session] = None
     ) -> None:
