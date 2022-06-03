@@ -2,7 +2,6 @@
 
 [![Build Status](https://github.com/monosans/pywttr/workflows/test/badge.svg?branch=main&event=push)](https://github.com/monosans/pywttr/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/monosans/pywttr/branch/main/graph/badge.svg)](https://codecov.io/gh/monosans/pywttr)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/monosans/pywttr/blob/main/LICENSE)
 
 Wrapper for [wttr.in](https://wttr.in) weather forecast.
 
@@ -30,11 +29,15 @@ Other languages may also be used instead of `en`. For a complete list of support
 
 ## Documentation
 
-For an example of type annotations, see `pywttr-models` [README.md](https://github.com/monosans/pywttr-models#usage-for-type-annotation).
-
 There is no documentation, just follow the code completion in your IDE.
+
+For an example of type annotations, see `pywttr-models` [README.md](https://github.com/monosans/pywttr-models#usage-for-type-annotation).
 
 ## Recommended IDEs
 
 - [Visual Studio Code](https://code.visualstudio.com) (with [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python))
 - [PyCharm](https://jetbrains.com/pycharm)
+
+## License
+
+[MIT](https://github.com/monosans/pywttr/blob/main/LICENSE)
