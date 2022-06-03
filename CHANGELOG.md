@@ -1,6 +1,11 @@
 # Changelog
 
-We follow [Semantic Versioning](https://semver.org/).
+[Semantic Versioning](https://semver.org/).
+
+## [1.0.2] - 2022-06-03
+
+- Drop Python 3.6 support.
+- Update dependencies.
 
 ## [1.0.1] - 2022-04-16
 
