@@ -1,6 +1,6 @@
 # Changelog
 
-[Semantic Versioning](https://semver.org/).
+[Semantic Versioning](https://semver.org/)
 
 ## [1.0.2] - 2022-06-03
 
