@@ -22,7 +22,7 @@ requests = "^2.27"
 [tool.poetry.dev-dependencies]
 black = "^22.3"
 isort = "^5.10"
-mypy = "^0.960"
+mypy = "^0.961"
 types-requests = "^2.27"
 pre-commit = "^2.19"
 pytest = "^7.1"
