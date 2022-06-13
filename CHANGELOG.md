@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.0.0] - 2022-06-13
+
+- Remove unsupported languages.
+
 ## [1.0.2] - 2022-06-03
 
 - Drop Python 3.6 support.
