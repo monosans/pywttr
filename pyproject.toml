@@ -16,7 +16,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pywttr-models = "^0.1"
+pywttr-models = "^1.0"
 requests = "^2.27"
 
 [tool.poetry.dev-dependencies]

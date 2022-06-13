@@ -31,9 +31,4 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies:
-          [
-            pywttr-models<1.0.0,
-            requests<3.0.0,
-            types-requests<3.0.0,
-            pytest<8.0.0,
-          ]
+          [pywttr-models<2.0, requests<3.0, types-requests<3.0, pytest<8.0]
