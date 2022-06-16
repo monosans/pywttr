@@ -16,6 +16,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
+pydantic = "^1.9"
 pywttr-models = "^1.0"
 requests = "^2.27"
 
@@ -23,10 +24,10 @@ requests = "^2.27"
 black = "^22.3"
 isort = "^5.10"
 mypy = "^0.961"
-types-requests = "^2.27"
 pre-commit = "^2.19"
 pytest = "^7.1"
 pytest-cov = "^3.0"
+types-requests = "^2.27"
 
 [tool.black]
 line-length = 79
