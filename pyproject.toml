@@ -32,6 +32,7 @@ types-requests = "^2.27"
 [tool.black]
 line-length = 79
 skip-magic-trailing-comma = true
+preview = true
 
 [tool.isort]
 profile = "black"
