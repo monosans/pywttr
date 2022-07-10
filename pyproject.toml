@@ -37,6 +37,7 @@ preview = true
 [tool.isort]
 profile = "black"
 line_length = 79
+add_imports = ["from __future__ import annotations"]
 
 [tool.mypy]
 warn_unreachable = true

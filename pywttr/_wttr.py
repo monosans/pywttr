@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import Any, Optional
 
 import pywttr_models
