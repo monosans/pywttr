@@ -27,7 +27,7 @@ mypy = "^0.961"
 pre-commit = "^2.20"
 pytest = "^7.1"
 pytest-cov = "^3.0"
-types-requests = "^2.27"
+types-requests = "^2.28"
 
 [tool.black]
 line-length = 79
