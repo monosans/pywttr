@@ -7,7 +7,7 @@ from requests import Session
 
 
 class Wttr:
-    """Wrapper for wttr.in weather forecast."""
+    """Wrapper for wttr.in weather forecast API."""
 
     __slots__ = ("location", "session")
 
