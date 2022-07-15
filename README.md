@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/monosans/pywttr/workflows/test/badge.svg?branch=main&event=push)](https://github.com/monosans/pywttr/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/monosans/pywttr/branch/main/graph/badge.svg)](https://codecov.io/gh/monosans/pywttr)
 
-Wrapper for [wttr.in](https://wttr.in) weather forecast.
+Wrapper for [wttr.in](https://wttr.in) weather forecast API.
 
 Asynchronous version [here](https://github.com/monosans/aiopywttr).
 
