@@ -17,7 +17,7 @@ repos:
         args: [--fix=lf]
       - id: trailing-whitespace
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.37.2
+    rev: v2.37.3
     hooks:
       - id: pyupgrade
         args: [--py37-plus]
@@ -37,6 +37,7 @@ repos:
     rev: v0.971
     hooks:
       - id: mypy
+        args: []
         additional_dependencies:
           - pydantic>=1.9,<2.0
           - pywttr-models>=1.0,<2.0
