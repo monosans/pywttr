@@ -10,13 +10,13 @@ keywords = ["forecast", "weather"]
 classifiers = [
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-pydantic = "^1.9"
+python = "^3.7.2"
 pywttr-models = "^1.0"
 requests = "^2.27"
 
@@ -25,21 +25,26 @@ black = "^22.6"
 isort = "^5.10"
 mypy = "^0.971"
 pre-commit = "^2.20"
+pydantic = "^1.9"
+pylint = "^2.14"
 pytest = "^7.1"
 pytest-cov = "^3.0"
 types-requests = "^2.28"
 
 [tool.black]
 line-length = 79
+target-version = ["py37"]
 skip-magic-trailing-comma = true
 preview = true
 
 [tool.isort]
+py_version = 37
 profile = "black"
 line_length = 79
 add_imports = ["from __future__ import annotations"]
 
 [tool.mypy]
+python_version = "3.7"
 warn_unreachable = true
 local_partial_types = true
 enable_error_code = [
@@ -57,6 +62,48 @@ init_forbid_extra = true
 init_typed = true
 warn_required_dynamic_aliases = true
 warn_untyped_fields = true
+
+[tool.pylint.main]
+extension-pkg-allow-list = "pydantic"
+
+# https://pylint.pycqa.org/en/stable/user_guide/checkers/extensions.html
+load-plugins = [
+    "pylint.extensions.bad_builtin",
+    "pylint.extensions.broad_try_clause",
+    "pylint.extensions.check_elif",
+    "pylint.extensions.code_style",
+    "pylint.extensions.comparetozero",
+    "pylint.extensions.comparison_placement",
+    "pylint.extensions.confusing_elif",
+    "pylint.extensions.consider_ternary_expression",
+    "pylint.extensions.empty_comment",
+    "pylint.extensions.eq_without_hash",
+    "pylint.extensions.for_any_all",
+    "pylint.extensions.overlapping_exceptions",
+    "pylint.extensions.private_import",
+    "pylint.extensions.redefined_loop_name",
+    "pylint.extensions.set_membership",
+    "pylint.extensions.typing",
+    "pylint.extensions.while_used",
+]
+
+py-version = "3.7"
+recursive = true
+
+[tool.pylint.format]
+max-line-length = 79
+
+[tool.pylint."messages control"]
+disable = [
+    "consider-using-assignment-expr",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "too-few-public-methods",
+]
+
+[tool.pylint.reports]
+score = false
 
 [tool.pytest.ini_options]
 xfail_strict = true

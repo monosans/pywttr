@@ -1,4 +1,4 @@
-name: test
+name: CI
 
 on:
   push:
@@ -12,11 +12,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.7", "3.10"]
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
     steps:
       - uses: actions/checkout@v3
       - run: pipx install poetry
@@ -24,8 +24,20 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: "poetry"
-      - run: poetry install -n
+      - run: poetry install
       - run: poetry run pytest --cov-report=xml
       - uses: codecov/codecov-action@v3
         with:
           files: ./coverage.xml
+
+  pylint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "poetry"
+      - run: poetry install
+      - run: poetry run pylint .

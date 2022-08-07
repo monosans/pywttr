@@ -1,9 +1,13 @@
+ci:
+  skip: [pylint]
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
+        args: [--no-allow-dict-kwargs]
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-merge-conflict
@@ -11,28 +15,31 @@ repos:
       - id: check-yaml
       - id: debug-statements
       - id: end-of-file-fixer
-      - id: fix-encoding-pragma
-        args: [--remove]
       - id: mixed-line-ending
         args: [--fix=lf]
       - id: trailing-whitespace
+
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.37.3
     hooks:
       - id: pyupgrade
         args: [--py37-plus]
+
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.7.1
     hooks:
       - id: prettier
+
   - repo: https://github.com/psf/black
     rev: 22.6.0
     hooks:
       - id: black
+
   - repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
       - id: isort
+
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.971
     hooks:
@@ -44,3 +51,12 @@ repos:
           - requests>=2.27,<3.0
           - pytest>=7.1,<8.0
           - types-requests>=2.28,<3.0
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        require_serial: true

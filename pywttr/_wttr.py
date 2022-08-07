@@ -6,6 +6,7 @@ import pywttr_models
 from requests import Session
 
 
+# pylint: disable-next=too-many-public-methods
 class Wttr:
     """Wrapper for wttr.in weather forecast API."""
 
@@ -17,6 +18,7 @@ class Wttr:
         self.location = location
         self.session = session
 
+    # pylint: disable=invalid-name
     def af(self) -> pywttr_models.af.Model:
         return pywttr_models.af.Model.parse_obj(self._get_json("af"))
 
@@ -119,13 +121,14 @@ class Wttr:
     def zh_tw(self) -> pywttr_models.zh_tw.Model:
         return pywttr_models.zh_tw.Model.parse_obj(self._get_json("zh-tw"))
 
+    # pylint: enable=invalid-name
     def _fetch(self, lang: str, session: Session) -> Any:
         with session.get(
             f"https://wttr.in/{self.location}",
             params={"format": "j1", "lang": lang},
-        ) as r:
-            r.raise_for_status()
-            return r.json()
+        ) as response:
+            response.raise_for_status()
+            return response.json()
 
     def _get_json(self, lang: str) -> Any:
         if isinstance(self.session, Session):
