@@ -68,7 +68,6 @@ extension-pkg-allow-list = "pydantic"
 
 # https://pylint.pycqa.org/en/stable/user_guide/checkers/extensions.html
 load-plugins = [
-    "pylint.extensions.broad_try_clause",
     "pylint.extensions.check_elif",
     "pylint.extensions.code_style",
     "pylint.extensions.comparison_placement",
@@ -82,7 +81,6 @@ load-plugins = [
     "pylint.extensions.redefined_loop_name",
     "pylint.extensions.set_membership",
     "pylint.extensions.typing",
-    "pylint.extensions.while_used",
 ]
 
 persistent = false
