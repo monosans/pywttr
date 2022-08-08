@@ -68,11 +68,9 @@ extension-pkg-allow-list = "pydantic"
 
 # https://pylint.pycqa.org/en/stable/user_guide/checkers/extensions.html
 load-plugins = [
-    "pylint.extensions.bad_builtin",
     "pylint.extensions.broad_try_clause",
     "pylint.extensions.check_elif",
     "pylint.extensions.code_style",
-    "pylint.extensions.comparetozero",
     "pylint.extensions.comparison_placement",
     "pylint.extensions.confusing_elif",
     "pylint.extensions.consider_ternary_expression",
@@ -87,6 +85,7 @@ load-plugins = [
     "pylint.extensions.while_used",
 ]
 
+persistent = false
 py-version = "3.7"
 recursive = true
 
@@ -104,6 +103,9 @@ disable = [
 
 [tool.pylint.reports]
 score = false
+
+[tool.pylint.string]
+check-str-concat-over-line-jumps = true
 
 [tool.pytest.ini_options]
 xfail_strict = true
