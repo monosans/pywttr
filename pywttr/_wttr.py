@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Optional
 
 import pywttr_models
 from requests import Session
@@ -13,7 +13,7 @@ class Wttr:
     __slots__ = ("location", "session")
 
     def __init__(
-        self, location: str, *, session: Session | None = None
+        self, location: str, *, session: Optional[Session] = None
     ) -> None:
         self.location = location
         self.session = session
