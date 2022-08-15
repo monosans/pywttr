@@ -417,11 +417,11 @@ testing = ["virtualenv", "pytest-xdist", "six", "process-tests", "hunter", "fiel
 
 [[package]]
 name = "pywttr-models"
-version = "1.0.0"
+version = "1.0.2"
 description = "Pydantic models for pywttr and aiopywttr"
 category = "main"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.7.2,<4.0.0"
 
 [package.dependencies]
 pydantic = ">=1.9,<2.0"
@@ -853,8 +853,8 @@ pytest-cov = [
     {file = "pytest_cov-3.0.0-py3-none-any.whl", hash = "sha256:578d5d15ac4a25e5f961c938b85a05b09fdaae9deef3bb6de9a6e766622ca7a6"},
 ]
 pywttr-models = [
-    {file = "pywttr-models-1.0.0.tar.gz", hash = "sha256:a50d354b1e428b7d204ac2c54ccc52b6d45d7688a401d6054846937170a06538"},
-    {file = "pywttr_models-1.0.0-py3-none-any.whl", hash = "sha256:20276bfc0716b5193e914d1354a8cdc4dabec4adfc8486439be99d6131968f21"},
+    {file = "pywttr-models-1.0.2.tar.gz", hash = "sha256:4dc4d07cd426b7b95bb571454274e626a1ede5c320bc0ac23bfd67724ef90f9f"},
+    {file = "pywttr_models-1.0.2-py3-none-any.whl", hash = "sha256:b309d1cfb6ff66c926b0d789cf9836ba9399c2753de3b56a2b83cc0d914971ef"},
 ]
 pyyaml = [
     {file = "PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53"},
