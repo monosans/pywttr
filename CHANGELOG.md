@@ -2,7 +2,7 @@
 
 [Semantic Versioning](https://semver.org/)
 
-## [Unreleased]
+## [2.0.1] - 2022-08-15
 
 - Raise minimum required Python version from 3.7 to 3.7.2.
 - Add docstring to `__init__.py`.
