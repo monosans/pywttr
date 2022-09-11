@@ -107,7 +107,7 @@ check-str-concat-over-line-jumps = true
 
 [tool.pytest.ini_options]
 xfail_strict = true
-addopts = "--strict-markers --strict-config --cov --cov-branch --cov-fail-under=100"
+addopts = "--strict-markers --strict-config --cov --cov-branch"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
