@@ -28,7 +28,7 @@ pre-commit = "^2.20"
 pydantic = "^1.10"
 pylint = "^2.15"
 pytest = "^7.1"
-pytest-cov = "^3.0"
+pytest-cov = "^4.0"
 types-requests = "^2.28"
 
 [tool.black]
