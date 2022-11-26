@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.0.2] - 2022-11-26
+
+- Allow keyword-only arguments of public methods to be positional.
+
 ## [2.0.1] - 2022-08-15
 
 - Raise minimum required Python version from 3.7 to 3.7.2.
