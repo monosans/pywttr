@@ -13,7 +13,7 @@ class Wttr:
     __slots__ = ("location", "session")
 
     def __init__(
-        self, location: str, *, session: Optional[Session] = None
+        self, location: str, session: Optional[Session] = None
     ) -> None:
         self.location = location
         self.session = session
