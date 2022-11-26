@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.1.0] - 2022-11-26
+
+- Add support for Galician language.
+
 ## [2.0.2] - 2022-11-26
 
 - Allow keyword-only arguments of public methods to be positional.
