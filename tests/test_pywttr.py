@@ -5,9 +5,11 @@ from requests import Session
 from pywttr import Wttr
 
 
-def test_validation() -> None:
+def test_pywttr() -> None:
+    wttr = Wttr("Paris")
+    wttr.en()
     with Session() as session:
-        wttr = Wttr("Paris", session=session)
+        wttr.session = session
         wttr.af()
         wttr.am()
         wttr.ar()
@@ -20,6 +22,7 @@ def test_validation() -> None:
         wttr.et()
         wttr.fa()
         wttr.fr()
+        wttr.gl()
         wttr.hi()
         wttr.hu()
         wttr.ia()
