@@ -22,6 +22,7 @@ requests = "^2.28"
 
 [tool.poetry.dev-dependencies]
 black = "^22.10"
+covdefaults = "^2.2"
 isort = "^5.10"
 mypy = "^0.991"
 pre-commit = "^2.20"
@@ -36,6 +37,12 @@ line-length = 79
 target-version = ["py37"]
 skip-magic-trailing-comma = true
 preview = true
+
+[tool.coverage.report]
+exclude_lines = ["@(abc.)?abstractmethod"]
+
+[tool.coverage.run]
+plugins = ["covdefaults"]
 
 [tool.isort]
 py_version = 37
@@ -110,7 +117,7 @@ check-str-concat-over-line-jumps = true
 
 [tool.pytest.ini_options]
 xfail_strict = true
-addopts = "--strict-markers --strict-config --cov --cov-branch"
+addopts = "--strict-markers --strict-config"
 
 [build-system]
 requires = ["poetry-core"]
