@@ -1,32 +1,22 @@
-ci:
-  skip: [pylint]
-
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
-      - id: check-ast
-      - id: check-builtin-literals
-        args: [--no-allow-dict-kwargs]
       - id: check-case-conflict
-      - id: check-docstring-first
+      - id: check-executables-have-shebangs
       - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
       - id: check-toml
-      - id: check-yaml
-      - id: debug-statements
+      - id: check-xml
+      - id: destroyed-symlinks
       - id: end-of-file-fixer
       - id: mixed-line-ending
         args: [--fix=lf]
       - id: trailing-whitespace
 
-  - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
-    hooks:
-      - id: pyupgrade
-        args: [--py37-plus, --keep-runtime-typing]
-
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.0-alpha.4
+  - repo: https://github.com/monosans/pre-commit-prettier
+    rev: v2.8.4
     hooks:
       - id: prettier
 
@@ -35,10 +25,11 @@ repos:
     hooks:
       - id: black
 
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.12.0
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.252
     hooks:
-      - id: isort
+      - id: ruff
+        args: [--fix]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.0.1
@@ -50,12 +41,3 @@ repos:
           - pywttr-models>=1.1,<2
           - pytest>=7.2,<8
           - types-requests>=2.28,<3
-
-  - repo: local
-    hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint
-        language: system
-        types: [python]
-        require_serial: true

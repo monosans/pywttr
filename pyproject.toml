@@ -10,7 +10,6 @@ keywords = ["forecast", "weather"]
 classifiers = [
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.7",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
@@ -23,17 +22,15 @@ requests = "^2.28"
 [tool.poetry.group.dev.dependencies]
 black = ">=22.12"
 covdefaults = "^2.2"
-isort = "^5.11"
 mypy = "^1.0"
 pre-commit = ">=2.21,<4"
 pydantic = "^1.10"
-pylint = "^2.15"
 pytest = "^7.2"
 pytest-cov = "^4.0"
+ruff = "^0.0.252"
 types-requests = "^2.28"
 
 [tool.black]
-line-length = 79
 target-version = ["py37"]
 skip-magic-trailing-comma = true
 preview = true
@@ -43,14 +40,6 @@ exclude_lines = ["@(abc.)?abstractmethod"]
 
 [tool.coverage.run]
 plugins = ["covdefaults"]
-
-[tool.isort]
-py_version = 37
-profile = "black"
-line_length = 79
-add_imports = ["from __future__ import annotations"]
-combine_as_imports = true
-combine_star = true
 
 [tool.mypy]
 python_version = "3.7"
@@ -76,56 +65,69 @@ init_typed = true
 warn_required_dynamic_aliases = true
 warn_untyped_fields = true
 
-[tool.pylint.main]
-extension-pkg-allow-list = "pydantic"
-
-# https://pylint.pycqa.org/en/stable/user_guide/checkers/extensions.html
-load-plugins = [
-    "pylint.extensions.check_elif",
-    "pylint.extensions.code_style",
-    "pylint.extensions.comparison_placement",
-    "pylint.extensions.confusing_elif",
-    "pylint.extensions.consider_refactoring_into_while_condition",
-    "pylint.extensions.consider_ternary_expression",
-    "pylint.extensions.dict_init_mutate",
-    "pylint.extensions.dunder",
-    "pylint.extensions.empty_comment",
-    "pylint.extensions.eq_without_hash",
-    "pylint.extensions.for_any_all",
-    "pylint.extensions.overlapping_exceptions",
-    "pylint.extensions.private_import",
-    "pylint.extensions.redefined_loop_name",
-    "pylint.extensions.redefined_variable_type",
-    "pylint.extensions.set_membership",
-    "pylint.extensions.typing",
-]
-
-persistent = false
-py-version = "3.7"
-recursive = true
-
-[tool.pylint.format]
-max-line-length = 79
-
-[tool.pylint."messages control"]
-disable = [
-    "consider-using-assignment-expr",
-    "consider-using-f-string",
-    "missing-class-docstring",
-    "missing-function-docstring",
-    "missing-module-docstring",
-    "too-few-public-methods",
-]
-
-[tool.pylint.reports]
-score = false
-
-[tool.pylint.string]
-check-str-concat-over-line-jumps = true
-
 [tool.pytest.ini_options]
 xfail_strict = true
-addopts = "--strict-markers --strict-config"
+addopts = ["--strict-markers", "--strict-config"]
+
+[tool.ruff]
+target-version = "py37"
+select = ["ALL"]
+ignore = [
+    "ANN",
+    "B008",
+    "BLE001",
+    "C901",
+    "COM",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D203",
+    "D205",
+    "D212",
+    "D213",
+    "D400",
+    "D401",
+    "D407",
+    "D415",
+    "D417",
+    "DJ008",
+    "ERA001",
+    "PD901",
+    "PLR0911",
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+    "PT012",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    "S110",
+    "S112",
+    "SIM105",
+    "TCH001",
+    "TCH002",
+    "TCH003",
+    "TID252",
+    "TRY400",
+]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.flake8-unused-arguments]
+ignore-variadic-names = true
+
+[tool.ruff.isort]
+combine-as-imports = true
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.pyupgrade]
+keep-runtime-typing = true
 
 [build-system]
 requires = ["poetry-core"]
