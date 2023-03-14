@@ -38,7 +38,7 @@ pre-commit = ">=2.21,<4"
 pydantic = "^1.10"
 pytest = "^7.2"
 pytest-cov = "^4.0"
-ruff = ">=0.0.252,<0.0.255"
+ruff = ">=0.0.252,<0.0.256"
 types-requests = "^2.28"
 
 [tool.black]
