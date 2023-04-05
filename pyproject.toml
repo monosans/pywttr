@@ -47,7 +47,7 @@ skip-magic-trailing-comma = true
 preview = true
 
 [tool.coverage.report]
-exclude_lines = ["@(abc.)?abstractmethod"]
+exclude_lines = ["^\\s*@(?:abc\\.)?abstractmethod$"]
 
 [tool.coverage.run]
 plugins = ["covdefaults"]
