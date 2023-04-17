@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any, Optional
 
 import pywttr_models
-from requests import Session
+from requests import Response, Session
 
 
 class Wttr:
@@ -120,15 +120,17 @@ class Wttr:
     def zh_tw(self) -> pywttr_models.zh_tw.Model:
         return pywttr_models.zh_tw.Model.parse_obj(self._get_json("zh-tw"))
 
-    def _fetch(self, lang: str, session: Session) -> Any:
+    def _get_json(self, lang: str) -> Any:
+        if isinstance(self.session, Session):
+            response = self._fetch(lang, self.session)
+        else:
+            with Session() as session:
+                response = self._fetch(lang, session)
+        response.raise_for_status()
+        return response.json()
+
+    def _fetch(self, lang: str, session: Session) -> Response:
         with session.get(
             f"https://wttr.in/{self.location}", params={"format": "j1", "lang": lang}
         ) as response:
-            response.raise_for_status()
-            return response.json()
-
-    def _get_json(self, lang: str) -> Any:
-        if isinstance(self.session, Session):
-            return self._fetch(lang, self.session)
-        with Session() as session:
-            return self._fetch(lang, session)
+            return response
