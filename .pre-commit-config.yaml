@@ -36,9 +36,9 @@ repos:
     rev: v1.2.0
     hooks:
       - id: mypy
-        args: []
+        args: ["--scripts-are-modules"]
         additional_dependencies:
-          - pydantic>=1.9,<2
-          - pywttr-models>=1.1,<2
-          - pytest>=7.2,<8
-          - types-requests>=2.28,<3
+          - pydantic<2
+          - pytest<8
+          - pywttr-models<2
+          - types-requests<3
