@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from requests import Session
 
-from pywttr import Wttr
+import pywttr
 
 
 def test_pywttr() -> None:
-    wttr = Wttr("Paris")
+    wttr = pywttr.Wttr("Paris")
     wttr.en()
     with Session() as session:
         wttr.session = session

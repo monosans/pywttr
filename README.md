@@ -20,9 +20,9 @@ python -m pip install pywttr
 This example prints the average temperature in New York today.
 
 ```python
-from pywttr import Wttr
+import pywttr
 
-wttr = Wttr("New York")
+wttr = pywttr.Wttr("New York")
 forecast = wttr.en()
 print(forecast.weather[0].avgtemp_c)
 ```
@@ -31,9 +31,9 @@ Other languages may also be used instead of `en`. For a complete list of support
 
 ## Documentation
 
-There is no documentation, just follow the code completion in your IDE.
+There is no documentation, just follow the example and code completion in your IDE.
 
-For an example of type annotations, see `pywttr-models` [README.md](https://github.com/monosans/pywttr-models#usage-for-type-annotation).
+All types of objects returned by the wttr.in API are in the `pywttr.models` package.
 
 ## Recommended IDEs
 
