@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.2.0] - 2023-04-22
+
+- Reexport models from pywttr-models.
+
 ## [2.1.0] - 2022-11-26
 
 - Add support for Galician language.
