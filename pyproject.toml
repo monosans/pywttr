@@ -39,7 +39,7 @@ pydantic = "1.10.7"
 pytest = "7.3.1"
 pytest-cov = "4.0.0"
 ruff = "0.0.263"
-types-requests = "2.28.11.17"
+types-requests = "2.29.0.0"
 
 [tool.black]
 target-version = ["py37"]
