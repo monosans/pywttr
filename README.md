@@ -1,8 +1,6 @@
 # pywttr
 
-[![CI](https://github.com/monosans/pywttr/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/monosans/pywttr/actions/workflows/ci.yml?query=event%3Apush+branch%3Amain)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/monosans/pywttr/main.svg)](https://results.pre-commit.ci/latest/github/monosans/pywttr/main)
-[![Coverage](https://img.shields.io/codecov/c/github/monosans/pywttr/main?logo=codecov)](https://codecov.io/gh/monosans/pywttr)
+[![CI](https://github.com/monosans/pywttr/actions/workflows/ci.yml/badge.svg)](https://github.com/monosans/pywttr/actions/workflows/ci.yml)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/pywttr?logo=pypi)](https://pypi.org/project/pywttr/)
 
 Wrapper for [wttr.in](https://wttr.in) weather forecast API.

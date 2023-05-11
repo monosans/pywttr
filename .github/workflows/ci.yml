@@ -5,8 +5,11 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
-  pytest:
+  run-pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,8 +24,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
-      - run: poetry install
-      - run: poetry run pytest --cov --cov-report=xml
-      - uses: codecov/codecov-action@v3
-        with:
-          files: ./coverage.xml
+      - run: poetry install --sync --no-root --no-interaction
+      - run: poetry run --no-interaction coverage run -m pytest
+      - run: poetry run --no-interaction coverage report
+  run-pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pipx run pre-commit run --all-files
