@@ -38,7 +38,7 @@ pre-commit = "2.21.0"
 pydantic = "1.10.7"
 pytest = "7.3.1"
 coverage = { version = "7.2.5", extras = ["toml"] }
-ruff = "0.0.267"
+ruff = "0.0.269"
 types-requests = "2.30.0.0"
 
 [tool.black]
