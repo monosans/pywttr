@@ -1,7 +1,7 @@
 # pywttr
 
 [![CI](https://github.com/monosans/pywttr/actions/workflows/ci.yml/badge.svg)](https://github.com/monosans/pywttr/actions/workflows/ci.yml)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/pywttr?logo=pypi)](https://pypi.org/project/pywttr/)
+[![Downloads](https://static.pepy.tech/badge/pywttr)](https://pepy.tech/project/pywttr)
 
 Wrapper for [wttr.in](https://wttr.in) weather forecast API.
 
