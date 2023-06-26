@@ -33,7 +33,7 @@ requests = "^2.28"
 [tool.poetry.group.dev.dependencies]
 black = "23.3.0"
 covdefaults = "2.3.0"
-mypy = "1.4.0"
+mypy = "1.4.1"
 pre-commit = "2.21.0"
 pydantic = "1.10.9"
 pytest = "7.4.0"
