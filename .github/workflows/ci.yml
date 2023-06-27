@@ -25,8 +25,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: poetry
       - run: poetry install --sync --no-root --no-interaction
-      - run: poetry run --no-interaction coverage run -m pytest
-      - run: poetry run --no-interaction coverage report
+      - run: poetry run --no-interaction pytest --cov
   run-pre-commit:
     runs-on: ubuntu-latest
     steps:
