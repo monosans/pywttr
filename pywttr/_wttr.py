@@ -11,7 +11,9 @@ class Wttr:
 
     __slots__ = ("location", "session")
 
-    def __init__(self, location: str, session: Optional[Session] = None) -> None:
+    def __init__(
+        self, location: str, session: Optional[Session] = None
+    ) -> None:
         self.location = location
         self.session = session
 
@@ -131,6 +133,7 @@ class Wttr:
 
     def _fetch(self, lang: str, session: Session) -> Response:
         with session.get(
-            f"https://wttr.in/{self.location}", params={"format": "j1", "lang": lang}
+            f"https://wttr.in/{self.location}",
+            params={"format": "j1", "lang": lang},
         ) as response:
             return response
