@@ -38,7 +38,7 @@ pre-commit = "2.21.0"
 pydantic = "1.10.10"
 pytest = "7.4.0"
 pytest-cov = "4.1.0"
-ruff = "0.0.275"
+ruff = "0.0.276"
 types-requests = "2.31.0.1"
 
 [tool.black]
