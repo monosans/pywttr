@@ -1,4 +1,4 @@
 mkdocs==1.4.3
 mkdocs-material==9.1.18
 mkdocstrings[python]==0.22.0
-pywttr-models==1.1.0
+pywttr-models==1.1.1
