@@ -7,7 +7,19 @@ from requests import Response, Session
 
 
 class Wttr:
-    """Wrapper for wttr.in weather forecast API."""
+    """Wrapper for wttr.in weather forecast API.
+
+    Examples:
+        Prints the average temperature in New York today:
+
+        ```python
+        >>> import pywttr
+        >>>
+        >>> wttr = pywttr.Wttr("New York")
+        >>> forecast = wttr.en()
+        >>> print(forecast.weather[0].avgtemp_c)
+        ```
+    """
 
     __slots__ = ("location", "session")
 

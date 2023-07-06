@@ -41,6 +41,14 @@ pytest-cov = "4.1.0"
 ruff = "0.0.277"
 types-requests = "2.31.0.1"
 
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "1.4.3"
+mkdocs-material = "9.1.18"
+mkdocstrings = { version = "0.22.0", extras = ["python"] }
+
 [tool.black]
 target-version = ["py37"]
 line-length = 80
