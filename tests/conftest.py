@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 import pytest
-from pydantic import BaseConfig, Extra
+
+try:
+    from pydantic.v1 import BaseConfig, Extra
+except ImportError:
+    from pydantic import BaseConfig, Extra  # type: ignore[assignment]
 
 
 @pytest.fixture(autouse=True)
