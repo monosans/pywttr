@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.2.1] - 2023-07-06
+
+- Add documentation.
+
 ## [2.2.0] - 2023-04-22
 
 - Reexport models from pywttr-models.
