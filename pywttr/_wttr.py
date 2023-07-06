@@ -13,11 +13,11 @@ class Wttr:
         Prints the average temperature in New York today:
 
         ```python
-        >>> import pywttr
-        >>>
-        >>> wttr = pywttr.Wttr("New York")
-        >>> forecast = wttr.en()
-        >>> print(forecast.weather[0].avgtemp_c)
+        import pywttr
+
+        wttr = pywttr.Wttr("New York")
+        forecast = wttr.en()
+        print(forecast.weather[0].avgtemp_c)
         ```
     """
 
