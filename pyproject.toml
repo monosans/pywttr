@@ -6,6 +6,7 @@ authors = ["monosans <hsyqixco@protonmail.com>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/monosans/pywttr"
+documentation = "https://pywttr.readthedocs.io/"
 keywords = ["forecast", "weather"]
 classifiers = [
     "Environment :: Web Environment",
