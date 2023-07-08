@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.2.2] - 2023-07-08
+
+- Lower minimum required Python version from 3.7.2 to 3.7.
+
 ## [2.2.1] - 2023-07-06
 
 - Add documentation.
