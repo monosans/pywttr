@@ -15,7 +15,7 @@ python -m pip install -U pywttr pywttr-models
 
 ## Documentation
 
-<https://pywttr.readthedocs.io/>
+<https://pywttr.readthedocs.io>
 
 ## License
 
