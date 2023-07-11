@@ -4,20 +4,16 @@ repo_name: monosans/pywttr
 edit_uri: edit/main/docs/
 nav:
   - index.md
-  - installation.md
+  - install.md
   - api.md
   - api_models.md
 theme:
   name: material
   features:
     - content.action.edit
-    - content.action.view
     - content.code.copy
-    - content.tabs.link
     - navigation.footer
-    - navigation.indexes
     - navigation.top
-    - navigation.tracking
     - toc.follow
   font: false
   icon:
