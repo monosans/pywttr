@@ -6,7 +6,7 @@ nav:
   - index.md
   - install.md
   - api.md
-  - api_models.md
+  - api-models.md
 theme:
   name: material
   features:
