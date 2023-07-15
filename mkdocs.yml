@@ -54,13 +54,15 @@ plugins:
       default_handler: python
       handlers:
         python:
+          import:
+            - https://docs.pydantic.dev/latest/objects.inv
           options:
             filters:
               - "!^_(?:[^_].*[^_]|_(?:all|doc|main|module|new|slots)__)$"
-            inherited_members: true
             members_order: source
             merge_init_into_class: true
             preload_modules:
+              - pydantic.v1
               - pywttr_models
             show_category_heading: true
             show_if_no_docstring: true
