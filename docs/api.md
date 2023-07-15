@@ -1,3 +1,3 @@
-# API Reference for pywttr
+# API Reference
 
 ::: pywttr
