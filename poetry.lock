@@ -374,13 +374,13 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "griffe"
-version = "0.35.0"
+version = "0.35.1"
 description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "griffe-0.35.0-py3-none-any.whl", hash = "sha256:52b1dc86dfca6db5877d65a07997f8363f61f14266064cf1cae41b70aac9f395"},
-    {file = "griffe-0.35.0.tar.gz", hash = "sha256:d313f102da3d155fe0a3d284acb0fc93059ee6788903a2e983eb4f64a713fac1"},
+    {file = "griffe-0.35.1-py3-none-any.whl", hash = "sha256:ff580073a71793cc58ed1fad696aee49c4bd9e637d3e0cde5b39a269ad8e59e4"},
+    {file = "griffe-0.35.1.tar.gz", hash = "sha256:1e3bf605344ab32fe2729161bb4f7761996684f838dfd5a7c60af03a0b20375f"},
 ]
 
 [package.dependencies]
@@ -954,13 +954,13 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4)", "pytest-co
 
 [[package]]
 name = "pluggy"
-version = "1.2.0"
+version = "1.3.0"
 description = "plugin and hook calling mechanisms for python"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "pluggy-1.2.0-py3-none-any.whl", hash = "sha256:c2fd55a7d7a3863cba1a013e4e2414658b1d07b6bc57b3919e0c63c9abb99849"},
-    {file = "pluggy-1.2.0.tar.gz", hash = "sha256:d12f0c4b579b15f5e054301bb226ee85eeeba08ffec228092f8defbaa3a4c4b3"},
+    {file = "pluggy-1.3.0-py3-none-any.whl", hash = "sha256:d89c696a773f8bd377d18e5ecda92b7a3793cbe66c87060a6fb58c7b6e1061f7"},
+    {file = "pluggy-1.3.0.tar.gz", hash = "sha256:cf61ae8f126ac6f7c451172cf30e3e43d3ca77615509771b3a984a0730651e12"},
 ]
 
 [package.extras]
