@@ -62,7 +62,6 @@ plugins:
             members_order: source
             merge_init_into_class: true
             preload_modules:
-              - pydantic.v1
               - pywttr_models
             show_category_heading: true
             show_if_no_docstring: true
