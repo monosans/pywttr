@@ -6,7 +6,7 @@ from requests import Session
 import pywttr
 
 pytestmark = pytest.mark.filterwarnings(
-    "ignore::aiopywttr.WttrClassDeprecationWarning"
+    "ignore::pywttr.WttrClassDeprecationWarning"
 )
 
 
