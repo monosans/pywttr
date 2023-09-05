@@ -348,13 +348,13 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "griffe"
-version = "0.36.0"
+version = "0.36.1"
 description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "griffe-0.36.0-py3-none-any.whl", hash = "sha256:4235df397b7b56192cbfda601e458526279bdaf3bf1f59d0be368abac72bf42d"},
-    {file = "griffe-0.36.0.tar.gz", hash = "sha256:ccf062126041d19cc4d9850ca46a555a656e738f5e83feb78f36b05fec5974ad"},
+    {file = "griffe-0.36.1-py3-none-any.whl", hash = "sha256:859b653fcde0a0af0e841a0109bac2b63a2f683132ae1ec8dae5fa81e94617a0"},
+    {file = "griffe-0.36.1.tar.gz", hash = "sha256:11df63f1c85f605c73e4485de70ec13784049695d228241b0b582364a20c0536"},
 ]
 
 [package.dependencies]
@@ -1059,28 +1059,29 @@ six = ">=1.5"
 
 [[package]]
 name = "pytz"
-version = "2023.3"
+version = "2023.3.post1"
 description = "World timezone definitions, modern and historical"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pytz-2023.3-py2.py3-none-any.whl", hash = "sha256:a151b3abb88eda1d4e34a9814df37de2a80e301e68ba0fd856fb9b46bfbbbffb"},
-    {file = "pytz-2023.3.tar.gz", hash = "sha256:1d8ce29db189191fb55338ee6d0387d82ab59f3d00eac103412d64e0ebd0c588"},
+    {file = "pytz-2023.3.post1-py2.py3-none-any.whl", hash = "sha256:ce42d816b81b68506614c11e8937d3aa9e41007ceb50bfdcb0749b921bf646c7"},
+    {file = "pytz-2023.3.post1.tar.gz", hash = "sha256:7b4fddbeb94a1eba4b557da24f19fdf9db575192544270a9101d8509f9f43d7b"},
 ]
 
 [[package]]
 name = "pywttr-models"
-version = "1.1.1"
-description = "Pydantic models for pywttr and aiopywttr"
+version = "1.2.2"
+description = "Pydantic models and other stuff for pywttr and aiopywttr"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.8,<4.0"
 files = [
-    {file = "pywttr_models-1.1.1-py3-none-any.whl", hash = "sha256:451d1c27f2632922bf68c09e65d02d618400ca925f13db0a8f08d7d9198e5867"},
-    {file = "pywttr_models-1.1.1.tar.gz", hash = "sha256:8f38fc863af482e3dec7ac6a9121c856f53ec5459e594eacb6f9971a275232de"},
+    {file = "pywttr_models-1.2.2-py3-none-any.whl", hash = "sha256:a800589fc89f9b1486ae34a1755e2a0d65d121a9953708923a3350032cbdf8e6"},
+    {file = "pywttr_models-1.2.2.tar.gz", hash = "sha256:b15d9610d6fafef3502973fdae26d8929b8cf15930ff9740dcf5982344533b11"},
 ]
 
 [package.dependencies]
 pydantic = ">=1.9,<3"
+typing-extensions = ">=4.0,<5.0"
 
 [[package]]
 name = "pyyaml"
