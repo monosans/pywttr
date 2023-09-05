@@ -93,7 +93,6 @@ warn_untyped_fields = true
 
 [tool.pytest.ini_options]
 addopts = ["--strict-config", "--strict-markers"]
-filterwarnings = ["ignore::pywttr.WttrClassDeprecationWarning"]
 xfail_strict = true
 
 [tool.ruff]

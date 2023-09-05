@@ -5,6 +5,10 @@ from requests import Session
 
 import pywttr
 
+pytestmark = pytest.mark.filterwarnings(
+    "ignore::aiopywttr.WttrClassDeprecationWarning"
+)
+
 
 @pytest.mark.parametrize("language", pywttr.Language)
 def test_wttr(
