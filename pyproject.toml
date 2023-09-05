@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pywttr"
-version = "2.2.2"
+version = "2.3.0"
 description = "Wrapper for wttr.in weather API"
 license = "MIT"
 authors = ["monosans <hsyqixco@protonmail.com>"]
