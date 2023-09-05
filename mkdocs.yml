@@ -44,6 +44,7 @@ extra:
       link: https://linkedin.com/in/monosans
       name: Developer's LinkedIn
 markdown_extensions:
+  - admonition
   - pymdownx.superfences
   - toc:
       permalink: true
@@ -56,6 +57,7 @@ plugins:
         python:
           import:
             - https://docs.pydantic.dev/latest/objects.inv
+            - https://docs.python.org/3/objects.inv
           options:
             filters:
               - "!^_(?:[^_].*[^_]|_(?:all|doc|main|module|new|slots)__)$"

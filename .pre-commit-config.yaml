@@ -41,3 +41,4 @@ repos:
           - pytest<8
           - pywttr-models<2
           - types-requests<3
+          - typing-extensions<5

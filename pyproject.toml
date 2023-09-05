@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "pywttr"
 version = "2.2.2"
-description = "Wrapper for wttr.in API"
+description = "Wrapper for wttr.in weather API"
 license = "MIT"
 authors = ["monosans <hsyqixco@protonmail.com>"]
 readme = "README.md"
 repository = "https://github.com/monosans/pywttr"
 documentation = "https://pywttr.readthedocs.io"
-keywords = ["forecast", "weather"]
+keywords = ["forecast"]
 classifiers = [
   "Environment :: Web Environment",
   "Framework :: Pydantic :: 1",
@@ -28,8 +28,9 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-pywttr-models = "^1.1"
+pywttr-models = "^1.2"
 requests = "^2.28"
+typing-extensions = "^4.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "23.7.0"
@@ -50,7 +51,7 @@ mkdocs = "1.5.2"
 mkdocs-material = "9.2.8"
 mkdocs-minify-html-plugin = "0.1.0"
 mkdocstrings = "0.23.0"
-mkdocstrings-python = "1.6.1"
+mkdocstrings-python = "1.6.2"
 
 [tool.black]
 line-length = 80
@@ -63,6 +64,7 @@ exclude_lines = ["^\\s*@(?:abc\\.)?abstractmethod$"]
 
 [tool.coverage.run]
 plugins = ["covdefaults"]
+source = [".", "pywttr_models"]
 
 [tool.mypy]
 python_version = "3.8"
@@ -151,7 +153,7 @@ target-version = "py38"
 "tests/*" = ["S101"]
 
 [tool.ruff.flake8-self]
-ignore-names = []
+ignore-names = ["_model_", "_name_", "_value_"]
 
 [tool.ruff.flake8-unused-arguments]
 ignore-variadic-names = true
