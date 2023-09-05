@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [2.3.0]
+
+- Add a new more flexible and simpler API consisting of `pywttr.get_weather` function and `pywttr.Language` enum. The old `pywttr.Wttr` API still works, but is marked deprecated.
+
 ## [2.2.2] - 2023-07-08
 
 - Lower minimum required Python version from 3.7.2 to 3.7.
