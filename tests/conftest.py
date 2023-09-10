@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Iterator
 
+import pydantic.v1 as pydantic
 import pytest
-from pydantic.v1 import BaseConfig, Extra
 from requests import Session
 
 
@@ -20,6 +20,6 @@ def location() -> str:
 
 @pytest.fixture(autouse=True)
 def _pydantic_strict(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(BaseConfig, "extra", Extra.forbid)
-    monkeypatch.setattr(BaseConfig, "validate_all", True)
-    monkeypatch.setattr(BaseConfig, "validate_assignment", True)
+    monkeypatch.setattr(pydantic.BaseConfig, "extra", pydantic.Extra.forbid)
+    monkeypatch.setattr(pydantic.BaseConfig, "validate_all", True)
+    monkeypatch.setattr(pydantic.BaseConfig, "validate_assignment", True)
