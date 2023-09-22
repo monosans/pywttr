@@ -602,13 +602,13 @@ mkdocs = ">=1.1"
 
 [[package]]
 name = "mkdocs-material"
-version = "9.3.2"
+version = "9.4.0"
 description = "Documentation that simply works"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocs_material-9.3.2-py3-none-any.whl", hash = "sha256:f2fd5cef6f0266b4caad6414f31c6a51e3183dbdd341995ad8fa7f33bc998c3d"},
-    {file = "mkdocs_material-9.3.2.tar.gz", hash = "sha256:7b3a35a7731af02d70d120224fcec053ce09bebbf83dff3366ab72abc4d5fc89"},
+    {file = "mkdocs_material-9.4.0-py3-none-any.whl", hash = "sha256:b9f1bb8bf3377fa1b7edd34276b1923928c39b2d4a56543af0e811f0cfe59085"},
+    {file = "mkdocs_material-9.4.0.tar.gz", hash = "sha256:492108aae369c12af21af2b14160f9bd5c0d6d7da28055877a74a554a704a671"},
 ]
 
 [package.dependencies]
@@ -616,8 +616,8 @@ babel = ">=2.10,<3.0"
 colorama = ">=0.4,<1.0"
 jinja2 = ">=3.0,<4.0"
 markdown = ">=3.2,<4.0"
-mkdocs = ">=1.5,<2.0"
-mkdocs-material-extensions = ">=1.1,<2.0"
+mkdocs = ">=1.5.3,<2.0"
+mkdocs-material-extensions = ">=1.2,<2.0"
 paginate = ">=0.5,<1.0"
 pygments = ">=2.16,<3.0"
 pymdown-extensions = ">=10.2,<11.0"
@@ -1481,4 +1481,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "9fb6822a09a8f6dc1bed36a45769c21c89fe6fc25e0ddb350e887a60697085e5"
+content-hash = "40eb7f3686684d0a322ec6a46b3b16417bf1efc1216b7993c6a204ef2d52d9fc"
