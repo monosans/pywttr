@@ -14,7 +14,6 @@ Examples:
     print(weather.weather[0].avgtemp_c)
     ```
 """
-
 from __future__ import annotations
 
 import pywttr_models as models
