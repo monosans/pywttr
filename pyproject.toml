@@ -61,13 +61,13 @@ source = [".", "pywttr_models"]
 
 [tool.mypy]
 python_version = "3.8"
+platform = "linux"
 disallow_subclassing_any = false
 disallow_untyped_calls = false
 disallow_untyped_decorators = false
 warn_unreachable = true
 local_partial_types = true
 enable_error_code = [
-  "explicit-override",
   "redundant-self",
   "redundant-expr",
   "possibly-undefined",
@@ -75,6 +75,7 @@ enable_error_code = [
   "truthy-iterable",
   "ignore-without-code",
   "unused-awaitable",
+  "explicit-override",
 ]
 strict = true
 plugins = ["pydantic.mypy"]
@@ -169,4 +170,5 @@ keep-runtime-typing = true
 
 [build-system]
 requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 build-backend = "poetry.core.masonry.api"
