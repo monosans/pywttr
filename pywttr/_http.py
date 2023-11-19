@@ -10,7 +10,7 @@ def get_json(location: str, language: str, session: Optional[Session]) -> Any:
     if isinstance(session, Session):
         response = fetch(location, language, session)
     else:
-        with Session() as session:
+        with Session() as session:  # noqa: PLR1704
             response = fetch(location, language, session)
     response.raise_for_status()
     return response.json()
