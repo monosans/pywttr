@@ -2,13 +2,15 @@ from __future__ import annotations
 
 from enum import auto
 
+import pytest
 from pywttr_models._strenum import StrEnum
 
 
-def test_generate_next_value() -> None:
-    class Foo(StrEnum):
-        BAR = auto()
-        baz = auto()
+class Foo(StrEnum):
+    BAR = auto()
+    baz = auto()
 
-    for member in Foo:
-        assert member.name == member.value
+
+@pytest.mark.parametrize("member", Foo)
+def test_generate_next_value(member: Foo) -> None:
+    assert member._name_ == member._value_ == str(member)
