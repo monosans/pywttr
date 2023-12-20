@@ -24,6 +24,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
+          check-latest: true
       - run: poetry install --sync --no-root --no-interaction
       - run: poetry run --no-interaction pytest --cov
   run-pre-commit:
