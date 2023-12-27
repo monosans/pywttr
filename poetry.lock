@@ -449,41 +449,6 @@ files = [
 ]
 
 [[package]]
-name = "minify-html"
-version = "0.11.5"
-description = "Extremely fast and smart HTML + JS + CSS minifier"
-optional = false
-python-versions = "*"
-files = [
-    {file = "minify_html-0.11.5-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:d7e0ebd50389c6641b97b7d45a909d5cd589ac6192bb854d64f31a485a85b5d8"},
-    {file = "minify_html-0.11.5-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:c9f886f91b1adcbf0094f3bfdafac889aab1cebdf1bed0905c3aec28e117b061"},
-    {file = "minify_html-0.11.5-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:10ace3647764425ee106d884ba6affc2b3c2d07eed8e23a99df5499587b4ce5e"},
-    {file = "minify_html-0.11.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b14528ecafba4e370eba1a380d9c5f577a9b09ca6595afe796762407a11f199f"},
-    {file = "minify_html-0.11.5-cp310-none-win_amd64.whl", hash = "sha256:54f975cae24848906f4635fb43e7e40fbdc4d19edaadaf4695cc5e33bbeb92f1"},
-    {file = "minify_html-0.11.5-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:ff739f134681c19f3346d7a4847af295e2eab28cee5fb3e9224400cabd1029bc"},
-    {file = "minify_html-0.11.5-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:76b22e8d720d111a80b9dd5fdfc36189d85f57f0de650468fa20bf015baff9f6"},
-    {file = "minify_html-0.11.5-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e5c13059c6b72d84b0d943b7d844e5043b3d2fc6394c5e9e8ff4fb5fd5617f8a"},
-    {file = "minify_html-0.11.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ad2dff69a6be45751c3505c7ac10aa8e373aedaac1d652945ebd33afaa981caf"},
-    {file = "minify_html-0.11.5-cp311-none-win_amd64.whl", hash = "sha256:9184492ec19d1eb9db201336f6068d20c074e3aace2d94137e37536fdaa8a6b2"},
-    {file = "minify_html-0.11.5-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:bac0e2b27a110a31f467e8a70ba0fb32ab4cce89790784c8934b6becae64b69d"},
-    {file = "minify_html-0.11.5-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:1d6bd52991434a543fe7bb24940a5b524dc079748029f150fefe849b55eaf8b8"},
-    {file = "minify_html-0.11.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:450dde6354b67dc29aff29b3ba76f0ab10b9cd571070b8cdfb5121e1a51f2db2"},
-    {file = "minify_html-0.11.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7e3649423ef9cabe46849cc65fa5fadc973a5aa7c0c08de52415c785547fd0d9"},
-    {file = "minify_html-0.11.5-cp312-none-win_amd64.whl", hash = "sha256:1165a62aba5eb025c9764f6d32343ccc42acb3c969ed6bf606a4bcc08a87d3ed"},
-    {file = "minify_html-0.11.5-cp38-cp38-macosx_10_12_x86_64.whl", hash = "sha256:f9fb51e1e589588cc0e3c3ec0bc1fb86008379b0d4ea98b2f5a27d27500a1124"},
-    {file = "minify_html-0.11.5-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:2fa8433ce12bd91cce352af1674b8a5593b72a890b77480c2081da35f6a7e879"},
-    {file = "minify_html-0.11.5-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0a09d9e4e14b7fccd0ed4e679f78253e543a485aa6e518c254ebd48881b9ae6d"},
-    {file = "minify_html-0.11.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c697597c3a2712dca9c8ec8aebeee95ccef3e24933cec23c43fdc7faf6efd2ae"},
-    {file = "minify_html-0.11.5-cp38-none-win_amd64.whl", hash = "sha256:9e068425130ac62d2169505a5f7aba0acc79b2ceea96722610fed6a1e96d5245"},
-    {file = "minify_html-0.11.5-cp39-cp39-macosx_10_12_x86_64.whl", hash = "sha256:d07f91c75ff8ac869ced192acef9792fbd02cf17438ba9827b5515ac52beee91"},
-    {file = "minify_html-0.11.5-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:291cb2917a007ed64168c45f8f260ba969d49251e54c6f740e738634e058fa7d"},
-    {file = "minify_html-0.11.5-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f0de7a3d5d482cd8091fd4366548a792a1290e88f1ca4588a732a874a4742157"},
-    {file = "minify_html-0.11.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8823751aeac129eccdb2cc48e37bc20765e09141b0d85645805df8920a1b82b7"},
-    {file = "minify_html-0.11.5-cp39-none-win_amd64.whl", hash = "sha256:981a9d14904e6cf38b5981a5a33cbd66175545d35597da3b558fe61d0133f505"},
-    {file = "minify_html-0.11.5.tar.gz", hash = "sha256:ac3c9a252d7bb778f82d7020fd95915232d3758d436b6a5654981142d941ed67"},
-]
-
-[[package]]
 name = "mkdocs"
 version = "1.5.3"
 description = "Project documentation with Markdown."
@@ -571,18 +536,159 @@ files = [
 
 [[package]]
 name = "mkdocs-minify-html-plugin"
-version = "0.1.0"
-description = "MkDocs plugin for minification using minify-html, an extremely fast HTML + JS + CSS minifier"
+version = "0.2.0"
+description = "MkDocs plugin for minification using minify-html, an extremely fast and smart HTML + JS + CSS minifier"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.7"
 files = [
-    {file = "mkdocs_minify_html_plugin-0.1.0-py3-none-any.whl", hash = "sha256:8730ca027adc7d226397e22bf27995b64461db0d8b980552d933c9e9d625aca7"},
-    {file = "mkdocs_minify_html_plugin-0.1.0.tar.gz", hash = "sha256:926082d8df480bc224bba7ac414b9280e198f8ddef718bb49735e6b1bd4ba31d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:2edc9cfa1388628bc88dfbaa11475e5e23efe6a05ced79aa9d477219846cc01b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:9a86815d024a58a32e876703d9a0500868bf213dd5eb843e66dee42a6a6e85ae"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:2e8250e8b1dfde7c076a8900c9ac1b4d8543bee728478b8fb030285a970008a0"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d18a812778c52df914de85b83068417da9f779f2cf01f081c4572d286fc3f276"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:dec3dd72990b48a080b8fdd67c8de7255e5073ad056350873d4ffb1aa02efb7c"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e666f9dfd2e34f2178c815762234840cc1240207dff5bc50a2fad87b03603df0"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:471b20573e676f84a60d5a6c9a2c5c4e162cf02b1fb9414c36a508d42d092192"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fd365eb01e8119a2aaa2be359fcdb1db172429b26f41a675e3f1eb308d2bdfda"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:9c42b8c3c7c4012d1677db4631c76cf7855b6bdd73e56812b9ebc5df60c790b7"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:6b00fbc2bfa3e9a3cb00cfd662c8c0297a8062197ef8a197d1b0bb48dc7515b5"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-musllinux_1_2_armv7l.whl", hash = "sha256:b60c7a55e50a64a77367bdace83a09f1024893fb7189fb39bd5d4e7d7f18ac07"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:ff448c85123e222876e1f6dea41f56d0cdf9622989c08a014fe71afbc8f401d0"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:55a3cf4a3aa638ae482b46cd46d30ed9d3c02e706b845852d890b19473a72e3a"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-none-win32.whl", hash = "sha256:a0bdeb66892bb26530f2e6ac3493ae0f89ea053d52825f17eba68f025138348b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp310-none-win_amd64.whl", hash = "sha256:f45ccf377ee938094f2b6aa68b2d901928111a64ad144523045cf06d322a9e48"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:ca45e3527135ccd5def8a6536edca831fa2fde6447d7795433671a1c388cd381"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:4f042e56b8a275a46bc5bf86e6c241b3eecc8f4d4e22a0786fd69bbfcc360768"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bd4178caa0c40d028c6d16aadd3f2b7f3cdcd1a335831d45bbfb8bef5260e1a1"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:8967fa7e55a509c1c2c757f5ef9580b7cdf0a050d8f6efe712413d39244b42e0"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:7495d6a242e1ac704e78f6103438c36b6914a52515380023e5df5ce9a6de0512"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e7089427e2986eddeb0e5ae920de8bc8a03f84fc1f26a1a9268858fe7992170c"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:65b6aac3a6d7dd140b3b248ac9eee8c9be39625aabecef31e2d29d48453af144"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f6aaa0a6e55253a645db75a1e43eef1181c7d71cc8573ae60dea148b30cdd450"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:c3adeb87b1a29c1fd8c28cf016d9866b47708be62db5a1b08551252c64141927"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:400be865b92f2bd5ffcd5533a5e94ad5e1bc23b9b64f54184377dc02c9a8dda1"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-musllinux_1_2_armv7l.whl", hash = "sha256:6415a1dfa6a0a3748f36604d2636e048b07e7ddcf19c3afa77e2b8b8717f4366"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:4323fdd8ebdcd96f8e936e993b70c236e33d08b937789d0ebfaf31d067286fe7"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:ed87a4ebc52018ebbcc6759cbd3c5e50b17fdf32a00be92548ca2c18252ae76c"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-none-win32.whl", hash = "sha256:323981a0e698042382ceaadbd337bc10c34e34dbae6b576244d48dd7a81052c1"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp311-none-win_amd64.whl", hash = "sha256:79f1c566991226421f5e37ca4477015275a5253d6fbb041b91705fd76006606a"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:7c5631d35473de3a29656e43372177c5e2d0e14201caf1fe241f00a7099b22bd"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:56057f609561bf9187d912d42935590e5ad48e28d5a97e05593f7b439d58a120"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5ceb1140c3f9b1df245c842d806c3efa78a403583d350dc7c2c8560d0efb606f"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:6a79c555ebe7c8fcd2ad7760eb2e5abc915b46836315ba8a9556525e246a58b4"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:5789d5e34c2168a23795dbc0c92c58c33d0413270df9be2331498ee5510f6c81"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:213b59b09513047e784821ac3964f3bade161db7ae1272e71818df990dd948a8"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:3f70081d839786444cbaa53c6bc2c8951142cb6cb24ccc05670d4954aed95587"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d6a18fcc4d8a89085cbd88e00833ce468c84a9dc450b3a675fd0c1398d914aee"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:6b6b8b0b3801934b8d2ad653decce14596c91f6b37af41d33c99befc1ad51cdb"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:b2e8451b5aa6af402d14a5fa534f670d375100f67b0a20d14afae39a9ba551c4"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:107d577ac13cad58a024498054d79c908333a1fd0076beb06e3d1ea4ec37b70b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:6da87ca4f361509e23b6956705557edc06356138957f039f8115d8727aebf585"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:d1ab43e91da05dd8ab6d58eefbdac48a1fb7500f3476c260e6a7f1aff3dffe9b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-none-win32.whl", hash = "sha256:54514aac203cec2c3c713d0677f7dd6252379d0ddfd04aabf4776e471821a046"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp312-none-win_amd64.whl", hash = "sha256:83c30b024452b38f245a0a07031f08edbb6918a2b8fa48e3a0a70f3e40f214fc"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-macosx_10_12_x86_64.whl", hash = "sha256:1ff110deac660e9c93d71ed2f2db6e36d9dca82cb6caa5874d62f1e3aea08e59"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-macosx_11_0_arm64.whl", hash = "sha256:d7e1387ce19d92fb1efe0d2f276f1d2c15a627142da36d33686c9f00d4539975"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e44ffe476b70f15fdf39fe49e343c6b671daf6d5035c709b18fc8cd26a91d7d8"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:163866f5ed950377cc4e8966fd02d457a04a21c2363131d9517df4ba4b8e938b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:e6a7263df7e69f8178bc180f7a6344b40e2bd8a472fdaf622b0964999bff7ede"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:3bf7f02489ad73bf65af2af22eb93dce1aed7e2c591b5106bc9b39f8c13bea2b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:482f1a5a3453b856ccb16963b8e4ebb0198bf368d8366056ee528e7cb3014eb1"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d587333897b6d6789cd4ac9fc4ae129a9f397168795b7820f4c5dd75dd384d60"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:95c9affa504b1834a5eca120d692a1837f86baa1426bfc3a6696e1ab32324e9a"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-musllinux_1_2_aarch64.whl", hash = "sha256:582c8c3d2c2b5c08d8daa0ff23dcc8d164be6b897dfe16ef4db03724af432bb8"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-musllinux_1_2_armv7l.whl", hash = "sha256:2119247b506cb7f17bd020c15a89eb4a53e7e7b23c391b24d6755373ec66a69a"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-musllinux_1_2_i686.whl", hash = "sha256:62fa31edfc0c4c52d0dd2ad0d4f1f86c5baf422d9b45209c1faa8f266cb9ba68"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-cp37m-musllinux_1_2_x86_64.whl", hash = "sha256:855e8d627fc29ecf57734001aed0062e2262766e6a771011d157e54a6385909c"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-none-win32.whl", hash = "sha256:c55c34bbe8d60936b48ca976bf56b4efee8b941ab54bc6b1d1c5dcd686e206d9"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp37-none-win_amd64.whl", hash = "sha256:6a90753d5a527966ebe9fafbc88baca9bb8c070266d8718b1da9a088f072be01"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-macosx_10_12_x86_64.whl", hash = "sha256:9dabea4093f728601514a3fa7bc6935f92bbd85512b5e122a7dcc1e18ae42c9e"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:43aee4c010f3dc1fc1676537e44bef90219353c6708c8e80636369fa24bcc30b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:32fbc73c78a12c6561992ad63589229d71b636279f5a86b3b695d70310c952cd"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:c149c4f8a4896dc1b576b1df43a7a799745763ec2493de47a4761c77c32b1e2d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:e7845761bb40750c12e63776fc3e19dab5cfcb539ebd67363a68634803967fd0"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:af68016c5b7bb4dd50e2f568cc7c1d0550f87800f68fe21e6dfa17b20ede18aa"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:8e5e26336e603b378e384448d687a1ea9dc17b5164065ac79a1132a37a801871"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7f2aead64c17735fc4085db6a93c5d4c4ff7a7f441bfeabc800f983e8adf5d35"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:e28ca3a903865a1294d3f0c335376d6cf339684d18b3f6cb43c9fb9917a7b902"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-musllinux_1_2_aarch64.whl", hash = "sha256:70c8cd321bb5fc8b08970165f2021468ea323ceb7cd1191c88e181d2db41ae5f"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-musllinux_1_2_armv7l.whl", hash = "sha256:3b7bc49465740087d43ed6e15275aca98d6e8e2b9f4702d2696b9e6ced5b84f5"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-musllinux_1_2_i686.whl", hash = "sha256:ef3413e28a9a57ab0a0d7870c394504f4737012b3c822d2cdef9153121235731"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-cp38-musllinux_1_2_x86_64.whl", hash = "sha256:0aff4098440ab0bed516f231ef99cd19ea9d9071c4ab9ad8f2680c09564b3d1d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-none-win32.whl", hash = "sha256:167330afb898c5d17d720e9a39308b14c95a24c20f50c1056bdc25012b222d22"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp38-none-win_amd64.whl", hash = "sha256:ed230d3f9192992a88771c7d3cd362b04e3e96b02d2db22071175ffda1ec0205"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-macosx_10_12_x86_64.whl", hash = "sha256:6895cf69443b53baf7f2fa923a0e6a169a88c06a8e9b6ef38191730b01b105af"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:10a02a7beda29a9033c9351dc75f8a12baaaf770bc96ddcdf7250619fcf7df7b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e8331dd692655e0f403bb1ac87fd21ef37d4da80232a9618a6a9ea3e8bfcac9b"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:fe9a58161287a24ca7bc7e4c09a2adcbb982d471f64604c04ce2b9fe4e0a9b42"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:26f8373a5ca9fe3325def6d431fc371df80e691b2b7488c2e15d95906fef2349"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:fa93ed259b4d27f85bb156d3e403f721efe07f624c30bac9dfdb90a197f1bad1"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:3b900c4eebdb4bbdfadfbbc1bb4e104449d387cb89f19042140cc558215f367e"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5a877731b808d29dfd41afbeb4859206cc4f85a56a2849a5a80c2bfe23688b50"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:467e11e1700636864b8b8b5b4265836042046f8365ee2532e6a412d4a8802ca8"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-musllinux_1_2_aarch64.whl", hash = "sha256:686a5342f422187a39ee168a4c0d7d7c026c6e3a0ab71e986d9073db099650c8"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-musllinux_1_2_armv7l.whl", hash = "sha256:d69ea4e9b8219546398ce77c8c6a479b19f9f20cd71328388d6152ca479c3b79"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-musllinux_1_2_i686.whl", hash = "sha256:b6b520424c0339a72e5dfef12ce81054b039c702d9446c6934020a13b77d5b48"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:f710798726b9ed9aad5b2af00fb00596267649803756eb5b8b0987f4aaa98982"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-none-win32.whl", hash = "sha256:c4dc31d4e542eff5053f0169f9fdbb3bab044167399bd66189a2cc735ce4acba"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-cp39-none-win_amd64.whl", hash = "sha256:a314a444556b826681ed94603e2021b02dd43e5c591e43daaaf81329b805bb19"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-macosx_10_12_x86_64.whl", hash = "sha256:add8bf162a178f688973e438b57e80190efea8fdf46fc0ab1e7c9662ca5ad488"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:cc5fa63937cc24d8af6160f069c4a4fa51261d216608a2e78422566c65493ed4"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:282bc0c65f345ef2074b85da168498cf7ce92095591995d625649529133ab2ee"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:74f2ba0ab3a66c05eb79708afacb7f05972cc7080fc3f8ec15cdadeb4a8273ee"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:3975c163c9d08428520e78b1615a432a0dfa1d4c4981270c2753ed08ba766c24"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:52d647dc6af39e6c901330ccb9b5c1ff0e843add80cf1489113367e61f8bf239"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:7d194962f25da9c2744cf44d16f102f01514db3b2e67b1709bcf4efbfbf89b63"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:44ccc375ebb25fafb1b3480a26eed4b340b395d75a1ffa3fb177c1cad486bd16"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:428384b6ee3e0bc07d410a1f54eb5f0a8da9a23e82e6d989fa8723ed98c54ce4"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-musllinux_1_2_aarch64.whl", hash = "sha256:1ca4622368379a4936f0e929330d5acff4b0c2719752d5d2839a92086b533a50"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-musllinux_1_2_armv7l.whl", hash = "sha256:79a120c6b20c4f690167ffa56af6c6de1e4b1b619f000b2148ee9df53a48b94a"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-musllinux_1_2_i686.whl", hash = "sha256:4cfdc0aa3157cc67e5015c98745a0e7d952e83736f73ff38382d7cb211558b47"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp310-pypy310_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:08e140368b59701f39bd77f14a3ccd6b42e3f4fb7544ea6b9e8cc41b96b99444"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-macosx_10_12_x86_64.whl", hash = "sha256:27c05bdb53bfbffe9b9f1f720bb32a9920a73a917e51307ec20d67f86f3ba2fe"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-macosx_11_0_arm64.whl", hash = "sha256:1ac1dec5fca6eb07ededc4d0ddf2728b7f4866e8e4634876320c8a6164b10a65"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9b92946c715fa9f4e3e333eec9597012744519de34c18ca951d16da7393aefa3"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:408fdd471705dd447a7ba6754928d6b553bad11cd04444e1553eeac9a0450881"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:658b222ec0b3a874462b1504ca0db699a111baf128019930eb4f35f7e3a22996"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:cc920a4cb6ecab3b7aa988b158577a19af89620863c3de0a862b36144c994b20"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:e6721109c477cfe5119c0ce1d9c2cba5775b6c46400d5e2add685162b77139bb"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:de7a47f63f247492de3cf0e1d939c68a8ea7aa999e41d587b6ea36449f3e9246"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:33378e1de973587e9a7208c4bf8c76c9049c0a6fcc1a4047787ad14a96ed755f"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-musllinux_1_2_aarch64.whl", hash = "sha256:0d40092aa07d8ea2eaf0bf9f9fa512014342bd13295c160cd4c04a901c67df98"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-musllinux_1_2_armv7l.whl", hash = "sha256:81e68a07b3281bdb6966dad2d321e6c090a03d728ff0b808d514b6dedd30a141"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-musllinux_1_2_i686.whl", hash = "sha256:35ef0abc551e2afa363fb021a668727ef735e4fddefd9892edd45f03318dee3e"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp37-pypy37_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:a7465a245e2020ecec37607bc448b21ed0faff6de62c9841853aa5cbe9d2c35d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-macosx_10_12_x86_64.whl", hash = "sha256:fa3baed1f73ed3356e657faa09b09220ceee6309699ab6469b037ecaebd86766"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-macosx_11_0_arm64.whl", hash = "sha256:e050d7dc008071e2d9f99c0dd450bbd840f8d700e28a56a75f85d47192b57a5d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ebdf15d1963103928e202bef70e50f40056164703a3a428803f2002175b7e4ba"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:f4f09bf1550ff8244b83573f012b5f33927568d47ab9f3b49c45c4fb1e9e8463"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:710a3371d867858fd0c2b541aec1ec07f4d837a19ef1c719a1789d4d7b502231"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:087824d0baef16233d6a5a0f7470c95add4cf158ad59d289a8436c037972231d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:049f7c479b3ccb358d2f06eae1c34470b6c91cc854b131be6df81ae692116bf9"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f73e4422dd61c744b13d7aea9bda3f60c7dd51a2b2d7b40e56f7dc19917cb385"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:1025a7a2430c34f32552291b09b032456565de64923414887ae8d039379c41aa"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-musllinux_1_2_aarch64.whl", hash = "sha256:5b2bf4adc2b759fbc8c5233410c5de572588091bc548f2bd71d3b54a5865326a"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-musllinux_1_2_armv7l.whl", hash = "sha256:043871b47c27bf8bd15dcb342c9e6e360d97c1aeb30c9b02f8e88fc013b78dd5"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-musllinux_1_2_i686.whl", hash = "sha256:3191b55b77b0c81aff891f6325a0681156801e34ab1c592148ba41e92ba4c808"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp38-pypy38_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:edcf9b43082d52404e46e80dc5d77e34241eafc70377da7279cc386d3b762636"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-macosx_10_12_x86_64.whl", hash = "sha256:b20575ba1b2437c3ad784de5bf15ee1f068bd8efb88c39ea93af12aa79e068ff"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-macosx_11_0_arm64.whl", hash = "sha256:7fdd75d90014079f58e423bdfd6328fd8eed0ac9f26f3e9ccc9659ac0bce6948"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:62138a7f62ce79fe60e27c8ad2cb88972b67798580362f1d2a7db948444ac390"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d0691f4299919cedc4f53e61513e08f28017f2d56ea1b57270294f0530fbe860"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:3fea5ec544b8dc6115ea5b62829f39bc71595e65116b9f1caf9770a9998923ff"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:6e6ebd68c7bff9d2aedf95cfc051999ac5c8df23325a9b0340bac39b3832b4ab"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:b160fc7242465f4137975048b812b74f08a771e21baa2d9c9198525399875104"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c359950d3c180e451da1ad277e3a849b16166dd1f2eaeaff9f30a058990c82a7"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:5394bbfe62b11c639e781bae8b5776c88184d9d6538efc00f57cff84a3d9a72d"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-musllinux_1_2_aarch64.whl", hash = "sha256:2c71ea960a23333fe4c766c45cf35ffc3ea41af70cdfa4895581a6724e17e1ca"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-musllinux_1_2_armv7l.whl", hash = "sha256:450afd3047aced79202eb2ac2a19220c204af1a99ce2a07ce6d727835e333f90"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-musllinux_1_2_i686.whl", hash = "sha256:59540bddadab718ece9a7c1bf22d09177fdd964cb507c4a93ed09586d8678d10"},
+    {file = "mkdocs_minify_html_plugin-0.2.0-pp39-pypy39_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:276fc95a4b3acbfc1737b6bb20af160f7c1daa739a4bc9d4a829efc607ed7379"},
+    {file = "mkdocs_minify_html_plugin-0.2.0.tar.gz", hash = "sha256:e4a3279a42a5bdec9f0aee797c2598f6090127c00549acb51b1c40589dac3f30"},
 ]
 
 [package.dependencies]
-minify-html = ">=0.6.8,<0.12"
-mkdocs = ">=1.4,<2.0"
+mkdocs = ">=1.4,<2"
+typing-extensions = ">=4.4,<5"
 
 [[package]]
 name = "mkdocstrings"
@@ -1353,4 +1459,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "03402627586b7ba919fce0b009e299177cd9c7b841134b99d08c2722880f0136"
+content-hash = "b0a81b79f058b67ca08e9751a6104b7611dafc5eff544b16a10112dd9f9593ba"
