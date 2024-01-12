@@ -94,7 +94,7 @@ class Wttr:
     def ia(self) -> pywttr_models.ia.Model:
         return get_weather(self.location, Language.IA, session=self.session)
 
-    def id(self) -> pywttr_models.id.Model:  # noqa: A003
+    def id(self) -> pywttr_models.id.Model:
         return get_weather(self.location, Language.ID, session=self.session)
 
     def it(self) -> pywttr_models.it.Model:
