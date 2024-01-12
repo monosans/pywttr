@@ -64,8 +64,11 @@ plugins:
             merge_init_into_class: true
             preload_modules:
               - pywttr_models
-            show_category_heading: true
+            separate_signature: true
             show_if_no_docstring: true
             show_signature_annotations: true
             show_source: false
             show_submodules: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
