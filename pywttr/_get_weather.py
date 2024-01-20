@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Optional
 
 import pywttr_models
-from pywttr_models._language import Language
+from pywttr_models._language import Language  # noqa: PLC2701
 from requests import Session
 from typing_extensions import Literal, overload
 
