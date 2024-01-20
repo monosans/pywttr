@@ -18,15 +18,15 @@ Examples:
 from __future__ import annotations
 
 import pywttr_models as models
-from pywttr_models._language import Language
+from pywttr_models._language import Language  # noqa: PLC2701
 
 from ._get_weather import get_weather
 from ._wttr import Wttr, WttrClassDeprecationWarning
 
 __all__ = (
-    "models",
     "Language",
-    "get_weather",
     "Wttr",
     "WttrClassDeprecationWarning",
+    "get_weather",
+    "models",
 )

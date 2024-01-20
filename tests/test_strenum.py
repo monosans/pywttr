@@ -3,7 +3,7 @@ from __future__ import annotations
 from enum import auto
 
 import pytest
-from pywttr_models._strenum import StrEnum
+from pywttr_models._strenum import StrEnum  # noqa: PLC2701
 
 
 class Foo(StrEnum):
