@@ -3,4 +3,4 @@ mkdocs-material==9.5.4
 mkdocs-minify-html-plugin==0.2.0
 mkdocstrings==0.24.0
 mkdocstrings-python==1.8.0
-pywttr-models==1.2.3
+pywttr-models==1.2.4
