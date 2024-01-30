@@ -35,11 +35,11 @@ typing-extensions = "^4.5"
 [tool.poetry.group.dev.dependencies]
 covdefaults = "2.3.0"
 mypy = "1.8.0"
-pydantic = "2.5.3"
+pydantic = "2.6.0"
 pytest = "8.0.0"
 pytest-cov = "4.1.0"
 pytest-rerunfailures = "13.0"
-ruff = "0.1.14"
+ruff = "0.1.15"
 types-requests = "2.31.0.20240125"
 
 [tool.poetry.group.docs]
