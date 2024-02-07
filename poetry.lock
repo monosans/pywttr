@@ -1037,21 +1037,6 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
 [[package]]
-name = "pytest-rerunfailures"
-version = "13.0"
-description = "pytest plugin to re-run tests to eliminate flaky failures"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "pytest-rerunfailures-13.0.tar.gz", hash = "sha256:e132dbe420bc476f544b96e7036edd0a69707574209b6677263c950d19b09199"},
-    {file = "pytest_rerunfailures-13.0-py3-none-any.whl", hash = "sha256:34919cb3fcb1f8e5d4b940aa75ccdea9661bade925091873b7c6fa5548333069"},
-]
-
-[package.dependencies]
-packaging = ">=17.1"
-pytest = ">=7"
-
-[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -1437,4 +1422,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "cbbe6135fa4b395a9a4188f99c30bb7fadeb4597cdc2f92798ad8f8401ea1742"
+content-hash = "71b5e4ad3eb1fa8bda9cd27d813937f4f8cc37ae4bafc504f5dbc0797c63482a"
