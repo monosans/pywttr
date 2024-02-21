@@ -34,8 +34,7 @@ repos:
         args:
           - --scripts-are-modules
         additional_dependencies:
-          - pydantic<3
-          - pytest<8
+          - pytest<9
           - pywttr-models<2
-          - types-requests<3
-          - typing-extensions<5
+          - types-requests
+          - typing-extensions
