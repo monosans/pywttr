@@ -41,7 +41,7 @@ covdefaults = "2.3.0"
 mypy = "1.9.0"
 pytest = "8.1.1"
 pytest-cov = "4.1.0"
-ruff = "0.3.2"
+ruff = "0.3.3"
 types-requests = "2.31.0.20240311"
 
 [tool.poetry.group.docs]
@@ -49,7 +49,7 @@ optional = true
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "1.5.3"
-mkdocs-material = "9.5.13"
+mkdocs-material = "9.5.14"
 mkdocs-minify-html-plugin = "0.2.1"
 mkdocstrings = "0.24.1"
 mkdocstrings-python = "1.9.0"
