@@ -264,13 +264,13 @@ toml = ["tomli"]
 
 [[package]]
 name = "exceptiongroup"
-version = "1.2.0"
+version = "1.2.1"
 description = "Backport of PEP 654 (exception groups)"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "exceptiongroup-1.2.0-py3-none-any.whl", hash = "sha256:4bfd3996ac73b41e9b9628b04e079f193850720ea5945fc96a08633c66912f14"},
-    {file = "exceptiongroup-1.2.0.tar.gz", hash = "sha256:91f5c769735f051a4290d52edd0858999b57e5876e9f85937691bd4c9fa3ed68"},
+    {file = "exceptiongroup-1.2.1-py3-none-any.whl", hash = "sha256:5258b9ed329c5bbdd31a309f53cbfb0b155341807f6ff7606a1e801a891b29ad"},
+    {file = "exceptiongroup-1.2.1.tar.gz", hash = "sha256:a4785e48b045528f5bfe627b6ad554ff32def154f42372786903b7abcfe1aa16"},
 ]
 
 [package.extras]
@@ -295,13 +295,13 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "griffe"
-version = "0.42.2"
+version = "0.43.0"
 description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "griffe-0.42.2-py3-none-any.whl", hash = "sha256:bf9a09d7e9dcc3aca6a2c7ab4f63368c19e882f58c816fbd159bea613daddde3"},
-    {file = "griffe-0.42.2.tar.gz", hash = "sha256:d5547b7a1a0786f84042379a5da8bd97c11d0464d4de3d7510328ebce5fda772"},
+    {file = "griffe-0.43.0-py3-none-any.whl", hash = "sha256:5966a0d0d6b9189945765903703fb9fb8f7818640facd255c2a0867662137619"},
+    {file = "griffe-0.43.0.tar.gz", hash = "sha256:b8c0a938db1d74840c6a76da5b3d8754ea680c6f43efab33958e28b95d3031d3"},
 ]
 
 [package.dependencies]
@@ -997,17 +997,17 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "pymdown-extensions"
-version = "10.7.1"
+version = "10.8"
 description = "Extension pack for Python Markdown."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pymdown_extensions-10.7.1-py3-none-any.whl", hash = "sha256:f5cc7000d7ff0d1ce9395d216017fa4df3dde800afb1fb72d1c7d3fd35e710f4"},
-    {file = "pymdown_extensions-10.7.1.tar.gz", hash = "sha256:c70e146bdd83c744ffc766b4671999796aba18842b268510a329f7f64700d584"},
+    {file = "pymdown_extensions-10.8-py3-none-any.whl", hash = "sha256:3539003ff0d5e219ba979d2dc961d18fcad5ac259e66c764482e8347b4c0503c"},
+    {file = "pymdown_extensions-10.8.tar.gz", hash = "sha256:91ca336caf414e1e5e0626feca86e145de9f85a3921a7bcbd32890b51738c428"},
 ]
 
 [package.dependencies]
-markdown = ">=3.5"
+markdown = ">=3.6"
 pyyaml = "*"
 
 [package.extras]
