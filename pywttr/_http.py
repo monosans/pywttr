@@ -18,6 +18,8 @@ def get_json(location: str, language: str, session: Optional[Session]) -> Any:
 
 def fetch(location: str, language: str, session: Session) -> Response:
     with session.get(
-        f"https://wttr.in/{location}", params={"format": "j1", "lang": language}
+        f"https://wttr.in/{location}",
+        params={"format": "j1", "lang": language},
+        headers={"Accept": "application/json"},
     ) as response:
         return response
