@@ -49,8 +49,7 @@ types-requests = "2.32.0.20240523"
 optional = true
 
 [tool.poetry.group.docs.dependencies]
-mkdocs = "1.5.3"
-mkdocs-material = "9.5.18"
+mkdocs-material = "9.5.24"
 mkdocs-minify-html-plugin = "0.2.2"
 mkdocstrings = "0.25.1"
 mkdocstrings-python = "1.10.3"
