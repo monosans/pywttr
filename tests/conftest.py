@@ -13,7 +13,7 @@ def http_session() -> Iterator[Session]:
         yield s
 
 
-@pytest.fixture()
+@pytest.fixture
 def location() -> str:
     return "Paris"
 
