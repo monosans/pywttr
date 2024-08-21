@@ -11,6 +11,5 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      - run: curl -LsSf https://astral.sh/uv/install.sh | sh
-      - run: uv tool run poetry build --no-interaction
+      - run: pipx run poetry build --no-interaction
       - uses: pypa/gh-action-pypi-publish@release/v1
