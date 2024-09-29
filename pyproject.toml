@@ -41,7 +41,6 @@ covdefaults = "2.3.0"
 mypy = "1.11.2"
 pytest = "8.3.3"
 pytest-cov = "5.0.0"
-pytest-rerunfailures = "14.0"
 ruff = "0.6.8"
 types-requests = "2.32.0.20240914"
 
