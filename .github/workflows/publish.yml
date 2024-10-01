@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: pipx run poetry build --no-interaction
       - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          attestations: true
