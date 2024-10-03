@@ -15,18 +15,14 @@ jobs:
       matrix:
         python-version:
           - "3.8"
-          - 3.x
+          - "3.12"
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
-      - run: pipx install poetry
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v3
         with:
-          python-version: ${{ matrix.python-version }}
-          cache: poetry
-          check-latest: true
-      - run: poetry install --sync --no-root --no-interaction
-      - run: poetry run --no-interaction pytest --cov
+          enable-cache: true
+      - run: uv run --frozen --python ${{ matrix.python-version }} pytest
   run-pre-commit:
     runs-on: ubuntu-latest
     steps:

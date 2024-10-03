@@ -1,54 +1,58 @@
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.poetry]
+[project]
 name = "pywttr"
 version = "2.3.0"
 description = "Wrapper for wttr.in weather API"
-license = "MIT"
-authors = ["monosans <hsyqixco@protonmail.com>"]
 readme = "README.md"
-repository = "https://github.com/monosans/pywttr"
-documentation = "https://pywttr.readthedocs.io"
 keywords = ["forecast"]
+license = { text = "MIT" }
+authors = [{ name = "monosans", email = "hsyqixco@protonmail.com" }]
+requires-python = ">=3.8"
 classifiers = [
   "Environment :: Web Environment",
-  "Framework :: Pydantic :: 1",
   "Framework :: Pydantic",
+  "Framework :: Pydantic :: 1",
+  "Framework :: Pydantic :: 2",
   "Intended Audience :: Developers",
   "Intended Audience :: Information Technology",
   "Natural Language :: English",
   "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python",
-  "Topic :: Internet :: WWW/HTTP",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Topic :: Internet",
-  "Topic :: Software Development :: Libraries :: Python Modules",
-  "Topic :: Software Development :: Libraries",
+  "Topic :: Internet :: WWW/HTTP",
   "Topic :: Software Development",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
   "Typing :: Typed",
 ]
+dependencies = [
+  "pywttr-models>=1.2,<2",
+  "requests>=2.26",
+  "typing-extensions>=4.5",
+]
+urls.documentation = "https://pywttr.readthedocs.io"
+urls.repository = "https://github.com/monosans/pywttr"
 
-[tool.poetry.dependencies]
-python = "^3.8"
-pywttr-models = "^1.2"
-requests = ">=2.26"
-typing-extensions = ">=4.5"
-
-[tool.poetry.group.dev.dependencies]
-covdefaults = "2.3.0"
-mypy = "1.11.2"
-pytest = "8.3.3"
-pytest-cov = "5.0.0"
-ruff = "0.6.8"
-types-requests = "2.32.0.20240914"
-
-[tool.poetry.group.docs]
-optional = true
-
-[tool.poetry.group.docs.dependencies]
-mkdocs-material = "9.5.39"
-mkdocs-minify-html-plugin = "0.2.3"
-mkdocstrings = "0.26.1"
-mkdocstrings-python = "1.11.1"
+[tool.uv]
+dev-dependencies = [
+  "covdefaults==2.3.0",
+  "mkdocs-material==9.5.39",
+  "mkdocs-minify-html-plugin==0.2.3",
+  "mkdocstrings==0.26.1",
+  "mkdocstrings-python==1.11.1",
+  "mypy==1.11.2",
+  "pytest==8.3.3",
+  "pytest-cov==5.0.0",
+  "ruff==0.6.8",
+  "types-requests==2.32.0.20240914",
+]
