@@ -35,6 +35,9 @@ dependencies = [
 urls.documentation = "https://pywttr.readthedocs.io"
 urls.repository = "https://github.com/monosans/pywttr"
 
+[tool.hatch.build.targets.sdist]
+include = ["pywttr"]
+
 [tool.uv]
 dev-dependencies = [
   "covdefaults==2.3",
