@@ -980,14 +980,14 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "covdefaults", specifier = "==2.3.0" },
+    { name = "covdefaults", specifier = "==2.3" },
     { name = "mkdocs-material", specifier = "==9.5.39" },
     { name = "mkdocs-minify-html-plugin", specifier = "==0.2.3" },
     { name = "mkdocstrings", specifier = "==0.26.1" },
     { name = "mkdocstrings-python", specifier = "==1.11.1" },
     { name = "mypy", specifier = "==1.11.2" },
     { name = "pytest", specifier = "==8.3.3" },
-    { name = "pytest-cov", specifier = "==5.0.0" },
+    { name = "pytest-cov", specifier = "==5" },
     { name = "ruff", specifier = "==0.6.8" },
     { name = "types-requests", specifier = "==2.32.0.20240914" },
 ]
