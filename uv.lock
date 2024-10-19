@@ -270,7 +270,7 @@ name = "importlib-metadata"
 version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "zipp" },
+    { name = "zipp", marker = "python_full_version < '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cd/12/33e59336dca5be0c398a7482335911a33aa0e20776128f038019f1a95f1b/importlib_metadata-8.5.0.tar.gz", hash = "sha256:71522656f0abace1d072b9e5481a48f07c138e00f079c38c8f883823f9c26bd7", size = 55304 }
 wheels = [
@@ -608,16 +608,16 @@ wheels = [
 
 [[package]]
 name = "mkdocstrings-python"
-version = "1.12.1"
+version = "1.12.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "griffe" },
     { name = "mkdocs-autorefs" },
     { name = "mkdocstrings" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/61/19/7b186a49a957611270d6c4fc156face8748cf98680a40c00b5b0b7008fe1/mkdocstrings_python-1.12.1.tar.gz", hash = "sha256:60d6a5ca912c9af4ad431db6d0111ce9f79c6c48d33377dde6a05a8f5f48d792", size = 168014 }
+sdist = { url = "https://files.pythonhosted.org/packages/23/ec/cb6debe2db77f1ef42b25b21d93b5021474de3037cd82385e586aee72545/mkdocstrings_python-1.12.2.tar.gz", hash = "sha256:7a1760941c0b52a2cd87b960a9e21112ffe52e7df9d0b9583d04d47ed2e186f3", size = 168207 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/65/e8/3cf3467fb8e31f68bfc8a2bfd5f4891c1eaa584b0c62b76c783d24d1901d/mkdocstrings_python-1.12.1-py3-none-any.whl", hash = "sha256:205244488199c9aa2a39787ad6a0c862d39b74078ea9aa2be817bc972399563f", size = 111657 },
+    { url = "https://files.pythonhosted.org/packages/5b/c1/ac524e1026d9580cbc654b5d19f5843c8b364a66d30f956372cd09fd2f92/mkdocstrings_python-1.12.2-py3-none-any.whl", hash = "sha256:7f7d40d6db3cb1f5d19dbcd80e3efe4d0ba32b073272c0c0de9de2e604eda62a", size = 111759 },
 ]
 
 [[package]]
@@ -915,7 +915,7 @@ dev = [
     { name = "mkdocs-material", specifier = "==9.5.41" },
     { name = "mkdocs-minify-html-plugin", specifier = "==0.2.3" },
     { name = "mkdocstrings", specifier = "==0.26.2" },
-    { name = "mkdocstrings-python", specifier = "==1.12.1" },
+    { name = "mkdocstrings-python", specifier = "==1.12.2" },
     { name = "mypy", specifier = "==1.12.0" },
     { name = "pytest", specifier = "==8.3.3" },
     { name = "pytest-cov", specifier = "==5" },
