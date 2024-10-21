@@ -29,6 +29,7 @@ ignore = [
   "D417",
   "DJ008",
   "DOC201",
+  "DOC402",
   "DOC501",
   "FURB180",
   "ISC001",
@@ -53,11 +54,13 @@ ignore = [
   "TCH001",
   "TCH002",
   "TCH003",
+  "TD002",
+  "TD003",
   "TID252",
   "TRY400",
 ]
 select = ["ALL"]
-unfixable = ["T"]
+unfixable = ["RUF027", "T"]
 
 [lint.per-file-ignores]
 "tests/*" = ["FBT001", "S101"]
@@ -66,8 +69,10 @@ unfixable = ["T"]
 ignore-names = ["_model_", "_name_", "_value_"]
 
 [lint.flake8-type-checking]
+exempt-modules = []
 runtime-evaluated-base-classes = ["pydantic.BaseModel", "pydantic.RootModel"]
 runtime-evaluated-decorators = ["pydantic.validate_call"]
+strict = true
 
 [lint.isort]
 combine-as-imports = true
