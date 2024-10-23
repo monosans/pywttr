@@ -44,7 +44,7 @@ dev-dependencies = [
   "mkdocs-minify-html-plugin==0.2.3",
   "mkdocstrings==0.26.2",
   "mkdocstrings-python==1.12.2",
-  "mypy==1.12.1",
+  "mypy==1.13.0",
   "pytest==8.3.3",
   "pytest-cov==5",
   "ruff==0.7.0",
