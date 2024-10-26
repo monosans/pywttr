@@ -270,7 +270,7 @@ name = "importlib-metadata"
 version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "zipp" },
+    { name = "zipp", marker = "python_full_version < '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cd/12/33e59336dca5be0c398a7482335911a33aa0e20776128f038019f1a95f1b/importlib_metadata-8.5.0.tar.gz", hash = "sha256:71522656f0abace1d072b9e5481a48f07c138e00f079c38c8f883823f9c26bd7", size = 55304 }
 wheels = [
@@ -948,18 +948,20 @@ dependencies = [
     { name = "typing-extensions" },
 ]
 
-[package.dev-dependencies]
+[package.dependency-groups]
 dev = [
     { name = "covdefaults" },
-    { name = "mkdocs-material" },
-    { name = "mkdocs-minify-html-plugin" },
-    { name = "mkdocstrings" },
-    { name = "mkdocstrings-python" },
     { name = "mypy", extra = ["faster-cache"] },
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "ruff" },
     { name = "types-requests" },
+]
+docs = [
+    { name = "mkdocs-material" },
+    { name = "mkdocs-minify-html-plugin" },
+    { name = "mkdocstrings" },
+    { name = "mkdocstrings-python" },
 ]
 
 [package.metadata]
@@ -969,18 +971,20 @@ requires-dist = [
     { name = "typing-extensions", specifier = ">=4.5" },
 ]
 
-[package.metadata.requires-dev]
+[package.metadata.dependency-groups]
 dev = [
     { name = "covdefaults", specifier = "==2.3" },
-    { name = "mkdocs-material", specifier = "==9.5.42" },
-    { name = "mkdocs-minify-html-plugin", specifier = "==0.2.3" },
-    { name = "mkdocstrings", specifier = "==0.26.2" },
-    { name = "mkdocstrings-python", specifier = "==1.12.2" },
     { name = "mypy", extras = ["faster-cache"], specifier = "==1.13" },
     { name = "pytest", specifier = "==8.3.3" },
     { name = "pytest-cov", specifier = "==5" },
     { name = "ruff", specifier = "==0.7.1" },
     { name = "types-requests", specifier = "==2.32.0.20241016" },
+]
+docs = [
+    { name = "mkdocs-material", specifier = "==9.5.42" },
+    { name = "mkdocs-minify-html-plugin", specifier = "==0.2.3" },
+    { name = "mkdocstrings", specifier = "==0.26.2" },
+    { name = "mkdocstrings-python", specifier = "==1.12.2" },
 ]
 
 [[package]]
