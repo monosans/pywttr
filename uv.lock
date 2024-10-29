@@ -948,7 +948,7 @@ dependencies = [
     { name = "typing-extensions" },
 ]
 
-[package.dependency-groups]
+[package.dev-dependencies]
 dev = [
     { name = "covdefaults" },
     { name = "mypy", extra = ["faster-cache"] },
@@ -971,7 +971,7 @@ requires-dist = [
     { name = "typing-extensions", specifier = ">=4.5" },
 ]
 
-[package.metadata.dependency-groups]
+[package.metadata.requires-dev]
 dev = [
     { name = "covdefaults", specifier = "==2.3" },
     { name = "mypy", extras = ["faster-cache"], specifier = "==1.13" },
