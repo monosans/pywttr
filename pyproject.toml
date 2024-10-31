@@ -34,15 +34,12 @@ dependencies = [
 urls.documentation = "https://pywttr.readthedocs.io"
 urls.repository = "https://github.com/monosans/pywttr"
 
-[tool.hatch.build.targets.sdist]
-include = ["pywttr"]
-
 [dependency-groups]
 dev = [
   "covdefaults==2.3",
   "mypy[faster-cache]==1.13",
   "pytest==8.3.3",
-  "pytest-cov==6.0.0",
+  "pytest-cov==6",
   "ruff==0.7.1",
   "types-requests==2.32.0.20241016",
 ]
@@ -52,3 +49,6 @@ docs = [
   "mkdocstrings==0.26.2",
   "mkdocstrings-python==1.12.2",
 ]
+
+[tool.hatch.build.targets.sdist]
+include = ["pywttr"]
