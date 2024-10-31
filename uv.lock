@@ -976,7 +976,7 @@ dev = [
     { name = "covdefaults", specifier = "==2.3" },
     { name = "mypy", extras = ["faster-cache"], specifier = "==1.13" },
     { name = "pytest", specifier = "==8.3.3" },
-    { name = "pytest-cov", specifier = "==6.0.0" },
+    { name = "pytest-cov", specifier = "==6" },
     { name = "ruff", specifier = "==0.7.1" },
     { name = "types-requests", specifier = "==2.32.0.20241016" },
 ]
