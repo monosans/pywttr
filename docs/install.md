@@ -3,5 +3,5 @@
 The latest version can be installed with the following command:
 
 ```bash
-python -m pip install -U pywttr pywttr-models
+pip install -U pywttr pywttr-models
 ```

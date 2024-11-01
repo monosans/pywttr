@@ -10,7 +10,7 @@ Asynchronous version [here](https://github.com/monosans/aiopywttr).
 ## Installation
 
 ```bash
-python -m pip install -U pywttr pywttr-models
+pip install -U pywttr pywttr-models
 ```
 
 ## Documentation
