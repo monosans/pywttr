@@ -44,7 +44,7 @@ dev = [
   "types-requests==2.32.0.20241016",
 ]
 docs = [
-  "mkdocs-material==9.5.43",
+  "mkdocs-material==9.5.44",
   "mkdocs-minify-html-plugin==0.2.3",
   "mkdocstrings==0.26.2",
   "mkdocstrings-python==1.12.2",
