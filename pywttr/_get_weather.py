@@ -7,7 +7,7 @@ from pywttr_models._language import Language  # noqa: PLC2701
 from requests import Session
 from typing_extensions import Literal, overload
 
-from ._http import get_json
+from pywttr._http import get_json
 
 
 @overload
