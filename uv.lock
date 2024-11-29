@@ -986,7 +986,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "pywttr-models", specifier = ">=1.2,<2" },
+    { name = "pywttr-models", specifier = ">=2,<3" },
     { name = "requests", specifier = ">=2.26" },
     { name = "typing-extensions", specifier = ">=4.5" },
 ]
@@ -1009,15 +1009,15 @@ docs = [
 
 [[package]]
 name = "pywttr-models"
-version = "1.2.4"
+version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d8/00/994ba3a68033996cbb97ee6bdb57e25d1d5fc5b68054f3e9e0ca94689432/pywttr_models-1.2.4.tar.gz", hash = "sha256:772e01b69a259c95975048a7f029270e6eff8e659dfd74f82503baff9d1301ff", size = 6574 }
+sdist = { url = "https://files.pythonhosted.org/packages/7e/90/71eacb56493fefae117271e2b79c519a60c6cdcf97b27ef30c462dd7c6cf/pywttr_models-2.0.0.tar.gz", hash = "sha256:231f739f13a85faa26181dcaeb6a8623ec292c20aa3f93f20b1703bc6c62006a", size = 8207 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4d/5c/acce35ce003c20f3741a27ae25395e56d3d0b94c0071838dbf931ac5c987/pywttr_models-1.2.4-py3-none-any.whl", hash = "sha256:22a6edcbc30a4368cdfeb76f0afa33c32094ec8ded847f64c5c57c776b40bd0f", size = 17450 },
+    { url = "https://files.pythonhosted.org/packages/7e/cd/9f89f1b3f4879e0cc6b342318ea2fca5fa2df238d80beb6c05ef120b79b7/pywttr_models-2.0.0-py3-none-any.whl", hash = "sha256:d384e84e598c46f78868198743a54ea119c02e9e6dfc0cd7a21b74dacf130af8", size = 16556 },
 ]
 
 [[package]]

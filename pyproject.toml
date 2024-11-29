@@ -27,7 +27,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 dependencies = [
-  "pywttr-models>=1.2,<2",
+  "pywttr-models>=2,<3",
   "requests>=2.26",
   "typing-extensions>=4.5",
 ]
