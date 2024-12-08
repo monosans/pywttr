@@ -4,7 +4,6 @@ requires = ["hatchling"]
 
 [project]
 name = "pywttr"
-version = "2.3.0"
 description = "Wrapper for wttr.in weather API"
 readme = "README.md"
 keywords = ["forecast"]
@@ -26,11 +25,8 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Typing :: Typed",
 ]
-dependencies = [
-  "pywttr-models>=1.2,<2",
-  "requests>=2.26",
-  "typing-extensions>=4.5",
-]
+dynamic = ["version"]
+dependencies = ["pywttr-models>=2,<3", "requests>=2.24", "typing-extensions>=4"]
 urls.documentation = "https://pywttr.readthedocs.io"
 urls.repository = "https://github.com/monosans/pywttr"
 
@@ -44,6 +40,7 @@ dev = [
   "types-requests==2.32.0.20241016",
 ]
 docs = [
+  "black==24.10",
   "mkdocs-material==9.5.47",
   "mkdocs-minify-html-plugin==0.2.3",
   "mkdocstrings==0.27",
@@ -52,3 +49,6 @@ docs = [
 
 [tool.hatch.build.targets.sdist]
 include = ["pywttr"]
+
+[tool.hatch.version]
+path = "pywttr/__init__.py"

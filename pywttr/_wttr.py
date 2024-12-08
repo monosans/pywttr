@@ -1,149 +1,276 @@
 from __future__ import annotations
 
-from typing import Optional
+from typing import Final, Optional
 
 import pywttr_models
+from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
 from requests import Session
-from typing_extensions import deprecated
-
-from pywttr._get_weather import get_weather
+from typing_extensions import Literal, Self, final, overload
 
 
-class WttrClassDeprecationWarning(DeprecationWarning):
-    pass
-
-
-@deprecated(
-    "Use get_weather function instead", category=WttrClassDeprecationWarning
-)
+@final
 class Wttr:
     """Wrapper for wttr.in weather API.
 
-    !!! warning "Deprecated"
-        Use [get_weather](.#pywttr.get_weather) function instead.
-
     Examples:
-        Prints the average temperature in Paris today:
+        Choose language. First option is preferred because of type safety.
 
         ```python
-        import pywttr
+        language = pywttr.Language.ZH_CN
+        language = pywttr.Language["ZH_CN"]
+        language = pywttr.Language("zh-cn")
+        ```
 
-        wttr = pywttr.Wttr("Paris")
-        weather = wttr.en()
+        Print the average temperature in Paris today:
+
+        ```python
+        with pywttr.Wttr() as wttr:
+            weather = wttr.weather("Paris", language=language)
         print(weather.weather[0].avgtemp_c)
+        ```
+
+        Custom base url:
+
+        ```python
+        with pywttr.Wttr(
+            base_url=pydantic.AnyHttpUrl("https://example.com")
+        ) as wttr:
+            ...
+        ```
+
+        Custom requests.Session:
+
+        ```python
+        with requests.Session() as session:
+            wttr = pywttr.Wttr(session=session)
+            ...
         ```
     """
 
-    __slots__ = ("location", "session")
+    __slots__ = ("_base_url", "_session")
 
+    @validate_call(config={"arbitrary_types_allowed": True})
     def __init__(
-        self, location: str, session: Optional[Session] = None
+        self,
+        *,
+        base_url: AnyHttpUrl = AnyHttpUrl.build(scheme="https", host="wttr.in"),  # noqa: B008
+        session: Optional[Session] = None,
     ) -> None:
-        self.location = location
-        self.session = session
+        self._base_url: Final = base_url
+        self._session = session
 
-    def af(self) -> pywttr_models.af.Model:
-        return get_weather(self.location, Language.AF, session=self.session)
+    @property
+    def base_url(self) -> AnyHttpUrl:
+        return self._base_url
 
-    def am(self) -> pywttr_models.am.Model:
-        return get_weather(self.location, Language.AM, session=self.session)
+    @property
+    def session(self) -> Optional[Session]:
+        return self._session
 
-    def ar(self) -> pywttr_models.ar.Model:
-        return get_weather(self.location, Language.AR, session=self.session)
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.AF]
+    ) -> pywttr_models.af.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.AM]
+    ) -> pywttr_models.am.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.AR]
+    ) -> pywttr_models.ar.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.BE]
+    ) -> pywttr_models.be.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.BN]
+    ) -> pywttr_models.bn.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.CA]
+    ) -> pywttr_models.ca.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.DA]
+    ) -> pywttr_models.da.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.DE]
+    ) -> pywttr_models.de.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.EL]
+    ) -> pywttr_models.el.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.EN] = ...
+    ) -> pywttr_models.en.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ET]
+    ) -> pywttr_models.et.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.FA]
+    ) -> pywttr_models.fa.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.FR]
+    ) -> pywttr_models.fr.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.GL]
+    ) -> pywttr_models.gl.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.HI]
+    ) -> pywttr_models.hi.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.HU]
+    ) -> pywttr_models.hu.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.IA]
+    ) -> pywttr_models.ia.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ID]
+    ) -> pywttr_models.id.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.IT]
+    ) -> pywttr_models.it.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.LT]
+    ) -> pywttr_models.lt.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.MG]
+    ) -> pywttr_models.mg.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.NB]
+    ) -> pywttr_models.nb.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.NL]
+    ) -> pywttr_models.nl.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.OC]
+    ) -> pywttr_models.oc.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.PL]
+    ) -> pywttr_models.pl.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.PT_BR]
+    ) -> pywttr_models.pt_br.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.RO]
+    ) -> pywttr_models.ro.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.RU]
+    ) -> pywttr_models.ru.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.TA]
+    ) -> pywttr_models.ta.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.TH]
+    ) -> pywttr_models.th.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.TR]
+    ) -> pywttr_models.tr.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.UK]
+    ) -> pywttr_models.uk.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.VI]
+    ) -> pywttr_models.vi.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ZH_CN]
+    ) -> pywttr_models.zh_cn.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ZH_TW]
+    ) -> pywttr_models.zh_tw.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Language
+    ) -> pywttr_models.AnyModel: ...
 
-    def be(self) -> pywttr_models.be.Model:
-        return get_weather(self.location, Language.BE, session=self.session)
+    @validate_call
+    def weather(
+        self, location: str, /, *, language: Language = Language.EN
+    ) -> pywttr_models.AnyModel:
+        """Wrapper for wttr.in weather API.
 
-    def bn(self) -> pywttr_models.bn.Model:
-        return get_weather(self.location, Language.BN, session=self.session)
+        Examples:
+            Choose language. First option is preferred because of type safety.
 
-    def ca(self) -> pywttr_models.ca.Model:
-        return get_weather(self.location, Language.CA, session=self.session)
+            ```python
+            language = pywttr.Language.ZH_CN
+            language = pywttr.Language["ZH_CN"]
+            language = pywttr.Language("zh-cn")
+            ```
 
-    def da(self) -> pywttr_models.da.Model:
-        return get_weather(self.location, Language.DA, session=self.session)
+            Print the average temperature in Paris today:
 
-    def de(self) -> pywttr_models.de.Model:
-        return get_weather(self.location, Language.DE, session=self.session)
+            ```python
+            with pywttr.Wttr() as wttr:
+                weather = wttr.weather("Paris", language=language)
+            print(weather.weather[0].avgtemp_c)
+            ```
 
-    def el(self) -> pywttr_models.el.Model:
-        return get_weather(self.location, Language.EL, session=self.session)
+            Custom base url:
 
-    def en(self) -> pywttr_models.en.Model:
-        return get_weather(self.location, Language.EN, session=self.session)
+            ```python
+            with pywttr.Wttr(
+                base_url=pydantic.AnyHttpUrl("https://example.com")
+            ) as wttr:
+                ...
+            ```
 
-    def et(self) -> pywttr_models.et.Model:
-        return get_weather(self.location, Language.ET, session=self.session)
+            Custom requests.Session:
 
-    def fa(self) -> pywttr_models.fa.Model:
-        return get_weather(self.location, Language.FA, session=self.session)
+            ```python
+            with requests.Session() as session:
+                wttr = pywttr.Wttr(session=session)
+                ...
+            ```
+        """
+        if self._session is None:
+            self._session = Session()
+        with self._session.get(
+            f"{self._base_url}/{location}",
+            params={"format": "j1", "lang": language},
+            headers={"Accept": "application/json"},
+        ) as response:
+            pass
+        response.raise_for_status()
+        return language._model_.model_validate_json(response.text)
 
-    def fr(self) -> pywttr_models.fr.Model:
-        return get_weather(self.location, Language.FR, session=self.session)
+    def close(self) -> None:
+        """Close HTTP session."""
+        if self._session is not None:
+            self._session.close()
 
-    def gl(self) -> pywttr_models.gl.Model:
-        return get_weather(self.location, Language.GL, session=self.session)
+    def __enter__(self) -> Self:
+        return self
 
-    def hi(self) -> pywttr_models.hi.Model:
-        return get_weather(self.location, Language.HI, session=self.session)
-
-    def hu(self) -> pywttr_models.hu.Model:
-        return get_weather(self.location, Language.HU, session=self.session)
-
-    def ia(self) -> pywttr_models.ia.Model:
-        return get_weather(self.location, Language.IA, session=self.session)
-
-    def id(self) -> pywttr_models.id.Model:
-        return get_weather(self.location, Language.ID, session=self.session)
-
-    def it(self) -> pywttr_models.it.Model:
-        return get_weather(self.location, Language.IT, session=self.session)
-
-    def lt(self) -> pywttr_models.lt.Model:
-        return get_weather(self.location, Language.LT, session=self.session)
-
-    def mg(self) -> pywttr_models.mg.Model:
-        return get_weather(self.location, Language.MG, session=self.session)
-
-    def nb(self) -> pywttr_models.nb.Model:
-        return get_weather(self.location, Language.NB, session=self.session)
-
-    def nl(self) -> pywttr_models.nl.Model:
-        return get_weather(self.location, Language.NL, session=self.session)
-
-    def oc(self) -> pywttr_models.oc.Model:
-        return get_weather(self.location, Language.OC, session=self.session)
-
-    def pl(self) -> pywttr_models.pl.Model:
-        return get_weather(self.location, Language.PL, session=self.session)
-
-    def pt_br(self) -> pywttr_models.pt_br.Model:
-        return get_weather(self.location, Language.PT_BR, session=self.session)
-
-    def ro(self) -> pywttr_models.ro.Model:
-        return get_weather(self.location, Language.RO, session=self.session)
-
-    def ru(self) -> pywttr_models.ru.Model:
-        return get_weather(self.location, Language.RU, session=self.session)
-
-    def ta(self) -> pywttr_models.ta.Model:
-        return get_weather(self.location, Language.TA, session=self.session)
-
-    def th(self) -> pywttr_models.th.Model:
-        return get_weather(self.location, Language.TH, session=self.session)
-
-    def tr(self) -> pywttr_models.tr.Model:
-        return get_weather(self.location, Language.TR, session=self.session)
-
-    def uk(self) -> pywttr_models.uk.Model:
-        return get_weather(self.location, Language.UK, session=self.session)
-
-    def vi(self) -> pywttr_models.vi.Model:
-        return get_weather(self.location, Language.VI, session=self.session)
-
-    def zh_cn(self) -> pywttr_models.zh_cn.Model:
-        return get_weather(self.location, Language.ZH_CN, session=self.session)
-
-    def zh_tw(self) -> pywttr_models.zh_tw.Model:
-        return get_weather(self.location, Language.ZH_TW, session=self.session)
+    def __exit__(self, *_: object) -> None:
+        self.close()

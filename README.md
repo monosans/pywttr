@@ -17,6 +17,14 @@ pip install -U pywttr pywttr-models
 
 <https://pywttr.readthedocs.io>
 
+## Simple example
+
+```python
+with pywttr.Wttr() as wttr:
+    weather = wttr.weather("Paris", language=pywttr.Language.EN)
+print(weather.weather[0].avgtemp_c)
+```
+
 ## License
 
 [MIT](https://github.com/monosans/pywttr/blob/main/LICENSE)
