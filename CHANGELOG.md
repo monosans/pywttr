@@ -2,6 +2,12 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [3.0.0] - 2024-12-08
+
+- New context manager based API focusing on correct and performant HTTP session management.
+- Switch to Pydantic v2. This also improves performance.
+- Previously all model fields were strings, now some are int or float.
+
 ## [2.3.0] - 2023-09-05
 
 - Raise the minimum required version of Python from 3.7 to 3.8.
