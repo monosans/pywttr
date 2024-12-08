@@ -37,6 +37,6 @@ repos:
         additional_dependencies:
           - orjson
           - pytest<9
-          - pywttr-models<2
+          - pywttr-models<3
           - types-requests
           - typing-extensions

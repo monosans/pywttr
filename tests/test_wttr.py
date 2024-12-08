@@ -5,22 +5,21 @@ from requests import Session
 
 import pywttr
 
-pytestmark = pytest.mark.filterwarnings(
-    "ignore::pywttr.WttrClassDeprecationWarning"
+
+@pytest.mark.parametrize(
+    "language",
+    [lang for lang in pywttr.Language if lang is not pywttr.Language.EN],
 )
+def test_wttr_without_session(language: pywttr.Language) -> None:
+    with pywttr.Wttr() as wttr:
+        weather = wttr.weather("Paris", language=language)
+    assert isinstance(weather, language._model_)
 
 
-@pytest.mark.parametrize("language", pywttr.Language)
-def test_wttr(
-    location: str, language: pywttr.Language, http_session: Session
-) -> None:
-    wttr = pywttr.Wttr(location, session=http_session)
-    model = getattr(wttr, language._name_.lower())()
-    assert isinstance(model, language._model_)
-
-
-def test_wttr_without_session(location: str) -> None:
-    wttr = pywttr.Wttr(location)
+def test_wttr_with_session() -> None:
     language = pywttr.Language.EN
-    model = getattr(wttr, language._name_.lower())()
-    assert isinstance(model, language._model_)
+
+    with Session() as s:
+        wttr = pywttr.Wttr(session=s)
+        weather = wttr.weather("Paris", language=language)
+    assert isinstance(weather, language._model_)
