@@ -36,7 +36,6 @@ extra:
       link: https://linkedin.com/in/monosans
       name: Developer's LinkedIn
 markdown_extensions:
-  - admonition
   - pymdownx.superfences
   - toc:
       permalink: true
@@ -54,9 +53,11 @@ plugins:
             - https://typing-extensions.readthedocs.io/en/stable/objects.inv
           options:
             filters:
-              - "!^_(?:[^_].*[^_]|_(?:all|doc|main|module|new|slots)__)$"
+              - "!^_(?:[^_].*[^_]|_(?:all|doc|format|main|module|new|slots|str)__)$"
+            heading_level: 3
             members_order: source
             merge_init_into_class: true
+            modernize_annotations: true
             preload_modules:
               - pywttr_models
             separate_signature: true
