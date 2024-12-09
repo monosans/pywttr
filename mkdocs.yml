@@ -52,6 +52,8 @@ plugins:
             - https://requests.readthedocs.io/en/stable/objects.inv
             - https://typing-extensions.readthedocs.io/en/stable/objects.inv
           options:
+            docstring_options:
+              ignore_init_summary: true
             filters:
               - "!^_(?:[^_].*[^_]|_(?:all|doc|format|main|module|new|slots|str)__)$"
             heading_level: 3
