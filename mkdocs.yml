@@ -59,7 +59,6 @@ plugins:
             heading_level: 3
             members_order: source
             merge_init_into_class: true
-            modernize_annotations: true
             preload_modules:
               - pywttr_models
             separate_signature: true
