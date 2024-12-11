@@ -20,7 +20,7 @@ def test_wttr_with_session() -> None:
     language = pywttr.Language.EN
 
     with httpx.Client(
-        timeout=httpx.Timeout(300, connect=30), follow_redirects=True
+        timeout=httpx.Timeout(60, connect=5), follow_redirects=True
     ) as session:
         wttr = pywttr.Wttr(session=session)
         weather = wttr.weather("Paris", language=language)

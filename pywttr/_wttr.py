@@ -43,7 +43,7 @@ class Wttr:
 
         ```python
         with httpx.Client(
-            timeout=httpx.Timeout(300, connect=30), follow_redirects=True
+            timeout=httpx.Timeout(60, connect=5), follow_redirects=True
         ) as session:
             wttr = pywttr.Wttr(session=session)
             ...
@@ -251,7 +251,7 @@ class Wttr:
 
             ```python
             with httpx.Client(
-                timeout=httpx.Timeout(300, connect=30), follow_redirects=True
+                timeout=httpx.Timeout(60, connect=5), follow_redirects=True
             ) as session:
                 wttr = pywttr.Wttr(session=session)
                 ...
@@ -259,7 +259,7 @@ class Wttr:
         """
         if self._session is None:
             self._session = Client(
-                timeout=Timeout(300, connect=30), follow_redirects=True
+                timeout=Timeout(60, connect=5), follow_redirects=True
             )
         response = self._session.get(
             f"{self._base_url}/{location}",
