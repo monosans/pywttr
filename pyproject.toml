@@ -26,7 +26,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 dynamic = ["version"]
-dependencies = ["pywttr-models>=2,<3", "requests>=2.24", "typing-extensions>=4"]
+dependencies = ["httpx", "pywttr-models>=2,<3", "typing-extensions>=4"]
 urls.documentation = "https://pywttr.readthedocs.io"
 urls.repository = "https://github.com/monosans/pywttr"
 
@@ -37,7 +37,6 @@ dev = [
   "pytest==8.3.4",
   "pytest-cov==6",
   "ruff==0.8.2",
-  "types-requests==2.32.0.20241016",
 ]
 docs = [
   "black==24.10",

@@ -3,9 +3,9 @@ from __future__ import annotations
 from typing import Final, Optional
 
 import pywttr_models
+from httpx import Client
 from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
-from requests import Session
 from typing_extensions import Literal, Self, final, overload
 
 
@@ -39,10 +39,10 @@ class Wttr:
             ...
         ```
 
-        Custom requests.Session:
+        Custom httpx.Client:
 
         ```python
-        with requests.Session() as session:
+        with httpx.Client(timeout=300, follow_redirects=True) as session:
             wttr = pywttr.Wttr(session=session)
             ...
         ```
@@ -55,7 +55,7 @@ class Wttr:
         self,
         *,
         base_url: AnyHttpUrl = AnyHttpUrl.build(scheme="https", host="wttr.in"),  # noqa: B008
-        session: Optional[Session] = None,
+        session: Optional[Client] = None,
     ) -> None:
         self._base_url: Final = base_url
         self._session = session
@@ -65,7 +65,7 @@ class Wttr:
         return self._base_url
 
     @property
-    def session(self) -> Optional[Session]:
+    def session(self) -> Optional[Client]:
         return self._session
 
     @overload
@@ -245,22 +245,21 @@ class Wttr:
                 ...
             ```
 
-            Custom requests.Session:
+            Custom httpx.Client:
 
             ```python
-            with requests.Session() as session:
+            with httpx.Client(timeout=300, follow_redirects=True) as session:
                 wttr = pywttr.Wttr(session=session)
                 ...
             ```
         """
         if self._session is None:
-            self._session = Session()
-        with self._session.get(
+            self._session = Client(timeout=300, follow_redirects=True)
+        response = self._session.get(
             f"{self._base_url}/{location}",
             params={"format": "j1", "lang": language},
             headers={"Accept": "application/json"},
-        ) as response:
-            pass
+        )
         response.raise_for_status()
         return language._model_.model_validate_json(response.text)
 

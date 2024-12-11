@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.0.0]
+
+- Switch from `requests` to `httpx`. This is not a breaking change for you, if you don't pass your own session instance.
+
 ## [3.0.0] - 2024-12-08
 
 - New context manager based API focusing on correct and performant HTTP session management.

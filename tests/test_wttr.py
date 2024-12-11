@@ -1,7 +1,7 @@
 from __future__ import annotations
 
+import httpx
 import pytest
-from requests import Session
 
 import pywttr
 
@@ -19,7 +19,7 @@ def test_wttr_without_session(language: pywttr.Language) -> None:
 def test_wttr_with_session() -> None:
     language = pywttr.Language.EN
 
-    with Session() as s:
+    with httpx.Client(timeout=300, follow_redirects=True) as s:
         wttr = pywttr.Wttr(session=s)
         weather = wttr.weather("Paris", language=language)
     assert isinstance(weather, language._model_)
