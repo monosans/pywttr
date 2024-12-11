@@ -4,7 +4,7 @@
 
 ## [4.0.0]
 
-- Switch from `requests` to `httpx`. This is not a breaking change for you, if you don't pass your own session instance.
+- Switch from `requests` to `httpx`.
 
 ## [3.0.0] - 2024-12-08
 
