@@ -19,7 +19,9 @@ def test_wttr_without_session(language: pywttr.Language) -> None:
 def test_wttr_with_session() -> None:
     language = pywttr.Language.EN
 
-    with httpx.Client(timeout=300, follow_redirects=True) as s:
-        wttr = pywttr.Wttr(session=s)
+    with httpx.Client(
+        timeout=httpx.Timeout(300, connect=30), follow_redirects=True
+    ) as session:
+        wttr = pywttr.Wttr(session=session)
         weather = wttr.weather("Paris", language=language)
     assert isinstance(weather, language._model_)

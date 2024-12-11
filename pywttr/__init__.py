@@ -29,7 +29,9 @@ Examples:
     Custom httpx.Client:
 
     ```python
-    with httpx.Client(timeout=300, follow_redirects=True) as session:
+    with httpx.Client(
+        timeout=httpx.Timeout(300, connect=30), follow_redirects=True
+    ) as session:
         wttr = pywttr.Wttr(session=session)
         ...
     ```
