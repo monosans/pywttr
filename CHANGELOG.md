@@ -2,7 +2,7 @@
 
 [Semantic Versioning](https://semver.org/)
 
-## [4.0.0]
+## [4.0.0] - 2024-12-12
 
 - Switch from `requests` to `httpx`.
 
