@@ -1099,15 +1099,15 @@ docs = [
 
 [[package]]
 name = "pywttr-models"
-version = "2.0.0"
+version = "2.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7e/90/71eacb56493fefae117271e2b79c519a60c6cdcf97b27ef30c462dd7c6cf/pywttr_models-2.0.0.tar.gz", hash = "sha256:231f739f13a85faa26181dcaeb6a8623ec292c20aa3f93f20b1703bc6c62006a", size = 8207 }
+sdist = { url = "https://files.pythonhosted.org/packages/bf/1f/96704db115381ca532cdf84791f9a7efd2da4c52b846c86f9f1b1f0acb0e/pywttr_models-2.0.1.tar.gz", hash = "sha256:eb4cf0e925548748733f15b168e931d40545f05b9d78e0b5489b0d7e212c0714", size = 8232 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7e/cd/9f89f1b3f4879e0cc6b342318ea2fca5fa2df238d80beb6c05ef120b79b7/pywttr_models-2.0.0-py3-none-any.whl", hash = "sha256:d384e84e598c46f78868198743a54ea119c02e9e6dfc0cd7a21b74dacf130af8", size = 16556 },
+    { url = "https://files.pythonhosted.org/packages/91/2b/bcf1966acf2354441cb77ce2d7add9b7c4f5a46798f7bd36ccec7f6e24f1/pywttr_models-2.0.1-py3-none-any.whl", hash = "sha256:8e4b6cc95721eadf27cce03fe7234b5b91b07466e379687960dfed1564942fcb", size = 16586 },
 ]
 
 [[package]]
