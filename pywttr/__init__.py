@@ -26,10 +26,12 @@ Examples:
         ...
     ```
 
-    Custom requests.Session:
+    Custom httpx.Client:
 
     ```python
-    with requests.Session() as session:
+    with httpx.Client(
+        timeout=httpx.Timeout(60, connect=5), follow_redirects=True
+    ) as session:
         wttr = pywttr.Wttr(session=session)
         ...
     ```
@@ -42,5 +44,5 @@ from pywttr_models._language import Language  # noqa: PLC2701
 
 from pywttr._wttr import Wttr
 
-__version__ = "3.0.0"
+__version__ = "4.0.0"
 __all__ = ("Language", "Wttr", "models")
