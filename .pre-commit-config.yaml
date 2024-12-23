@@ -35,7 +35,6 @@ repos:
         args:
           - --scripts-are-modules
         additional_dependencies:
-          - orjson
           - httpx
           - pytest<9
           - pywttr-models<3
