@@ -56,7 +56,9 @@ class Wttr:
     def __init__(
         self,
         *,
-        base_url: AnyHttpUrl = AnyHttpUrl.build(scheme="https", host="wttr.in"),  # noqa: B008
+        base_url: AnyHttpUrl = AnyHttpUrl.build(  # noqa: B008
+            scheme="https", host="wttr.in"
+        ),
         session: Optional[Client] = None,
     ) -> None:
         self._base_url: Final = base_url
