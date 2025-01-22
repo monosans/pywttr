@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   run-pytest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version:
@@ -26,7 +26,7 @@ jobs:
           enable-cache: true
       - run: uv run --frozen --python ${{ matrix.python-version }} pytest
   run-pre-commit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
