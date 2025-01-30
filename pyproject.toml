@@ -36,14 +36,14 @@ dev = [
   "mypy[faster-cache]==1.14.1",
   "pytest==8.3.4",
   "pytest-cov==6",
-  "ruff==0.9.3",
+  "ruff==0.9.4",
 ]
 docs = [
   "mkdocs-material==9.5.50",
   "mkdocs-minify-html-plugin==0.2.3",
   "mkdocstrings==0.27",
   "mkdocstrings-python==1.13",
-  "ruff==0.9.3",
+  "ruff==0.9.4",
 ]
 
 [tool.hatch.build.targets.sdist]
