@@ -50,4 +50,4 @@ docs = [
 include = ["pywttr"]
 
 [tool.hatch.version]
-path = "pywttr/__init__.py"
+path = "src/pywttr/__init__.py"
