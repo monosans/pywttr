@@ -269,7 +269,7 @@ class Wttr:
             headers={"Accept": "application/json"},
         )
         response.raise_for_status()
-        return language._model_.model_validate_json(response.text)
+        return language._model_.model_validate_json(response.content)
 
     def close(self) -> None:
         """Close HTTP session."""
