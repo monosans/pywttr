@@ -42,7 +42,7 @@ dev = [
 docs = [
   "mkdocs-material==9.6.8",
   "mkdocs-minify-html-plugin==0.2.5",
-  "mkdocstrings==0.29.0",
+  "mkdocstrings==0.29",
   "mkdocstrings-python==1.16.5",
   "ruff==0.10.0",
 ]
