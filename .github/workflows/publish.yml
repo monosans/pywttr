@@ -18,4 +18,4 @@ jobs:
         with:
           enable-cache: false
       - run: uv build --python 3.13 --no-cache
-      - uses: pypa/gh-action-pypi-publish@release/v1
+      - run: uv publish --trusted-publishing always --no-cache
