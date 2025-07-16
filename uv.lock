@@ -1224,7 +1224,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "covdefaults", specifier = "==2.3" },
-    { name = "mypy", extras = ["faster-cache"], specifier = "==1.17.0" },
+    { name = "mypy", extras = ["faster-cache"], specifier = "==1.17" },
     { name = "pytest", specifier = "==8.4.1" },
     { name = "pytest-cov", specifier = "==6.2.1" },
     { name = "pytest-github-actions-annotate-failures", specifier = "==0.3" },

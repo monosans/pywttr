@@ -33,7 +33,7 @@ urls.repository = "https://github.com/monosans/pywttr"
 [dependency-groups]
 dev = [
   "covdefaults==2.3",
-  "mypy[faster-cache]==1.17.0",
+  "mypy[faster-cache]==1.17",
   "pytest==8.4.1",
   "pytest-cov==6.2.1",
   "pytest-github-actions-annotate-failures==0.3",
