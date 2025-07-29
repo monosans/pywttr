@@ -8,13 +8,13 @@ version = "4.0.0"
 description = "Wrapper for wttr.in weather API"
 readme = "README.md"
 keywords = ["forecast"]
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "monosans", email = "hsyqixco@protonmail.com" }]
 requires-python = ">=3.9"
 classifiers = [
   "Framework :: Pydantic",
   "Framework :: Pydantic :: 2",
-  "License :: OSI Approved :: MIT License",
   "Natural Language :: English",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
