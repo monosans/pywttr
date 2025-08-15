@@ -375,7 +375,7 @@ name = "importlib-metadata"
 version = "8.7.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "zipp" },
+    { name = "zipp", marker = "python_full_version < '3.10'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/76/66/650a33bd90f786193e4de4b3ad86ea60b53c89b669a5c7be931fac31cdb0/importlib_metadata-8.7.0.tar.gz", hash = "sha256:d13b81ad223b890aa16c5471f2ac3056cf76c5f10f82d6f9292f0b415f389000", size = 56641, upload-time = "2025-04-27T15:29:01.736Z" }
 wheels = [
@@ -843,7 +843,7 @@ wheels = [
 
 [[package]]
 name = "mkdocstrings-python"
-version = "1.16.12"
+version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "griffe" },
@@ -851,9 +851,9 @@ dependencies = [
     { name = "mkdocstrings" },
     { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/bf/ed/b886f8c714fd7cccc39b79646b627dbea84cd95c46be43459ef46852caf0/mkdocstrings_python-1.16.12.tar.gz", hash = "sha256:9b9eaa066e0024342d433e332a41095c4e429937024945fea511afe58f63175d", size = 206065, upload-time = "2025-06-03T12:52:49.276Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/39/7c/6dfd8ad59c0eebae167168528ed6cad00116f58ef2327686149f7b25d175/mkdocstrings_python-1.17.0.tar.gz", hash = "sha256:c6295962b60542a9c7468a3b515ce8524616ca9f8c1a38c790db4286340ba501", size = 200408, upload-time = "2025-08-14T21:18:14.568Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3b/dd/a24ee3de56954bfafb6ede7cd63c2413bb842cc48eb45e41c43a05a33074/mkdocstrings_python-1.16.12-py3-none-any.whl", hash = "sha256:22ded3a63b3d823d57457a70ff9860d5a4de9e8b1e482876fc9baabaf6f5f374", size = 124287, upload-time = "2025-06-03T12:52:47.819Z" },
+    { url = "https://files.pythonhosted.org/packages/bd/ac/b1fcc937f4ecd372f3e857162dea67c45c1e2eedbac80447be516e3372bb/mkdocstrings_python-1.17.0-py3-none-any.whl", hash = "sha256:49903fa355dfecc5ad0b891e78ff5d25d30ffd00846952801bbe8331e123d4b0", size = 124778, upload-time = "2025-08-14T21:18:12.821Z" },
 ]
 
 [[package]]
@@ -1305,7 +1305,7 @@ docs = [
     { name = "mkdocs-material", specifier = "==9.6.16" },
     { name = "mkdocs-minify-html-plugin", specifier = "==0.3.4" },
     { name = "mkdocstrings", specifier = "==0.30" },
-    { name = "mkdocstrings-python", specifier = "==1.16.12" },
+    { name = "mkdocstrings-python", specifier = "==1.17.0" },
     { name = "ruff", specifier = "==0.12.9" },
 ]
 
