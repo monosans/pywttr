@@ -39,12 +39,10 @@ Examples:
 
 from __future__ import annotations
 
-from importlib.metadata import version as _version
-
 import pywttr_models as models
 from pywttr_models._language import Language  # noqa: PLC2701
 
 from pywttr._wttr import Wttr
 
-__version__ = _version(__name__)
+__version__ = "4.0.0"
 __all__ = ("Language", "Wttr", "models")

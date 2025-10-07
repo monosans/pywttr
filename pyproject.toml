@@ -1,10 +1,9 @@
 [build-system]
-build-backend = "uv_build"
-requires = ["uv-build>=0.8,<0.9"]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
 
 [project]
 name = "pywttr"
-version = "4.0.0"
 description = "Wrapper for wttr.in weather API"
 readme = "README.md"
 keywords = ["forecast"]
@@ -28,6 +27,7 @@ classifiers = [
   "Programming Language :: Python :: 3.15",
   "Typing :: Typed",
 ]
+dynamic = ["version"]
 dependencies = ["httpx", "pywttr-models>=2,<3", "typing-extensions>=4"]
 urls.documentation = "https://pywttr.readthedocs.io"
 urls.repository = "https://github.com/monosans/pywttr"
@@ -48,3 +48,9 @@ docs = [
   "mkdocstrings-python==1.18.2",
   "ruff==0.13.3",
 ]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src"]
+
+[tool.hatch.version]
+path = "src/pywttr/__init__.py"
