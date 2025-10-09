@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.0.1] - 2025-10-09
+
+- Improve JSON parsing performance.
+
 ## [4.0.0] - 2024-12-12
 
 - Switch from `requests` to `httpx`.
