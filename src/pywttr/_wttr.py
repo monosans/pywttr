@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from typing import Final, Optional
+from typing import Final, Literal
 
 import pywttr_models
 from httpx import Client, Timeout
 from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
-from typing_extensions import Literal, Self, final, overload
+from typing_extensions import Self, final, overload
 
 
 @final
@@ -59,7 +59,7 @@ class Wttr:
         base_url: AnyHttpUrl = AnyHttpUrl.build(  # noqa: B008
             scheme="https", host="wttr.in"
         ),
-        session: Optional[Client] = None,
+        session: Client | None = None,
     ) -> None:
         self._base_url: Final = base_url
         self._session = session
@@ -69,7 +69,7 @@ class Wttr:
         return self._base_url
 
     @property
-    def session(self) -> Optional[Client]:
+    def session(self) -> Client | None:
         return self._session
 
     @overload
