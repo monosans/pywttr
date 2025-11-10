@@ -1229,7 +1229,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "httpx" },
+    { name = "httpx", specifier = ">=0.18.2" },
     { name = "pywttr-models", specifier = ">=2,<3" },
     { name = "typing-extensions", specifier = ">=4" },
 ]
