@@ -17,5 +17,5 @@ jobs:
       - uses: astral-sh/setup-uv@v7
         with:
           enable-cache: false
-      - run: uv build --python 3.13 --no-cache
+      - run: uv build --python 3.14 --no-cache
       - run: uv publish --trusted-publishing always --no-cache
