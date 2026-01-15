@@ -38,6 +38,7 @@ dev = [
   "pytest==9.0.2",
   "pytest-cov==7.0.0",
   "pytest-github-actions-annotate-failures==0.3",
+  "pytest-rerunfailures==16.1",
   "ruff==0.14.12",
 ]
 docs = [
