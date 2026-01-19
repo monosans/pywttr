@@ -1,7 +1,7 @@
 [pytest]
 addopts = [
   "--reruns=2",
-  "--only-rerun=httpx.ConnectError",
-  "--only-rerun=httpx.ConnectTimeout",
+  "--only-rerun=ConnectError",
+  "--only-rerun=ConnectTimeout",
 ]
 strict = true
