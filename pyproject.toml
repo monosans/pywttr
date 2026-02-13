@@ -39,14 +39,14 @@ dev = [
   "pytest-cov==7.0.0",
   "pytest-github-actions-annotate-failures==0.3",
   "pytest-rerunfailures==16.1",
-  "ruff==0.15.0",
+  "ruff==0.15.1",
 ]
 docs = [
   "mkdocs-material==9.7.1",
   "mkdocs-minify-html-plugin==0.3.9",
   "mkdocstrings==1.0.3",
   "mkdocstrings-python==2.0.2",
-  "ruff==0.15.0",
+  "ruff==0.15.1",
 ]
 
 [tool.hatch.build.targets.sdist]
