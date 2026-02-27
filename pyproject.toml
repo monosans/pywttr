@@ -1,16 +1,12 @@
-[build-system]
-build-backend = "hatchling.build"
-requires = ["hatchling"]
-
 [project]
 name = "pywttr"
 description = "Wrapper for wttr.in weather API"
 readme = "README.md"
-keywords = ["forecast"]
+requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "monosans", email = "hsyqixco@protonmail.com" }]
-requires-python = ">=3.10"
+keywords = ["forecast"]
 classifiers = [
   "Framework :: Pydantic",
   "Framework :: Pydantic :: 2",
@@ -26,10 +22,10 @@ classifiers = [
   "Programming Language :: Python :: 3.15",
   "Typing :: Typed",
 ]
-dynamic = ["version"]
-dependencies = ["httpx>=0.18.2", "pywttr-models>=2,<3", "typing-extensions>=4"]
 urls.documentation = "https://pywttr.readthedocs.io"
 urls.repository = "https://github.com/monosans/pywttr"
+dependencies = ["httpx>=0.18.2", "pywttr-models>=2,<3", "typing-extensions>=4"]
+dynamic = ["version"]
 
 [dependency-groups]
 dev = [
@@ -48,6 +44,10 @@ docs = [
   "mkdocstrings-python==2.0.3",
   "ruff==0.15.2",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist]
 only-include = ["src"]
