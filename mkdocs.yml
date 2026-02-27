@@ -3,7 +3,7 @@ repo_url: https://github.com/monosans/pywttr
 repo_name: monosans/pywttr
 edit_uri: edit/main/docs/
 theme:
-  name: material
+  name: materialx
   features:
     - content.action.edit
     - content.code.copy
