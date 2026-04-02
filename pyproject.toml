@@ -35,7 +35,7 @@ dev = [
   "pytest-cov==7.1.0",
   "pytest-github-actions-annotate-failures==0.4.0",
   "pytest-rerunfailures==16.1",
-  "ruff==0.15.8",
+  "ruff==0.15.9",
 ]
 docs = [
   "mkdocs-materialx==10.1.2",
@@ -43,7 +43,7 @@ docs = [
   "mkdocstrings==1.0.3",
   "mkdocstrings-python==2.0.3",
   "properdocs==1.6.7",
-  "ruff==0.15.8",
+  "ruff==0.15.9",
 ]
 
 [build-system]
