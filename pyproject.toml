@@ -30,7 +30,7 @@ dynamic = ["version"]
 [dependency-groups]
 dev = [
   "covdefaults==2.3",
-  "mypy==1.20.0",
+  "mypy==1.20.1",
   "pytest==9.0.3",
   "pytest-cov==7.1.0",
   "pytest-github-actions-annotate-failures==0.4.0",
