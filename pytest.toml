@@ -1,6 +1,7 @@
 [pytest]
 addopts = [
-  "--reruns=2",
+  "--reruns=9",
+  "--reruns-delay=1",
   "--only-rerun=ConnectError",
   "--only-rerun=ConnectTimeout",
 ]
