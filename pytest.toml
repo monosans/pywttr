@@ -4,5 +4,6 @@ addopts = [
   "--reruns-delay=1",
   "--only-rerun=ConnectError",
   "--only-rerun=ConnectTimeout",
+  "--only-rerun=HTTPStatusError",
 ]
 strict = true
