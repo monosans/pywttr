@@ -56,5 +56,8 @@ only-include = ["src"]
 [tool.hatch.version]
 path = "src/pywttr/__init__.py"
 
+[tool.uv]
+exclude-newer = "3 days"
+
 [tool.uv.sources]
 pywttr-models = { git = "https://github.com/monosans/pywttr-models", branch = "main" }
