@@ -36,10 +36,11 @@ repos:
     rev: v1.20.2
     hooks:
       - id: mypy
+        language: python
         args:
           - --scripts-are-modules
         additional_dependencies:
           - httpx
-          - pytest<9
+          - pytest==9.0.3
           - pywttr-models<3
           - typing-extensions
