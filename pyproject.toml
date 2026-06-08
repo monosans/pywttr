@@ -22,7 +22,7 @@ classifiers = [
   "Programming Language :: Python :: 3.15",
   "Typing :: Typed",
 ]
-urls.documentation = "https://pywttr.readthedocs.io"
+urls.documentation = "https://monosans.github.io/pywttr"
 urls.repository = "https://github.com/monosans/pywttr"
 dependencies = ["httpx>=0.18.2", "pywttr-models>=2,<3", "typing-extensions>=4"]
 dynamic = ["version"]
@@ -38,12 +38,10 @@ dev = [
   "ruff==0.15.16",
 ]
 docs = [
-  "mkdocs-materialx==10.1.7",
-  "mkdocs-minify-html-plugin==0.3.10",
   "mkdocstrings==1.0.4",
   "mkdocstrings-python==2.0.4",
-  "properdocs==1.6.7",
   "ruff==0.15.16",
+  "zensical==0.0.44",
 ]
 
 [build-system]

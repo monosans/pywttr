@@ -15,7 +15,7 @@ pip install -U pywttr pywttr-models
 
 ## Documentation
 
-<https://pywttr.readthedocs.io>
+<https://monosans.github.io/pywttr>
 
 ## Simple example
 
