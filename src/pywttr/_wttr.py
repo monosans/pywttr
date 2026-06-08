@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Final, Literal
 
 import pywttr_models
-from httpx import Client, Timeout
+from httpx2 import Client, Timeout
 from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
 from typing_extensions import Self, final, overload
@@ -39,11 +39,11 @@ class Wttr:
             ...
         ```
 
-        Custom httpx.Client:
+        Custom httpx2.Client:
 
         ```python
-        with httpx.Client(
-            timeout=httpx.Timeout(60, connect=5), follow_redirects=True
+        with httpx2.Client(
+            timeout=httpx2.Timeout(60, connect=5), follow_redirects=True
         ) as session:
             wttr = pywttr.Wttr(session=session)
             ...
@@ -249,11 +249,11 @@ class Wttr:
                 ...
             ```
 
-            Custom httpx.Client:
+            Custom httpx2.Client:
 
             ```python
-            with httpx.Client(
-                timeout=httpx.Timeout(60, connect=5), follow_redirects=True
+            with httpx2.Client(
+                timeout=httpx2.Timeout(60, connect=5), follow_redirects=True
             ) as session:
                 wttr = pywttr.Wttr(session=session)
                 ...

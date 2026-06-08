@@ -24,7 +24,7 @@ classifiers = [
 ]
 urls.documentation = "https://monosans.github.io/pywttr"
 urls.repository = "https://github.com/monosans/pywttr"
-dependencies = ["httpx>=0.18.2", "pywttr-models>=2,<3", "typing-extensions>=4"]
+dependencies = ["httpx2", "pywttr-models>=2,<3", "typing-extensions>=4"]
 dynamic = ["version"]
 
 [dependency-groups]

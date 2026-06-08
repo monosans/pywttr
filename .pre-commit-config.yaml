@@ -40,7 +40,7 @@ repos:
         args:
           - --scripts-are-modules
         additional_dependencies:
-          - httpx
+          - httpx2
           - pytest==9.0.3
           - pywttr-models<3
           - typing-extensions

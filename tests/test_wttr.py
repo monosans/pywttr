@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import httpx
+import httpx2
 import pytest
 
 import pywttr
@@ -19,8 +19,8 @@ def test_wttr_without_session(language: pywttr.Language) -> None:
 def test_wttr_with_session() -> None:
     language = pywttr.Language.EN
 
-    with httpx.Client(
-        timeout=httpx.Timeout(60, connect=5), follow_redirects=True
+    with httpx2.Client(
+        timeout=httpx2.Timeout(60, connect=5), follow_redirects=True
     ) as session:
         wttr = pywttr.Wttr(session=session)
         weather = wttr.weather("Paris", language=language)
