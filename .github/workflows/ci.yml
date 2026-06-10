@@ -12,7 +12,7 @@ jobs:
   check:
     if: ${{ always() && github.event_name == 'pull_request' }}
     needs:
-      - docs
+      - docs-build
       - pre-commit
       - pytest
     runs-on: ubuntu-24.04
@@ -20,34 +20,36 @@ jobs:
       - uses: re-actors/alls-green@05ac9388f0aebcb5727afa17fcccfecd6f8ec5fe # release/v1
         with:
           jobs: ${{ toJSON(needs) }}
-  docs:
+  docs-build:
     runs-on: ubuntu-24.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           persist-credentials: false
       - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
         with:
+          python-version: "3.14"
           enable-cache: true
-      - if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
-      - run: uv run --group docs --no-group dev --locked --python 3.14 zensical build --strict
+      - run: uv run --group docs --no-group dev --locked zensical build --strict
       - if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: site
-      - if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
-        id: deployment
+  docs-deploy:
+    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    needs: docs-build
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5
   pre-commit:
     runs-on: ubuntu-24.04
@@ -57,8 +59,9 @@ jobs:
           persist-credentials: false
       - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
         with:
+          python-version: "3.14"
           enable-cache: false
-      - run: uv tool run --exclude-newer '3 days' --no-cache --python 3.14 prek run --all-files --show-diff-on-failure
+      - run: uv tool run --exclude-newer '3 days' --no-cache prek run --all-files --show-diff-on-failure
         env:
           RUFF_OUTPUT_FORMAT: github
   pytest:
@@ -75,5 +78,6 @@ jobs:
           persist-credentials: false
       - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
         with:
+          python-version: ${{ matrix.python-version }}
           enable-cache: true
-      - run: uv run --locked --python ${{ matrix.python-version }} pytest
+      - run: uv run --locked pytest
