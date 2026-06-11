@@ -44,3 +44,7 @@ repos:
           - pytest==9.0.3
           - pywttr-models<3
           - typing-extensions
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.25.2
+    hooks:
+      - id: zizmor
