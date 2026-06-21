@@ -35,12 +35,12 @@ dev = [
   "pytest-cov==7.1.0",
   "pytest-github-actions-annotate-failures==0.4.1",
   "pytest-rerunfailures==16.3",
-  "ruff==0.15.17",
+  "ruff==0.15.18",
 ]
 docs = [
   "mkdocstrings==1.0.4",
   "mkdocstrings-python==2.0.4",
-  "ruff==0.15.17",
+  "ruff==0.15.18",
   "zensical==0.0.45",
 ]
 
