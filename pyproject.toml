@@ -31,7 +31,7 @@ dynamic = ["version"]
 dev = [
   "covdefaults==2.3",
   "mypy==2.1.0",
-  "pytest==9.1.0",
+  "pytest==9.1.1",
   "pytest-cov==7.1.0",
   "pytest-github-actions-annotate-failures==0.4.1",
   "pytest-rerunfailures==16.3",

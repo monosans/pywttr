@@ -41,7 +41,7 @@ repos:
           - --scripts-are-modules
         additional_dependencies:
           - httpx2
-          - pytest==9.1.0
+          - pytest==9.1.1
           - pywttr-models<3
           - typing-extensions
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
