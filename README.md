@@ -1,6 +1,5 @@
 # pywttr
 
-[![CI](https://github.com/monosans/pywttr/actions/workflows/ci.yml/badge.svg)](https://github.com/monosans/pywttr/actions/workflows/ci.yml)
 [![Downloads](https://static.pepy.tech/badge/pywttr)](https://pepy.tech/project/pywttr)
 
 Wrapper for [wttr.in](https://wttr.in) weather API.
