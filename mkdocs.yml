@@ -1,5 +1,6 @@
 site_name: pywttr
 site_url: https://monosans.github.io/pywttr
+strict: true
 repo_url: https://github.com/monosans/pywttr
 repo_name: monosans/pywttr
 edit_uri: edit/main/docs/
