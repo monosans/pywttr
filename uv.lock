@@ -1081,7 +1081,7 @@ docs = [
 [[package]]
 name = "pywttr-models"
 version = "2.0.7"
-source = { git = "https://github.com/monosans/pywttr-models?branch=main#d49aded8301cbc318af2e3f60a801a509d53ba94" }
+source = { git = "https://github.com/monosans/pywttr-models?branch=main#4d4930958db759cc6f659d2c7352abac94c5bb4a" }
 dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
