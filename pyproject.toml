@@ -2,7 +2,7 @@
 name = "pywttr"
 description = "Wrapper for wttr.in weather API"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "monosans", email = "hsyqixco@protonmail.com" }]
@@ -14,7 +14,6 @@ classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
@@ -24,7 +23,7 @@ classifiers = [
 ]
 urls.documentation = "https://monosans.github.io/pywttr"
 urls.repository = "https://github.com/monosans/pywttr"
-dependencies = ["httpx2", "pywttr-models>=2,<3", "typing-extensions>=4"]
+dependencies = ["httpx2", "pywttr-models>=2,<3"]
 dynamic = ["version"]
 
 [dependency-groups]
@@ -41,7 +40,7 @@ docs = [
   "mkdocstrings==1.0.6",
   "mkdocstrings-python==2.0.9",
   "ruff==0.16.10",
-  "zensical==0.0.67",
+  "zensical==0.0.68",
 ]
 
 [build-system]

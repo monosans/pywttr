@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-from typing import Final, Literal
+from typing import Final, Literal, Self, final, overload
 
 import pywttr_models
 from httpx2 import Client, Timeout
 from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
-from typing_extensions import Self, final, overload
 
 
 @final

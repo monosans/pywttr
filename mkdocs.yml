@@ -52,7 +52,6 @@ plugins:
             - https://docs.pydantic.dev/latest/objects.inv
             - https://docs.python.org/3/objects.inv
             - https://httpx2.pydantic.dev/objects.inv
-            - https://typing-extensions.readthedocs.io/en/stable/objects.inv
           options:
             docstring_options:
               ignore_init_summary: true
