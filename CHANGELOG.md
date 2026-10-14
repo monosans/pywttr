@@ -2,6 +2,11 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.0.3] - 2026-10-14
+
+- Drop support for Python 3.10.
+- Don't require typing-extensions.
+
 ## [4.0.2] - 2026-06-08
 
 - Drop support for Python 3.9.
