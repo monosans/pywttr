@@ -23,17 +23,7 @@
 
 ## Response models
 
-Each language has its own module, such as `pywttr.models.fr`. Its models add one field with the translated description, such as `lang_fr`; everything else is shared and listed below.
-
-::: pywttr.models
-    options:
-      heading_level: 3
-      members:
-        - AnyModel
-      show_attribute_values: false
-      show_labels: false
-      show_root_heading: false
-      show_root_toc_entry: false
+Each language has its own module, such as `pywttr.models.fr`. Its `CurrentConditionItem` and `HourlyItem` add the translated description twice: as `lang_fr` and as `lang_xx`, which every language has.
 
 ::: pywttr.models.base
     options:
@@ -57,5 +47,11 @@ Each language has its own module, such as `pywttr.models.fr`. Its models add one
       show_labels: false
       show_root_heading: false
       show_root_toc_entry: false
+
+::: pywttr.models.AnyModel
+    options:
+      heading_level: 3
+      show_attribute_values: false
+      show_labels: false
 
 <!-- prettier-ignore-end -->
