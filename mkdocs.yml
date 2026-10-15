@@ -18,10 +18,11 @@ theme:
     - navigation.prune
     - navigation.top
     - toc.follow
+  favicon: assets/logo.svg
   icon:
-    logo: fontawesome/solid/cloud-sun
     repo: fontawesome/brands/github
   language: en
+  logo: assets/logo.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
