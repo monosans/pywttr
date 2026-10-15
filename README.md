@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/monosans/pywttr/main/docs/assets/logo.svg" alt="" width="96" align="right">
+
 # pywttr
 
 [![Downloads](https://static.pepy.tech/badge/pywttr)](https://pepy.tech/project/pywttr)
