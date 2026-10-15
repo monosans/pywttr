@@ -22,6 +22,8 @@ class Wttr:
 
     Examples:
         ```python
+        import pywttr
+
         with pywttr.Wttr() as wttr:
             weather = wttr.weather("Paris")
         ```
@@ -214,6 +216,8 @@ class Wttr:
 
         Examples:
             ```python
+            import pywttr
+
             with pywttr.Wttr() as wttr:
                 weather = wttr.weather("Paris", language=pywttr.Language.DE)
             print(weather.current_condition[0].lang_de[0].value)

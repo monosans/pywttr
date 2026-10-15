@@ -6,11 +6,11 @@ Every example is a complete script: copy it and run it.
 
 [`Wttr.weather`][pywttr.Wttr.weather] returns a [`Model`][pywttr.models.base.Model]:
 
-- [`current_condition[0]`][pywttr.models.base.CurrentConditionItem]: the weather now.
-- [`weather[0]`, `weather[1]`, `weather[2]`][pywttr.models.base.WeatherItem]: today, tomorrow and the day after.
-- [`weather[i].hourly`][pywttr.models.base.HourlyItem]: that day in 3-hour steps.
-- [`weather[i].astronomy[0]`][pywttr.models.base.AstronomyItem]: sunrise, sunset and the moon.
-- [`nearest_area[0]`][pywttr.models.base.NearestAreaItem]: the place wttr.in found.
+- `current_condition[0]`: the weather now ([`CurrentConditionItem`][pywttr.models.base.CurrentConditionItem]).
+- `weather[0]` to `weather[2]`: today, tomorrow and the day after ([`WeatherItem`][pywttr.models.base.WeatherItem]).
+- `weather[i].hourly`: that day in 3-hour steps ([`HourlyItem`][pywttr.models.base.HourlyItem]).
+- `weather[i].astronomy[0]`: sunrise, sunset and the moon ([`AstronomyItem`][pywttr.models.base.AstronomyItem]).
+- `nearest_area[0]`: the place wttr.in found ([`NearestAreaItem`][pywttr.models.base.NearestAreaItem]).
 
 Most values come in metric and imperial units, e.g. `temp_c` and `temp_f`.
 
@@ -107,7 +107,7 @@ print(weather.current_condition[0].temp_c)
 
 !!! warning
 
-    [`Wttr.close`][pywttr.Wttr.close], and so leaving `with pywttr.Wttr(...)`, closes the client you passed.
+    [`Wttr.close`][pywttr.Wttr.close] closes the client you passed, and leaving `with pywttr.Wttr(...)` calls it.
 
 ## Self-hosted wttr.in
 

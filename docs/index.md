@@ -31,4 +31,4 @@ print(f"{now.temp_c} °C, {now.weather_desc[0].value}")
 ## Next steps
 
 - [Guide](guide.md): current weather, forecasts, languages, timeouts, errors.
-- [API Reference](api.md): every class, method and response field.
+- [API reference](api.md): every class, method and response field.
