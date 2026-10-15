@@ -88,7 +88,7 @@ print(now.lang_fr[0].value)
 print(now.weather_desc[0].value)
 ```
 
-If the language is only known at runtime, e.g. `pywttr.Language("fr")`, read `lang_xx`: every model has it.
+If the language is only known at runtime, e.g. `pywttr.Language("fr")`, read [`lang_xx`](api.md#response-models): every language has it.
 
 ## Custom HTTP client and timeouts
 
@@ -111,7 +111,7 @@ print(weather.current_condition[0].temp_c)
 
 ## Self-hosted wttr.in
 
-Point `base_url` at your own [wttr.in server](https://github.com/chubin/wttr.in).
+Point `base_url` at your own [wttr.in server](https://github.com/chubin/wttr.in#installation).
 
 ```python
 import pydantic
