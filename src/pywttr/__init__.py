@@ -44,5 +44,5 @@ from pywttr_models._language import Language  # noqa: PLC2701
 
 from pywttr._wttr import Wttr
 
-__version__ = "4.0.3"
+__version__ = "4.0.4"
 __all__ = ("Language", "Wttr", "models")
