@@ -2,27 +2,31 @@
 
 [![Downloads](https://static.pepy.tech/badge/pywttr)](https://pepy.tech/project/pywttr)
 
-Wrapper for [wttr.in](https://wttr.in) weather API.
-
-Asynchronous version [here](https://github.com/monosans/aiopywttr).
+Typed Python client for the [wttr.in](https://wttr.in) weather API. For asyncio, use [aiopywttr](https://github.com/monosans/aiopywttr).
 
 ## Installation
 
 ```bash
+uv add pywttr pywttr-models
+# or
 pip install -U pywttr pywttr-models
+```
+
+## Example
+
+```python
+import pywttr
+
+with pywttr.Wttr() as wttr:
+    weather = wttr.weather("Paris")
+
+now = weather.current_condition[0]
+print(f"{now.temp_c} °C, {now.weather_desc[0].value}")
 ```
 
 ## Documentation
 
 <https://monosans.github.io/pywttr>
-
-## Simple example
-
-```python
-with pywttr.Wttr() as wttr:
-    weather = wttr.weather("Paris", language=pywttr.Language.EN)
-print(weather.weather[0].avgtemp_c)
-```
 
 ## License
 

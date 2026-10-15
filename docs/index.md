@@ -1,17 +1,34 @@
 # pywttr
 
-Welcome to the documentation of pywttr, the wrapper for the [wttr.in](https://wttr.in) weather API!
-
-Asynchronous version [here](https://github.com/monosans/aiopywttr).
+Typed Python client for the [wttr.in](https://wttr.in) weather API. For asyncio, use [aiopywttr](https://monosans.github.io/aiopywttr).
 
 ## Installation
 
-The latest version can be installed with the following command:
+=== "uv"
 
-```bash
-pip install -U pywttr pywttr-models
+    ```bash
+    uv add pywttr pywttr-models
+    ```
+
+=== "pip"
+
+    ```bash
+    pip install -U pywttr pywttr-models
+    ```
+
+## Quick start
+
+```python
+import pywttr
+
+with pywttr.Wttr() as wttr:
+    weather = wttr.weather("Paris")
+
+now = weather.current_condition[0]
+print(f"{now.temp_c} °C, {now.weather_desc[0].value}")
 ```
 
-## API Reference
+## Next steps
 
-::: pywttr
+- [Guide](guide.md): current weather, forecasts, languages, timeouts, errors.
+- [API Reference](api.md): every class, method and response field.

@@ -1,39 +1,12 @@
-"""Wrapper for wttr.in weather API.
+"""Wrapper for the [wttr.in](https://wttr.in) weather API.
 
 Examples:
-    Choose language. First option is preferred because of type safety.
-
     ```python
-    language = pywttr.Language.ZH_CN
-    language = pywttr.Language["ZH_CN"]
-    language = pywttr.Language("zh-cn")
-    ```
+    import pywttr
 
-    Print the average temperature in Paris today:
-
-    ```python
     with pywttr.Wttr() as wttr:
-        weather = wttr.weather("Paris", language=language)
-    print(weather.weather[0].avgtemp_c)
-    ```
-
-    Custom base url:
-
-    ```python
-    with pywttr.Wttr(
-        base_url=pydantic.AnyHttpUrl("https://example.com")
-    ) as wttr:
-        ...
-    ```
-
-    Custom httpx2.Client:
-
-    ```python
-    with httpx2.Client(
-        timeout=httpx2.Timeout(60, connect=5), follow_redirects=True
-    ) as session:
-        wttr = pywttr.Wttr(session=session)
-        ...
+        weather = wttr.weather("Paris")
+    print(weather.current_condition[0].temp_c)
     ```
 """
 

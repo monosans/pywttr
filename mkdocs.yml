@@ -4,6 +4,10 @@ strict: true
 repo_url: https://github.com/monosans/pywttr
 repo_name: monosans/pywttr
 edit_uri: edit/main/docs/
+nav:
+  - Home: index.md
+  - Guide: guide.md
+  - API Reference: api.md
 theme:
   features:
     - content.action.edit
@@ -38,9 +42,13 @@ extra:
       link: https://linkedin.com/in/monosans
       name: Developer's LinkedIn
 markdown_extensions:
+  - admonition
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
+      toc_depth: 3
 plugins:
   - minify:
       minify_html: true
@@ -58,14 +66,19 @@ plugins:
             docstring_section_style: list
             filters:
               - "!^_(?:[^_].*[^_]|_(?:all|doc|format|main|module|new|slots|str)__)$"
-            heading_level: 3
+              - "!^_model_$"
+            group_by_category: false
+            heading_level: 2
             members_order: source
             merge_init_into_class: true
-            parameter_headings: true
+            parameter_headings: false
             preload_modules:
               - pywttr_models
             separate_signature: true
             show_if_no_docstring: true
+            show_overloads: false
+            show_root_full_path: false
+            show_root_heading: true
             show_signature_annotations: true
             show_source: false
             show_submodules: true

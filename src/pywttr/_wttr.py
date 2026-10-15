@@ -10,42 +10,20 @@ from pywttr_models._language import Language  # noqa: PLC2701
 
 @final
 class Wttr:
-    """Wrapper for wttr.in weather API.
+    """Client for the wttr.in weather API.
+
+    Use it as a context manager or call `close` when done.
+
+    Args:
+        base_url: Server to send requests to, e.g. a self-hosted wttr.in.
+        session: HTTP client to send requests with. If `None`, one is
+            created on the first request, with a 60 s timeout (5 s to connect).
+            `close` closes it either way.
 
     Examples:
-        Choose language. First option is preferred because of type safety.
-
-        ```python
-        language = pywttr.Language.ZH_CN
-        language = pywttr.Language["ZH_CN"]
-        language = pywttr.Language("zh-cn")
-        ```
-
-        Print the average temperature in Paris today:
-
         ```python
         with pywttr.Wttr() as wttr:
-            weather = wttr.weather("Paris", language=language)
-        print(weather.weather[0].avgtemp_c)
-        ```
-
-        Custom base url:
-
-        ```python
-        with pywttr.Wttr(
-            base_url=pydantic.AnyHttpUrl("https://example.com")
-        ) as wttr:
-            ...
-        ```
-
-        Custom httpx2.Client:
-
-        ```python
-        with httpx2.Client(
-            timeout=httpx2.Timeout(60, connect=5), follow_redirects=True
-        ) as session:
-            wttr = pywttr.Wttr(session=session)
-            ...
+            weather = wttr.weather("Paris")
         ```
     """
 
@@ -65,10 +43,12 @@ class Wttr:
 
     @property
     def base_url(self) -> AnyHttpUrl:
+        """Server the requests go to."""
         return self._base_url
 
     @property
     def session(self) -> Client | None:
+        """HTTP client; `None` until the first request if none was passed."""
         return self._session
 
     @overload
@@ -220,42 +200,23 @@ class Wttr:
     def weather(
         self, location: str, /, *, language: Language = Language.EN
     ) -> pywttr_models.AnyModel:
-        """Wrapper for wttr.in weather API.
+        """Get the current weather and a forecast for 3 days.
+
+        Raises `httpx2.HTTPStatusError` if wttr.in responds with an error
+        status, e.g. for an unknown location.
+
+        Args:
+            location: City, airport code, `~landmark`, `latitude,longitude`
+                or anything else [wttr.in](https://wttr.in/:help) accepts.
+            language: Language of the weather description. It also selects
+                the return type, e.g. `Language.RU` gives
+                `pywttr.models.ru.Model`.
 
         Examples:
-            Choose language. First option is preferred because of type safety.
-
-            ```python
-            language = pywttr.Language.ZH_CN
-            language = pywttr.Language["ZH_CN"]
-            language = pywttr.Language("zh-cn")
-            ```
-
-            Print the average temperature in Paris today:
-
             ```python
             with pywttr.Wttr() as wttr:
-                weather = wttr.weather("Paris", language=language)
-            print(weather.weather[0].avgtemp_c)
-            ```
-
-            Custom base url:
-
-            ```python
-            with pywttr.Wttr(
-                base_url=pydantic.AnyHttpUrl("https://example.com")
-            ) as wttr:
-                ...
-            ```
-
-            Custom httpx2.Client:
-
-            ```python
-            with httpx2.Client(
-                timeout=httpx2.Timeout(60, connect=5), follow_redirects=True
-            ) as session:
-                wttr = pywttr.Wttr(session=session)
-                ...
+                weather = wttr.weather("Paris", language=pywttr.Language.DE)
+            print(weather.current_condition[0].lang_de[0].value)
             ```
         """
         if self._session is None:
@@ -271,12 +232,14 @@ class Wttr:
         return language._model_.model_validate_json(response.content)
 
     def close(self) -> None:
-        """Close HTTP session."""
+        """Close the HTTP client."""
         if self._session is not None:
             self._session.close()
 
     def __enter__(self) -> Self:
+        """Return the client itself."""
         return self
 
     def __exit__(self, *_: object) -> None:
+        """Close the HTTP client."""
         self.close()
