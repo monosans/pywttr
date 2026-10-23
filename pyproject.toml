@@ -24,7 +24,7 @@ classifiers = [
 ]
 urls.documentation = "https://monosans.github.io/pywttr"
 urls.repository = "https://github.com/monosans/pywttr"
-dependencies = ["httpx2", "pywttr-models>=2,<3"]
+dependencies = ["httpx2>=2.0.0", "pywttr-models>=2,<3"]
 dynamic = ["version"]
 
 [dependency-groups]
@@ -45,7 +45,7 @@ docs = [
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist]
