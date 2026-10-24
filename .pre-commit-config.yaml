@@ -41,7 +41,7 @@ repos:
         args:
           - --scripts-are-modules
         additional_dependencies:
-          - httpx2==2.15.1
+          - httpx2==2.16.0
           - pydantic==2.14.1
           - pytest==9.1.1
           - pywttr-models==2.0.10
