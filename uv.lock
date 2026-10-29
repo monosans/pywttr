@@ -1060,11 +1060,14 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "covdefaults" },
+    { name = "mkdocstrings" },
+    { name = "mkdocstrings-python" },
     { name = "mypy" },
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "pytest-rerunfailures" },
     { name = "ruff" },
+    { name = "zensical" },
 ]
 docs = [
     { name = "mkdocstrings" },
@@ -1073,6 +1076,10 @@ docs = [
     { name = "zensical" },
 ]
 test = [
+    { name = "pytest" },
+    { name = "pytest-rerunfailures" },
+]
+test-ci = [
     { name = "pytest" },
     { name = "pytest-github-actions-annotate-failures" },
     { name = "pytest-rerunfailures" },
@@ -1087,11 +1094,14 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "covdefaults", specifier = "==2.3" },
+    { name = "mkdocstrings", specifier = "==1.0.8" },
+    { name = "mkdocstrings-python", specifier = "==2.0.10" },
     { name = "mypy", specifier = "==2.4.0" },
     { name = "pytest", specifier = "==9.1.1" },
     { name = "pytest-cov", specifier = "==7.1.0" },
     { name = "pytest-rerunfailures", specifier = "==16.7" },
     { name = "ruff", specifier = "==0.17.2" },
+    { name = "zensical", specifier = "==0.0.73" },
 ]
 docs = [
     { name = "mkdocstrings", specifier = "==1.0.8" },
@@ -1100,6 +1110,10 @@ docs = [
     { name = "zensical", specifier = "==0.0.73" },
 ]
 test = [
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-rerunfailures", specifier = "==16.7" },
+]
+test-ci = [
     { name = "pytest", specifier = "==9.1.1" },
     { name = "pytest-github-actions-annotate-failures", specifier = "==0.4.2" },
     { name = "pytest-rerunfailures", specifier = "==16.7" },
