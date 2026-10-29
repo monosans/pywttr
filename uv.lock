@@ -1063,7 +1063,6 @@ dev = [
     { name = "mypy" },
     { name = "pytest" },
     { name = "pytest-cov" },
-    { name = "pytest-github-actions-annotate-failures" },
     { name = "pytest-rerunfailures" },
     { name = "ruff" },
 ]
@@ -1072,6 +1071,11 @@ docs = [
     { name = "mkdocstrings-python" },
     { name = "ruff" },
     { name = "zensical" },
+]
+test = [
+    { name = "pytest" },
+    { name = "pytest-github-actions-annotate-failures" },
+    { name = "pytest-rerunfailures" },
 ]
 
 [package.metadata]
@@ -1086,7 +1090,6 @@ dev = [
     { name = "mypy", specifier = "==2.4.0" },
     { name = "pytest", specifier = "==9.1.1" },
     { name = "pytest-cov", specifier = "==7.1.0" },
-    { name = "pytest-github-actions-annotate-failures", specifier = "==0.4.2" },
     { name = "pytest-rerunfailures", specifier = "==16.7" },
     { name = "ruff", specifier = "==0.17.2" },
 ]
@@ -1095,6 +1098,11 @@ docs = [
     { name = "mkdocstrings-python", specifier = "==2.0.10" },
     { name = "ruff", specifier = "==0.17.2" },
     { name = "zensical", specifier = "==0.0.73" },
+]
+test = [
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-github-actions-annotate-failures", specifier = "==0.4.2" },
+    { name = "pytest-rerunfailures", specifier = "==16.7" },
 ]
 
 [[package]]
