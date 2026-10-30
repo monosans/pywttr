@@ -1074,6 +1074,10 @@ docs = [
 ]
 test = [
     { name = "pytest" },
+    { name = "pytest-rerunfailures" },
+]
+test-ci = [
+    { name = "pytest" },
     { name = "pytest-github-actions-annotate-failures" },
     { name = "pytest-rerunfailures" },
 ]
@@ -1100,6 +1104,10 @@ docs = [
     { name = "zensical", specifier = "==0.0.73" },
 ]
 test = [
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-rerunfailures", specifier = "==16.7" },
+]
+test-ci = [
     { name = "pytest", specifier = "==9.1.1" },
     { name = "pytest-github-actions-annotate-failures", specifier = "==0.4.2" },
     { name = "pytest-rerunfailures", specifier = "==16.7" },

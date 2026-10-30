@@ -31,10 +31,9 @@ dynamic = ["version"]
 dev = [
   "covdefaults==2.3",
   "mypy==2.4.0",
-  "pytest==9.1.1",
   "pytest-cov==7.1.0",
-  "pytest-rerunfailures==16.7",
   "ruff==0.17.2",
+  { include-group = "test" },
 ]
 docs = [
   "mkdocstrings==1.0.8",
@@ -42,10 +41,10 @@ docs = [
   "ruff==0.17.2",
   "zensical==0.0.73",
 ]
-test = [
-  "pytest==9.1.1",
+test = ["pytest==9.1.1", "pytest-rerunfailures==16.7"]
+test-ci = [
   "pytest-github-actions-annotate-failures==0.4.2",
-  "pytest-rerunfailures==16.7",
+  { include-group = "test" },
 ]
 
 [build-system]
