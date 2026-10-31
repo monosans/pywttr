@@ -1054,6 +1054,7 @@ name = "pywttr"
 source = { editable = "." }
 dependencies = [
     { name = "httpx2" },
+    { name = "pydantic" },
     { name = "pywttr-models" },
 ]
 
@@ -1085,6 +1086,7 @@ test-ci = [
 [package.metadata]
 requires-dist = [
     { name = "httpx2", specifier = ">=2.0.0" },
+    { name = "pydantic", specifier = ">=2" },
     { name = "pywttr-models", git = "https://github.com/monosans/pywttr-models?branch=main" },
 ]
 
