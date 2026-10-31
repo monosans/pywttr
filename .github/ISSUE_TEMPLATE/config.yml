@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://monosans.github.io/pywttr
+    about: Guide and API reference for pywttr.
+  - name: 🌦 Problem with wttr.in itself
+    url: https://github.com/chubin/wttr.in/issues
+    about: >-
+      Wrong forecasts, outages and missing locations belong in the wttr.in
+      tracker.
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/monosans/pywttr/security/advisories/new
+    about: Report it privately instead of opening a public issue.

@@ -1,0 +1,90 @@
+name: 🐛 Bug report
+description: >-
+  Report something in pywttr that is broken or differs from the
+  documentation.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Wrong or missing forecasts usually come from wttr.in itself. If
+        <https://wttr.in> shows the same data, report it to the [wttr.in
+        tracker](https://github.com/chubin/wttr.in/issues).
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: >-
+            I searched the [existing
+            issues](https://github.com/monosans/pywttr/issues?q=is%3Aissue)
+            and found nothing about this.
+          required: true
+        - label: >-
+            I can reproduce this on the [latest
+            release](https://pypi.org/project/pywttr/).
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "What happened?"
+      description: What you did, what you expected and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproducible example
+      description: >-
+        The shortest complete code that shows the problem, including the
+        location and language.
+      placeholder: |-
+        import pywttr
+
+        with pywttr.Wttr() as wttr:
+            weather = wttr.weather("Paris")
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback
+      description: >-
+        The full traceback, if an exception was raised. For a
+        `pydantic.ValidationError`, include all of it: it names the fields
+        that did not match.
+      render: python traceback
+  - type: input
+    id: version
+    attributes:
+      label: pywttr version
+      description: "`uv pip show pywttr` or `pip show pywttr`"
+    validations:
+      required: true
+  - type: input
+    id: models_version
+    attributes:
+      label: pywttr-models version
+      description: "`uv pip show pywttr-models` or `pip show pywttr-models`"
+    validations:
+      required: true
+  - type: input
+    id: python_version
+    attributes:
+      label: Python version
+      description: "`python --version`"
+      placeholder: 3.14.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+    validations:
+      required: true
