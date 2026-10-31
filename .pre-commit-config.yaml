@@ -43,7 +43,7 @@ repos:
         additional_dependencies:
           - httpx2==2.16.0
           - pydantic==2.14.1
-          - pytest==9.1.1
+          - pytest==9.2.0
           - pywttr-models==2.0.10
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f # frozen: v1.31.1
