@@ -68,6 +68,9 @@ unfixable = ["RUF027", "T"]
 [lint.per-file-ignores]
 "tests/*" = ["FBT001", "S101"]
 
+[lint.flake8-pytest-style]
+warns-require-match-for = ["*"]
+
 [lint.flake8-self]
 ignore-names = ["_model_", "_name_", "_value_"]
 
@@ -87,6 +90,3 @@ split-on-trailing-comma = false
 
 [lint.pydocstyle]
 convention = "google"
-
-[lint.pyupgrade]
-keep-runtime-typing = true
