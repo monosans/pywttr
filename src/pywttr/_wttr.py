@@ -194,9 +194,7 @@ class Wttr:
         self, location: str, /, *, language: Literal[Language.ZH_TW]
     ) -> pywttr_models.zh_tw.Model: ...
     @overload
-    def weather(
-        self, location: str, /, *, language: Language
-    ) -> pywttr_models.AnyModel: ...
+    def weather(self, location: str, /, *, language: Language) -> pywttr_models.AnyModel: ...
 
     @validate_call(config={"arbitrary_types_allowed": True})
     def weather(
@@ -224,9 +222,7 @@ class Wttr:
             ```
         """
         if self._session is None:
-            self._session = Client(
-                timeout=Timeout(60, connect=5), follow_redirects=True
-            )
+            self._session = Client(timeout=Timeout(60, connect=5), follow_redirects=True)
         response = self._session.get(
             f"{self._base_url}/{location}",
             params={"format": "j1", "lang": language},
