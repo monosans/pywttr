@@ -1,6 +1,6 @@
 # API reference
 
-<!-- prettier-ignore-start -->
+<!-- oxfmt-ignore-start -->
 
 ::: pywttr.Wttr
     options:
@@ -54,4 +54,4 @@ Each language has its own module, such as `pywttr.models.fr`. Its `CurrentCondit
       show_attribute_values: false
       show_labels: false
 
-<!-- prettier-ignore-end -->
+<!-- oxfmt-ignore-end -->
