@@ -38,28 +38,11 @@
   "lockFileMaintenance": { "enabled": true, "schedule": ["at any time"] },
   "minimumReleaseAge": "3 days",
   "packageRules": [
-    {
-      "matchPackageNames": ["mypy", "pre-commit/mirrors-mypy"],
-      "groupName": "mypy"
-    },
-    {
-      "matchPackageNames": ["ruff", "charliermarsh/ruff-pre-commit"],
-      "groupName": "ruff"
-    },
-    {
-      "matchCurrentVersion": "!/^0/",
-      "matchUpdateTypes": ["minor"],
-      "automerge": true
-    },
-    {
-      "matchUpdateTypes": ["lockFileMaintenance", "patch", "replacement"],
-      "automerge": true
-    },
-    {
-      "matchDepTypes": ["dependency-groups"],
-      "matchManagers": ["pep621"],
-      "automerge": true
-    },
+    { "matchPackageNames": ["mypy", "pre-commit/mirrors-mypy"], "groupName": "mypy" },
+    { "matchPackageNames": ["ruff", "charliermarsh/ruff-pre-commit"], "groupName": "ruff" },
+    { "matchCurrentVersion": "!/^0/", "matchUpdateTypes": ["minor"], "automerge": true },
+    { "matchUpdateTypes": ["lockFileMaintenance", "patch", "replacement"], "automerge": true },
+    { "matchDepTypes": ["dependency-groups"], "matchManagers": ["pep621"], "automerge": true },
     {
       "description": "Update a runtime dependency's uv.lock entry in its own branch, which a pin of it elsewhere joins, rather than only in lock file maintenance",
       "matchDepTypes": ["project.dependencies"],
