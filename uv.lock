@@ -1122,7 +1122,7 @@ test-ci = [
 [[package]]
 name = "pywttr-models"
 version = "2.0.10"
-source = { git = "https://github.com/monosans/pywttr-models?branch=main#c85d17d68f892f4412f3499f625bb1222270eea0" }
+source = { git = "https://github.com/monosans/pywttr-models?branch=main#59a12e85c64c6f9de82986fc00dfe63319503b7c" }
 dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions", marker = "python_full_version < '3.13'" },
