@@ -1078,11 +1078,15 @@ docs = [
     { name = "zensical" },
 ]
 test = [
+    { name = "covdefaults" },
     { name = "pytest" },
+    { name = "pytest-cov" },
     { name = "pytest-rerunfailures" },
 ]
 test-ci = [
+    { name = "covdefaults" },
     { name = "pytest" },
+    { name = "pytest-cov" },
     { name = "pytest-github-actions-annotate-failures" },
     { name = "pytest-rerunfailures" },
 ]
@@ -1110,11 +1114,15 @@ docs = [
     { name = "zensical", specifier = "==0.0.74" },
 ]
 test = [
+    { name = "covdefaults", specifier = "==2.3" },
     { name = "pytest", specifier = "==9.2.0" },
+    { name = "pytest-cov", specifier = "==7.1.0" },
     { name = "pytest-rerunfailures", specifier = "==16.7" },
 ]
 test-ci = [
+    { name = "covdefaults", specifier = "==2.3" },
     { name = "pytest", specifier = "==9.2.0" },
+    { name = "pytest-cov", specifier = "==7.1.0" },
     { name = "pytest-github-actions-annotate-failures", specifier = "==0.4.2" },
     { name = "pytest-rerunfailures", specifier = "==16.7" },
 ]
