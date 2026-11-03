@@ -87,4 +87,12 @@ jobs:
           enable-cache: true
           prune-cache: true
           save-cache: ${{ github.ref == 'refs/heads/main' }}
-      - run: uv run --group test-ci --no-group dev --locked pytest
+      - run: uv sync --group test-ci --no-group dev --locked
+      - run: |
+          for n in 4 8 16 4 8 16; do
+            echo "::group::n=$n"
+            start=$(date +%s.%N)
+            uv run --no-sync pytest -n "$n" -q -p no:cacheprovider | tail -n 3
+            echo "TIMING n=$n wall=$(echo "$(date +%s.%N) - $start" | bc)"
+            echo "::endgroup::"
+          done
