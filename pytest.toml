@@ -1,5 +1,8 @@
 [pytest]
 addopts = [
+  # The tests wait on wttr.in, so more workers than CPUs help; on CI, 16 are
+  # no faster than 8.
+  "-n=8",
   "--reruns=9",
   "--reruns-delay=1",
   "--only-rerun=ConnectError",
