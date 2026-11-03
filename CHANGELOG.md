@@ -2,6 +2,11 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.0.6] - 2026-11-03
+
+- With the default base URL, requests go to `https://wttr.in/<location>` again instead of `https://wttr.in//<location>`, which wttr.in answered with a redirect. A session that doesn't follow redirects, such as a plain `httpx2.Client()`, works again.
+- Declare pydantic as a dependency, since pywttr imports it directly, and require httpx2 2.0.0 or newer.
+
 ## [4.0.5] - 2026-10-15
 
 - New documentation at <https://monosans.github.io/pywttr>: a guide with an example for each task and an API reference that describes every response field with its unit.
