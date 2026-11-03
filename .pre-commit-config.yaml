@@ -51,7 +51,7 @@ repos:
           - httpx2==2.16.0
           - pydantic==2.14.2
           - pytest==9.2.0
-          - pywttr-models==2.1.0
+          - pywttr-models @ git+https://github.com/monosans/pywttr-models@main
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f # frozen: v1.31.1
     hooks:
