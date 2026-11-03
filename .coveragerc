@@ -1,6 +1,5 @@
 [report]
 exclude_lines = ^\s*@(?:abc\.)?abstractmethod$
-fail_under = 100
 
 [run]
 plugins = covdefaults
