@@ -46,3 +46,26 @@ def test_wttr_close_closes_passed_session() -> None:
     with pywttr.Wttr(session=session) as wttr:
         assert wttr.session is session
     assert session.is_closed
+
+
+@pytest.mark.parametrize(
+    ("path", "expected"),
+    [
+        ("", "/Paris?format=j1&lang=de"),
+        ("/wttr", "/wttr/Paris?format=j1&lang=de"),
+        ("/wttr/", "/wttr/Paris?format=j1&lang=de"),
+    ],
+)
+def test_wttr_request_url(path: str, expected: str) -> None:
+    requests: list[httpx2.Request] = []
+
+    def handler(request: httpx2.Request) -> httpx2.Response:
+        requests.append(request)
+        return httpx2.Response(
+            200, json={"current_condition": [], "nearest_area": [], "request": [], "weather": []}
+        )
+
+    with httpx2.Client(transport=httpx2.MockTransport(handler)) as session:
+        wttr = pywttr.Wttr(base_url=AnyHttpUrl(f"https://wttr.in{path}"), session=session)
+        wttr.weather("Paris", language=pywttr.Language.DE)
+    assert [str(request.url) for request in requests] == [f"https://wttr.in{expected}"]
