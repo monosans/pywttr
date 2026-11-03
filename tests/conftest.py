@@ -12,7 +12,7 @@ def _get_models(
     cls: type[pydantic.BaseModel] = pydantic.BaseModel, /
 ) -> Iterator[type[pydantic.BaseModel]]:
     for subclass in cls.__subclasses__():
-        if subclass.__module__.startswith(f"{pywttr.models.__name__}."):
+        if subclass.__module__.startswith(f"{pywttr.models.__name__}."):  # pragma: no branch
             yield subclass
         yield from _get_models(subclass)
 
