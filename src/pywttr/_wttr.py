@@ -67,16 +67,48 @@ class Wttr:
     ) -> pywttr_models.ar.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.AZ]
+    ) -> pywttr_models.az.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.BA]
+    ) -> pywttr_models.ba.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.BE]
     ) -> pywttr_models.be.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.BG]
+    ) -> pywttr_models.bg.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.BN]
     ) -> pywttr_models.bn.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.BS]
+    ) -> pywttr_models.bs.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.BY]
+    ) -> pywttr_models.by.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.CA]
     ) -> pywttr_models.ca.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.CRK]
+    ) -> pywttr_models.crk.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.CS]
+    ) -> pywttr_models.cs.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.CY]
+    ) -> pywttr_models.cy.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.DA]
@@ -91,32 +123,68 @@ class Wttr:
     ) -> pywttr_models.el.Model: ...
     @overload
     def weather(
-        self, location: str, /, *, language: Literal[Language.EN] = ...
+        self, location: str, /, *, language: Literal[Language.EN]
     ) -> pywttr_models.en.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.EO]
+    ) -> pywttr_models.eo.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ES]
+    ) -> pywttr_models.es.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.ET]
     ) -> pywttr_models.et.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.EU]
+    ) -> pywttr_models.eu.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.FA]
     ) -> pywttr_models.fa.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.FI]
+    ) -> pywttr_models.fi.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.FR]
     ) -> pywttr_models.fr.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.FY]
+    ) -> pywttr_models.fy.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.GA]
+    ) -> pywttr_models.ga.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.GL]
     ) -> pywttr_models.gl.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.HE]
+    ) -> pywttr_models.he.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.HI]
     ) -> pywttr_models.hi.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.HR]
+    ) -> pywttr_models.hr.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.HU]
     ) -> pywttr_models.hu.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.HY]
+    ) -> pywttr_models.hy.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.IA]
@@ -127,16 +195,60 @@ class Wttr:
     ) -> pywttr_models.id.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.IS]
+    ) -> pywttr_models.is_.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.IT]
     ) -> pywttr_models.it.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.JA]
+    ) -> pywttr_models.ja.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.JV]
+    ) -> pywttr_models.jv.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.KA]
+    ) -> pywttr_models.ka.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.KK]
+    ) -> pywttr_models.kk.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.KO]
+    ) -> pywttr_models.ko.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.KY]
+    ) -> pywttr_models.ky.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.LT]
     ) -> pywttr_models.lt.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.LV]
+    ) -> pywttr_models.lv.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.MG]
     ) -> pywttr_models.mg.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.MK]
+    ) -> pywttr_models.mk.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ML]
+    ) -> pywttr_models.ml.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.MR]
+    ) -> pywttr_models.mr.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.NB]
@@ -147,12 +259,24 @@ class Wttr:
     ) -> pywttr_models.nl.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.NN]
+    ) -> pywttr_models.nn.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.OC]
     ) -> pywttr_models.oc.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.PA]
+    ) -> pywttr_models.pa.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.PL]
     ) -> pywttr_models.pl.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.PT]
+    ) -> pywttr_models.pt.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.PT_BR]
@@ -167,8 +291,36 @@ class Wttr:
     ) -> pywttr_models.ru.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.SK]
+    ) -> pywttr_models.sk.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.SL]
+    ) -> pywttr_models.sl.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.SR]
+    ) -> pywttr_models.sr.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.SR_LAT]
+    ) -> pywttr_models.sr_lat.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.SV]
+    ) -> pywttr_models.sv.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.SW]
+    ) -> pywttr_models.sw.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.TA]
     ) -> pywttr_models.ta.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.TE]
+    ) -> pywttr_models.te.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.TH]
@@ -179,6 +331,10 @@ class Wttr:
     ) -> pywttr_models.tr.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.TS]
+    ) -> pywttr_models.ts.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.UK]
     ) -> pywttr_models.uk.Model: ...
     @overload
@@ -187,12 +343,20 @@ class Wttr:
     ) -> pywttr_models.vi.Model: ...
     @overload
     def weather(
+        self, location: str, /, *, language: Literal[Language.ZH]
+    ) -> pywttr_models.zh.Model: ...
+    @overload
+    def weather(
         self, location: str, /, *, language: Literal[Language.ZH_CN]
     ) -> pywttr_models.zh_cn.Model: ...
     @overload
     def weather(
         self, location: str, /, *, language: Literal[Language.ZH_TW]
     ) -> pywttr_models.zh_tw.Model: ...
+    @overload
+    def weather(
+        self, location: str, /, *, language: Literal[Language.ZU]
+    ) -> pywttr_models.zu.Model: ...
     @overload
     def weather(self, location: str, /, *, language: Language) -> pywttr_models.AnyModel: ...
 
