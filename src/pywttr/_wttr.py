@@ -224,7 +224,7 @@ class Wttr:
         if self._session is None:
             self._session = Client(timeout=Timeout(60, connect=5), follow_redirects=True)
         response = self._session.get(
-            f"{self._base_url}/{location}",
+            f"{str(self._base_url).rstrip('/')}/{location}",
             params={"format": "j1", "lang": language},
             headers={"Accept": "application/json"},
         )
