@@ -3,12 +3,16 @@ addopts = [
   # The tests wait on wttr.in, so more workers than CPUs help; on CI, 16 are
   # no faster than 8.
   "-n=8",
-  "--reruns=9",
-  "--reruns-delay=1",
-  "--only-rerun=ConnectError",
-  "--only-rerun=ConnectTimeout",
-  "--only-rerun=HTTPStatusError",
+  # When wttr.in is down, every test fails: stop rerunning them past this.
+  "--max-suite-reruns=20",
+  "--rerun-show-tracebacks",
 ]
 empty_parameter_set_mark = "fail_at_collect"
 filterwarnings = ["error"]
+# wttr.in drops a connection or answers 5xx now and then. On CI, a test never
+# needed more than 3 reruns.
+only_rerun = ["^ConnectError: ", "^ConnectTimeout: ", "^HTTPStatusError: Server error "]
+reruns = "4"
+reruns_delay = "1"
+reruns_delay_backoff_factor = "2"
 strict = true
