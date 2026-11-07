@@ -4,7 +4,7 @@
 
 ## [Unreleased]
 
-- `Wttr.weather` no longer has pydantic evaluate its return type, `pywttr_models.AnyModel`, on import. With a pywttr-models that imports each language's models when it is first used, importing the package then loads none of them, and a request loads those of its language only: roughly 400 ms less on import.
+- Load only the models of the language a request asks for, not those of all 76, which takes roughly 400 ms off `import pywttr`. pywttr-models 2.1.1, now required, imports each language's models the first time they are used, and `Wttr.weather` no longer has pydantic evaluate its return type, `pywttr_models.AnyModel`, on import.
 
 ## [4.1.0] - 2026-11-04
 

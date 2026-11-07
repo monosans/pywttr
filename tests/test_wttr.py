@@ -108,3 +108,15 @@ def test_import_leaves_the_return_type_of_weather_unevaluated() -> None:
         "import pywttr\n"
     )
     subprocess.run((sys.executable, "-c", code), check=True)  # noqa: S603
+
+
+def test_import_loads_no_language_models() -> None:
+    code = (
+        "import sys\n"
+        "import pywttr\n"
+        "print(*sorted(name for name in sys.modules if name.startswith('pywttr_models.')))\n"
+    )
+    done = subprocess.run(  # noqa: S603
+        (sys.executable, "-c", code), capture_output=True, check=True, text=True
+    )
+    assert set(done.stdout.split()) <= {"pywttr_models._language"}
