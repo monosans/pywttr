@@ -2,7 +2,7 @@
 
 [Semantic Versioning](https://semver.org/)
 
-## [Unreleased]
+## [4.1.1] - 2026-11-07
 
 - Load only the models of the language a request asks for, not those of all 76, which takes roughly 400 ms off `import pywttr`. pywttr-models 2.1.1, now required, imports each language's models the first time they are used, and `Wttr.weather` no longer has pydantic evaluate its return type, `pywttr_models.AnyModel`, on import.
 
