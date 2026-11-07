@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import subprocess
+import sys
+
 import httpx2
 import pytest
 from pydantic import AnyHttpUrl
@@ -73,3 +76,16 @@ def test_wttr_request_url(path: str, expected: str) -> None:
         wttr = pywttr.Wttr(base_url=AnyHttpUrl(f"https://wttr.in{path}"), session=session)
         wttr.weather("Paris", language=pywttr.Language.DE)
     assert [str(request.url) for request in requests] == [f"https://wttr.in{expected}"]
+
+
+def test_import_leaves_the_return_type_of_weather_unevaluated() -> None:
+    """Evaluating `pywttr_models.AnyModel` would import every language's models."""
+    code = (
+        "import pywttr_models\n"
+        "vars(pywttr_models).pop('AnyModel', None)\n"
+        "def __getattr__(name):\n"
+        "    raise AttributeError(name)\n"
+        "pywttr_models.__getattr__ = __getattr__\n"
+        "import pywttr\n"
+    )
+    subprocess.run((sys.executable, "-c", code), check=True)  # noqa: S603
