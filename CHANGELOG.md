@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [Unreleased]
+
+- Load only the models of the language a request asks for, not those of all 76, which takes roughly 400 ms off `import pywttr`. pywttr-models 2.1.1, now required, imports each language's models the first time they are used, and `Wttr.weather` no longer has pydantic evaluate its return type, `pywttr_models.AnyModel`, on import.
+
 ## [4.1.0] - 2026-11-04
 
 - Support all 76 languages wttr.in has. pywttr-models 2.1.0, now required, adds the 41 that were missing, such as `Language.ES` (Spanish), `Language.JA` (Japanese) and `Language.PT` (Portuguese). wttr.in translates most of them only in part, and gives untranslated descriptions in English. Each one has a `weather()` overload, so type checkers know its model.

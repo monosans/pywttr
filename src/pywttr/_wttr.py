@@ -1,11 +1,43 @@
 from __future__ import annotations
 
-from typing import Final, Literal, Self, final, overload
+import functools
+import types
+from typing import TYPE_CHECKING, Final, Literal, Self, TypeVar, cast, final, overload
 
 import pywttr_models
 from httpx2 import Client, Timeout
 from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
+
+_F = TypeVar("_F", bound="Callable[..., object]")
+
+
+def _validate_arguments(func: _F, /) -> _F:
+    """Validate the arguments of `func` as `validate_call` does.
+
+    `validate_call` evaluates the return annotation too, though it doesn't
+    validate the return value, and `pywttr_models.AnyModel` imports the models
+    of all 76 languages, where a request needs those of one. So it is handed a
+    copy of `func` without the return annotation.
+    """
+    function = cast("types.FunctionType", func)
+    copy = types.FunctionType(
+        function.__code__,
+        function.__globals__,
+        function.__name__,
+        function.__defaults__,
+        function.__closure__,
+    )
+    copy.__kwdefaults__ = function.__kwdefaults__
+    copy.__qualname__ = function.__qualname__
+    copy.__annotations__ = {
+        name: value for name, value in function.__annotations__.items() if name != "return"
+    }
+    validated = validate_call(config={"arbitrary_types_allowed": True})(copy)
+    return cast("_F", functools.update_wrapper(validated, function))
 
 
 @final
@@ -360,7 +392,7 @@ class Wttr:
     @overload
     def weather(self, location: str, /, *, language: Language) -> pywttr_models.AnyModel: ...
 
-    @validate_call(config={"arbitrary_types_allowed": True})
+    @_validate_arguments
     def weather(
         self, location: str, /, *, language: Language = Language.EN
     ) -> pywttr_models.AnyModel:
