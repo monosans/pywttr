@@ -49,7 +49,7 @@ repos:
           - --scripts-are-modules
         additional_dependencies:
           - httpx2==2.16.0
-          - pydantic==2.14.2
+          - pydantic==2.14.3
           - pytest==9.2.0
           - pywttr-models @ git+https://github.com/monosans/pywttr-models@main
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
