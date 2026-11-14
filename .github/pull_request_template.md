@@ -1,6 +1,11 @@
 <!--
 Pull requests are squash-merged, so write the title in the Conventional Commits
 style: `fix: ...`, `feat: ...`, `docs: ...`, `refactor: ...`, `test: ...`, `chore: ...`.
+
+CI runs the linters and tests. To catch failures before you push, run:
+
+uvx prek run --all-files
+uv run pytest
 -->
 
 ## Summary
@@ -17,7 +22,6 @@ style: `fix: ...`, `feat: ...`, `docs: ...`, `refactor: ...`, `test: ...`, `chor
 
 ## Checklist
 
-- [ ] `uvx prek run --all-files` passes.
-- [ ] `uv run pytest` passes, and new behavior has tests.
+- [ ] New behavior has tests.
 - [ ] Docstrings and `docs/` describe any change to the public API.
 - [ ] If the change also applies to [aiopywttr](https://github.com/monosans/aiopywttr), it has a matching pull request there.
