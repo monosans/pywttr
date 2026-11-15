@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.1.4] - 2026-11-15
+
+- Require pydantic 2.5 or newer. 4.1.3 asked for 2.10, more than pywttr needs. Before 2.5, `pywttr.Wttr()` fails with `AttributeError`, because `validate_call` can't wrap `__init__` of a class with `__slots__`.
+
 ## [4.1.3] - 2026-11-15
 
 - Require pydantic 2.10 or newer. Older versions don't work: with 2.0 pywttr doesn't import, from 2.4 to 2.7.1 the response models don't load once typing-extensions 4.12 or newer is installed, and up to 2.9 a validation error of `Wttr.weather` is titled "weather" instead of "Wttr.weather".
