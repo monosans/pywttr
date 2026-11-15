@@ -52,6 +52,7 @@ repos:
           - pydantic==2.14.3
           - pytest==9.2.0
           - pywttr-models @ git+https://github.com/monosans/pywttr-models@main
+          - typing-extensions==4.16.0
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: 06a39750ec31860bb44f2acf67182c40016cd1e7 # frozen: v1.32.0
     hooks:
