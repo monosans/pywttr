@@ -2,6 +2,10 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.1.5] - 2026-11-15
+
+- Declare typing-extensions as a dependency on Python before 3.13, where pywttr takes `TypeVar` from it. It used to come only through pydantic.
+
 ## [4.1.4] - 2026-11-15
 
 - Require pydantic 2.5 or newer. 4.1.3 asked for 2.10, more than pywttr needs. Before 2.5, `pywttr.Wttr()` fails with `AttributeError`, because `validate_call` can't wrap `__init__` of a class with `__slots__`.
