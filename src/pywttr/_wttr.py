@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import functools
+import sys
 import types
 from typing import TYPE_CHECKING, Final, Literal, Self, cast, final, overload
 
@@ -8,7 +9,11 @@ import pywttr_models
 from httpx2 import Client, Timeout
 from pydantic import AnyHttpUrl, validate_call
 from pywttr_models._language import Language  # noqa: PLC2701
-from typing_extensions import TypeVar
+
+if sys.version_info >= (3, 13):  # pragma: >=3.13 cover
+    from typing import TypeVar
+else:  # pragma: <3.13 cover
+    from typing_extensions import TypeVar
 
 if TYPE_CHECKING:
     from collections.abc import Callable

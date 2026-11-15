@@ -44,7 +44,7 @@ dependencies = [
   "httpx2>=2.0.0",
   "pydantic>=2.5",
   "pywttr-models>=2.1.1,<3",
-  "typing-extensions>=4.4"
+  "typing-extensions>=4.4; python_version < '3.13'"
 ]
 dynamic = ["version"]
 
