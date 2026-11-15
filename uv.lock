@@ -1127,7 +1127,7 @@ test-ci = [
 [package.metadata]
 requires-dist = [
     { name = "httpx2", specifier = ">=2.0.0" },
-    { name = "pydantic", specifier = ">=2.10" },
+    { name = "pydantic", specifier = ">=2.5" },
     { name = "pywttr-models", git = "https://github.com/monosans/pywttr-models?branch=main" },
 ]
 
