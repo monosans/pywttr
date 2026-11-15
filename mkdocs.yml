@@ -1,5 +1,6 @@
 site_name: pywttr
 site_url: https://monosans.github.io/pywttr
+site_description: Typed Python client for the wttr.in weather API
 strict: true
 repo_url: https://github.com/monosans/pywttr
 repo_name: monosans/pywttr

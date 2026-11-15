@@ -12,6 +12,8 @@ uv add pywttr pywttr-models
 pip install -U pywttr pywttr-models
 ```
 
+pywttr-models holds the response models and gets its own releases when wttr.in changes its responses. Naming it keeps `pip install -U` upgrading it along with pywttr.
+
 ## Example
 
 ```python

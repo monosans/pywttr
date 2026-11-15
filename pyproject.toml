@@ -1,15 +1,26 @@
 [project]
 name = "pywttr"
-description = "Wrapper for wttr.in weather API"
+description = "Typed Python client for the wttr.in weather API"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "monosans", email = "hsyqixco@protonmail.com" }]
-keywords = ["forecast"]
+keywords = [
+  "api-client",
+  "forecast",
+  "httpx",
+  "pydantic",
+  "weather",
+  "weather-api",
+  "wttr",
+  "wttr-in",
+]
 classifiers = [
+  "Development Status :: 5 - Production/Stable",
   "Framework :: Pydantic",
   "Framework :: Pydantic :: 2",
+  "Intended Audience :: Developers",
   "Natural Language :: English",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
@@ -20,11 +31,16 @@ classifiers = [
   "Programming Language :: Python :: 3.14",
   "Programming Language :: Python :: 3.15",
   "Programming Language :: Python :: 3.16",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Scientific/Engineering :: Atmospheric Science",
+  "Topic :: Software Development :: Libraries :: Python Modules",
   "Typing :: Typed",
 ]
+urls.changelog = "https://github.com/monosans/pywttr/blob/main/CHANGELOG.md"
 urls.documentation = "https://monosans.github.io/pywttr"
+urls.issues = "https://github.com/monosans/pywttr/issues"
 urls.repository = "https://github.com/monosans/pywttr"
-dependencies = ["httpx2>=2.0.0", "pydantic>=2", "pywttr-models>=2.1.1,<3"]
+dependencies = ["httpx2>=2.0.0", "pydantic>=2.10", "pywttr-models>=2.1.1,<3"]
 dynamic = ["version"]
 
 [dependency-groups]
