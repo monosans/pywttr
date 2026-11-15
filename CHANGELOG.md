@@ -2,6 +2,11 @@
 
 [Semantic Versioning](https://semver.org/)
 
+## [4.1.3] - 2026-11-15
+
+- Require pydantic 2.10 or newer. Older versions don't work: with 2.0 pywttr doesn't import, from 2.4 to 2.7.1 the response models don't load once typing-extensions 4.12 or newer is installed, and up to 2.9 a validation error of `Wttr.weather` is titled "weather" instead of "Wttr.weather".
+- Describe the package on PyPI as a typed Python client for the wttr.in weather API, with keywords, classifiers and links to the changelog and the issue tracker.
+
 ## [4.1.1] - 2026-11-07
 
 - Load only the models of the language a request asks for, not those of all 76, which takes roughly 400 ms off `import pywttr`. pywttr-models 2.1.1, now required, imports each language's models the first time they are used, and `Wttr.weather` no longer has pydantic evaluate its return type, `pywttr_models.AnyModel`, on import.
