@@ -23,7 +23,7 @@ jobs:
       - run: git merge-base --is-ancestor HEAD origin/main
       - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
-          python-version: "3.14" # attest-action locks cffi and pydantic-core without 3.15 wheels
+          python-version: "3.15"
           enable-cache: false
       - run: uv build --no-cache
       - uses: astral-sh/attest-action@39b6ce43875c196a579e31635b11aa2a2036384a # v0.0.7
